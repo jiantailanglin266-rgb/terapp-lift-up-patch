@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="TERAPP">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".5" stop-color="#D9BE86"/><stop offset="1" stop-color="#C29B57"/></linearGradient></defs>
+  <rect width="100" height="100" rx="22" fill="#0C2A25"/>
+  <g transform="translate(50,50) scale(0.232) translate(-600,-418)" fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round">
+    <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="26"/>
+    <path d="M570,470 A30,30 0 0 1 630,470"/>
+    <path d="M542,470 A58,58 0 0 1 658,470"/>
+    <path d="M514,470 A86,86 0 0 1 686,470"/>
+    <path d="M486,470 A114,114 0 0 1 714,470"/>
+  </g>
+  <circle transform="translate(50,50) scale(0.232) translate(-600,-418)" cx="600" cy="470" r="20" fill="url(#g)"/>
+</svg>

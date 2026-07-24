@@ -29,7 +29,7 @@
 <meta name="twitter:description" content="テラヘルツ特殊加工を施した美容ケア用パッチ。毎日の美容習慣に。">
 <meta name="twitter:image" content="https://TERAPP-DOMAIN-TBD/images/terapp-ogp.webp">
 
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <!-- ===== Fonts (欧文ディスプレイ×和文サブの2層構成) ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -412,6 +412,13 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .price-card .pc-price small{font-size:1rem;font-weight:400;margin-left:.2rem}
 .price-card .pc-cta{margin-top:1.8rem;width:100%}
 .price-note{margin-top:1.8rem;text-align:center;font-size:.74rem;color:var(--muted);line-height:1.8;max-width:52ch;margin-left:auto;margin-right:auto}
+.price-note a,.assurance a{color:var(--deep);text-decoration:underline;text-underline-offset:2px}
+/* 購入安心ブロック */
+.assurance{list-style:none;max-width:840px;margin:2.4rem auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;padding:0}
+.assurance li{display:flex;flex-direction:column;gap:.35rem;background:#fff;border:1px solid var(--line-rose);border-radius:14px;padding:1.2rem 1.3rem;box-shadow:var(--shadow-sm)}
+.assurance svg{width:26px;height:26px;color:var(--deep)}
+.assurance b{font-size:.9rem;font-weight:700;color:var(--text)}
+.assurance span{font-size:.8rem;color:var(--muted);line-height:1.7}
 
 /* Reviews empty state */
 .reviews{background:var(--soft)}
@@ -784,11 +791,47 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
       <h2 class="sec-title"><span class="en">Choose Your Beauty Routine.</span></h2>
       <div class="s-line"></div>
     </div>
-    <!-- 価格データ TODO:
-         ・税込価格か確認 / ・1セットあたりのパッチ枚数を確認 / ・3セット5,500円の販売単位を確認
-         ・送料を確認 / ・定期購入の有無を確認 -->
-    <div class="price-grid" id="price-grid"></div>
-    <p class="price-note reveal">※1セットずつ購入する場合と比較した金額表示は、税込区分と販売単位を確認してから計算します。<br>販売単位・税込表示・送料は公開前に確定情報へ更新します。</p>
+    <!-- 価格データ TODO(docs/todo-client.md参照):
+         ・税込/税抜区分 / ・1セットの内容量(ロールを切る方式のため枚数でなく長さの可能性) / ・3セットの販売単位
+         ・送料 / ・定期購入の有無。※カードは静的HTML。JSはcheckoutURL確定時にhref/文言を差し替える補助のみ -->
+    <div class="price-grid" id="price-grid">
+      <!-- 1セット -->
+      <div class="price-card reveal" data-plan="one">
+        <span class="pc-name">TERAPP Lift Up Patch</span>
+        <span class="pc-qty">1セット</span>
+        <span class="pc-price">2,200<small>円</small></span>
+        <a class="btn btn-primary pc-cta" href="contact.html" data-ev="one_set_click" data-checkout="">購入について問い合わせる</a>
+      </div>
+      <!-- 3セット（おすすめ） -->
+      <div class="price-card reveal reco" data-plan="three" data-d="1">
+        <span class="price-badge">おすすめ</span>
+        <span class="pc-name">TERAPP Lift Up Patch</span>
+        <span class="pc-qty">3セット</span>
+        <span class="pc-price">5,500<small>円</small></span>
+        <a class="btn btn-primary pc-cta" href="contact.html" data-ev="three_set_click" data-checkout="">購入について問い合わせる</a>
+      </div>
+    </div>
+    <p class="price-note reveal">※価格は表示のとおりです。税込／税抜の区分、販売単位、送料などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
+
+    <!-- 購入安心ブロック（不安要素を価格直下で解消） -->
+    <ul class="assurance reveal" data-d="1">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h13v8H3zM16 10h3l2 2v3h-5" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
+        <b>配送について</b><span>配送方法・送料は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18" stroke-linejoin="round"/></svg>
+        <b>お支払い</b><span>お支払い方法の詳細は<a href="tokushoho.html">特商法表記</a>に記載します。</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12a9 9 0 109-9M3 12l3-2M3 12l2 3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <b>返品・交換</b><span>条件は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.5 8.5 0 118-11.9" stroke-linecap="round"/><path d="M8 12l3 3 6-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>お困りの際は</b><span><a href="contact.html">お問い合わせ</a>または <a href="mailto:support@terapp.jp">support@terapp.jp</a> へ。</span>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -816,7 +859,41 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
       <h2 class="sec-title">よくあるご質問</h2>
       <div class="s-line"></div>
     </div>
-    <div class="faq-list" id="faq-list"></div>
+    <!-- FAQは静的HTML（no-JS/クローラでも表示）。JSは開閉挙動のみ。表示内容は head の FAQPage JSON-LD と一致させること -->
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-0" aria-expanded="false" aria-controls="faq-a-0"><span class="qmark">Q</span><span>どこに使用できますか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-0" role="region" aria-labelledby="faq-q-0"><div class="faq-a-inner">フェイスライン、頬、首元、デコルテなど、外見の印象が気になる部分への使用を想定しています。正式な使用可能部位は商品パッケージおよび取扱説明をご確認ください。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1"><span class="qmark">Q</span><span>どのくらいの時間貼ればよいですか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><div class="faq-a-inner">正式な推奨使用時間を確認後に記載します。確認できるまでは、商品パッケージまたは取扱説明に従ってご使用ください。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2"><span class="qmark">Q</span><span>繰り返し使用できますか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><div class="faq-a-inner">再利用の可否が未確認のため、メーカーの正式な商品仕様を確認後に記載します。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3"><span class="qmark">Q</span><span>毎日使用できますか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><div class="faq-a-inner">使用頻度は正式な商品仕様に従ってください。肌の状態を確認し、異常を感じた場合は使用を中止してください。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4"><span class="qmark">Q</span><span>敏感肌でも使用できますか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><div class="faq-a-inner">すべての方に刺激が起こらないことを保証するものではありません。肌が敏感な方は、使用前に商品表示を確認し、異常がある場合は使用を控えてください。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5"><span class="qmark">Q</span><span>テラヘルツ波とは何ですか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><div class="faq-a-inner">一般に、電波と赤外線の間に位置する周波数帯の電磁波を指します。通信、分析、センシングなど、さまざまな分野で研究されています。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6"><span class="qmark">Q</span><span>貼るだけでリフトアップしますか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6"><div class="faq-a-inner">本商品は医薬品や治療を目的とした商品ではありません。「リフトアップ」は商品名および美容ケアのコンセプトを表すものであり、身体の変化や効果を保証するものではありません。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" id="faq-q-7" aria-expanded="false" aria-controls="faq-a-7"><span class="qmark">Q</span><span>送料はいくらですか？</span><span class="plus" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7"><div class="faq-a-inner">配送条件が確定していないため、正式な送料情報を確認後に記載します。<a href="tokushoho.html">特定商取引法に基づく表記</a>もあわせてご確認ください。</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -844,7 +921,7 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
       <div class="biz-row"><dt>担当者</dt><dd>大山 真奈</dd></div>
       <div class="biz-row"><dt>電話番号</dt><dd><a href="tel:09036941101">090-3694-1101</a></dd></div>
       <div class="biz-row"><dt>所在地</dt><dd>〒124-0021<br>東京都葛飾区細田4-29-1</dd></div>
-      <div class="biz-row"><dt>メールアドレス</dt><dd class="tbd">正式なメールアドレス確定後に掲載します。<!-- [CONTACT_EMAIL_TO_BE_CREATED] --></dd></div>
+      <div class="biz-row"><dt>メールアドレス</dt><dd><a href="mailto:support@terapp.jp">support@terapp.jp</a></dd></div>
       <div class="biz-row"><dt>お問い合わせ</dt><dd><a href="contact.html">お問い合わせフォームへ</a></dd></div>
     </dl>
   </div>
@@ -1036,56 +1113,22 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
     build(document.getElementById('mq2'), row2);
   })();
 
-  /* ---- Pricing cards (データと表示を分離) ---- */
+  /* ---- Pricing: カードは静的HTML。JSはcheckoutURL確定時のみ href/文言を差し替える補助 ---- */
   (function(){
-    // ProductPlan[] : checkoutUrl 未確定時は問い合わせフォームへ誘導
-    var PLANS = [
-      { id:'one',   name:'TERAPP Lift Up Patch', qty:'1セット', price:2200, currency:'JPY', checkoutUrl:'', ev:'one_set_click' },
-      { id:'three', name:'TERAPP Lift Up Patch', qty:'3セット', price:5500, currency:'JPY', checkoutUrl:'', recommended:true, ev:'three_set_click' }
-    ];
-    var CONTACT_URL = 'contact.html';
     var grid = document.getElementById('price-grid'); if(!grid) return;
-    PLANS.forEach(function(p, i){
-      var card = document.createElement('div');
-      card.className = 'price-card reveal' + (p.recommended ? ' reco' : '');
-      if(i) card.setAttribute('data-d', i);
-      var href = p.checkoutUrl || CONTACT_URL;
-      var label = p.checkoutUrl ? (p.qty + 'を購入する') : '購入について問い合わせる';
-      var price = p.price.toLocaleString('ja-JP');
-      card.innerHTML =
-        (p.recommended ? '<span class="price-badge">おすすめ</span>' : '') +
-        '<span class="pc-name">'+p.name+'</span>' +
-        '<span class="pc-qty">'+p.qty+'</span>' +
-        '<span class="pc-price">'+price+'<small>円</small></span>' +
-        '<a class="btn btn-primary pc-cta" href="'+href+'" data-ev="'+p.ev+'">'+label+'</a>';
-      grid.appendChild(card);
+    grid.querySelectorAll('.pc-cta').forEach(function(a){
+      var url = a.getAttribute('data-checkout');
+      if(url){
+        var qty = a.closest('.price-card').querySelector('.pc-qty');
+        a.setAttribute('href', url);
+        a.textContent = (qty ? qty.textContent : '') + 'を購入する';
+      }
     });
   })();
 
-  /* ---- FAQ (accordion + aria + keyboard) — 表示内容は JSON-LD と一致 ---- */
+  /* ---- FAQ: 項目は静的HTML。JSは開閉挙動のみ（表示内容は FAQPage JSON-LD と一致） ---- */
   (function(){
-    var FAQ = [
-      ['どこに使用できますか？','フェイスライン、頬、首元、デコルテなど、外見の印象が気になる部分への使用を想定しています。正式な使用可能部位は商品パッケージおよび取扱説明をご確認ください。'],
-      ['どのくらいの時間貼ればよいですか？','正式な推奨使用時間を確認後に記載します。確認できるまでは、商品パッケージまたは取扱説明に従ってご使用ください。'],
-      ['繰り返し使用できますか？','再利用の可否が未確認のため、メーカーの正式な商品仕様を確認後に記載します。'],
-      ['毎日使用できますか？','使用頻度は正式な商品仕様に従ってください。肌の状態を確認し、異常を感じた場合は使用を中止してください。'],
-      ['敏感肌でも使用できますか？','すべての方に刺激が起こらないことを保証するものではありません。肌が敏感な方は、使用前に商品表示を確認し、異常がある場合は使用を控えてください。'],
-      ['テラヘルツ波とは何ですか？','一般に、電波と赤外線の間に位置する周波数帯の電磁波を指します。通信、分析、センシングなど、さまざまな分野で研究されています。'],
-      ['貼るだけでリフトアップしますか？','本商品は医薬品や治療を目的とした商品ではありません。「リフトアップ」は商品名および美容ケアのコンセプトを表すものであり、身体の変化や効果を保証するものではありません。'],
-      ['送料はいくらですか？','配送条件が確定していないため、正式な送料情報を確認後に記載します。']
-    ];
     var list = document.getElementById('faq-list'); if(!list) return;
-    FAQ.forEach(function(qa, i){
-      var item = document.createElement('div');
-      item.className = 'faq-item reveal';
-      var aid = 'faq-a-'+i, bid='faq-q-'+i;
-      item.innerHTML =
-        '<button class="faq-q" id="'+bid+'" aria-expanded="false" aria-controls="'+aid+'">' +
-          '<span class="qmark">Q</span><span>'+qa[0]+'</span><span class="plus" aria-hidden="true"></span>' +
-        '</button>' +
-        '<div class="faq-a" id="'+aid+'" role="region" aria-labelledby="'+bid+'"><div class="faq-a-inner">'+qa[1]+'</div></div>';
-      list.appendChild(item);
-    });
     list.addEventListener('click', function(e){
       var btn = e.target.closest('.faq-q'); if(!btn) return;
       var item = btn.parentElement;
