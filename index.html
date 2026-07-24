@@ -314,6 +314,8 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 
 /* ---------- Concern cards ---------- */
 .concerns{background:var(--soft)}
+.concern-figure{margin:0 auto;max-width:560px}
+.concern-figure img{width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow)}
 .concern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:2.4rem}
 .concern-card{background:#fff;border:1px solid var(--line-rose);border-radius:var(--radius);padding:1.5rem 1.4rem;
   display:flex;align-items:flex-start;gap:.9rem;box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s}
@@ -639,20 +641,21 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 
 <!-- ============================== CONCERNS ============================== -->
 <section class="section concerns">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Your Concern</span>
-      <h2 class="sec-title">こんな美容のお悩みは<br>ありませんか？</h2>
-      <div class="s-line"></div>
-    </div>
-    <div class="concern-grid">
-      <div class="concern-card reveal"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>フェイスラインの印象が気になる</p></div>
-      <div class="concern-card reveal" data-d="1"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>頬や口元をすっきり見せたい</p></div>
-      <div class="concern-card reveal" data-d="2"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>首元やデコルテまで美容ケアしたい</p></div>
-      <div class="concern-card reveal"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>忙しくて美容時間を確保しにくい</p></div>
-      <div class="concern-card reveal" data-d="1"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>毎日無理なく続けられるケアを探している</p></div>
-      <div class="concern-card reveal" data-d="2"><span class="chk"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><p>いつものスキンケアに新しい習慣を加えたい</p></div>
-    </div>
+  <!-- 見出し・お悩み項目は画像内に含まれるが、SEO/スクリーンリーダー用に実テキストを保持 -->
+  <h2 class="sr-only">こんな美容のお悩みはありませんか？</h2>
+  <ul class="sr-only">
+    <li>フェイスラインの印象が気になる</li>
+    <li>頬や口元をすっきり見せたい</li>
+    <li>首元やデコルテまで美容ケアしたい</li>
+    <li>忙しくて美容時間を確保しにくい</li>
+    <li>毎日無理なく続けられるケアを探している</li>
+    <li>いつものスキンケアに新しい習慣を加えたい</li>
+  </ul>
+  <div class="wrap reveal">
+    <figure class="concern-figure">
+      <img src="images/terapp-concern.jpg" width="864" height="1821" loading="lazy" decoding="async"
+           alt="Your Concern こんな美容のお悩みはありませんか？ フェイスラインの印象が気になる／頬や口元をすっきり見せたい／首元やデコルテまで美容ケアしたい／忙しくて美容時間を確保しにくい／毎日無理なく続けられるケアを探している／いつものスキンケアに新しい習慣を加えたい。TERAPP商品パッケージと花のイメージ。">
+    </figure>
   </div>
 </section>
 
