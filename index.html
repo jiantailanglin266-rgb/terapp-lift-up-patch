@@ -141,8 +141,9 @@ header{
 }
 header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(1.1);box-shadow:0 1px 0 var(--line-rose),0 8px 30px rgba(184,95,120,.06)}
 .brand{display:flex;align-items:center;gap:.5rem;text-decoration:none}
-.brand-mark{width:24px;height:24px;flex-shrink:0}
-.brand-name{font-family:var(--sans);font-weight:600;font-size:1.05rem;letter-spacing:.22em;color:var(--text)}
+.brand-mark{width:30px;height:27px;flex-shrink:0}
+.brand-name{font-family:var(--sans);font-weight:700;font-size:1.08rem;letter-spacing:.24em;
+  background:linear-gradient(180deg,#E4CFA3,#C9A86A 55%,#A9843F);-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav{display:flex;align-items:center;gap:2rem}
 .nav a{font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .3s;position:relative}
 .nav a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--deep);transition:width .3s var(--ease)}
@@ -453,7 +454,10 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 /* ---------- Footer ---------- */
 footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 .foot-wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
-.foot-brand{font-family:var(--sans);font-weight:600;font-size:1.1rem;letter-spacing:.22em;color:#fff}
+.foot-brand{display:inline-flex;align-items:center;gap:.55rem}
+.foot-mark{width:34px;height:30px;flex-shrink:0}
+.foot-brand-text{font-family:var(--sans);font-weight:700;font-size:1.1rem;letter-spacing:.24em;
+  background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
 .foot-links{display:flex;flex-wrap:wrap;gap:1.3rem}
 .foot-links a{font-family:var(--sans);font-size:.72rem;letter-spacing:.05em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .3s}
 .foot-links a:hover{color:#fff}
@@ -509,7 +513,15 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 <!-- ============================== HEADER ============================== -->
 <header id="hdr">
   <a href="#top" class="brand" aria-label="TERAPP ホーム">
-    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E99AAD"/><stop offset="1" stop-color="#C9A86A"/></linearGradient></defs><circle cx="16" cy="16" r="13" fill="none" stroke="url(#bm)" stroke-width="2"/><circle cx="16" cy="16" r="5" fill="url(#bm)"/></svg>
+    <svg class="brand-mark" viewBox="452 286 296 264" aria-hidden="true">
+      <defs><linearGradient id="lgH" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".45" stop-color="#D9BE86"/><stop offset=".75" stop-color="#C29B57"/><stop offset="1" stop-color="#A9843F"/></linearGradient></defs>
+      <g fill="none" stroke="url(#lgH)" stroke-width="8" stroke-linecap="round">
+        <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
+        <path d="M570,470 A30,30 0 0 1 630,470"/><path d="M542,470 A58,58 0 0 1 658,470"/>
+        <path d="M514,470 A86,86 0 0 1 686,470"/><path d="M486,470 A114,114 0 0 1 714,470"/>
+      </g>
+      <circle cx="600" cy="470" r="7" fill="url(#lgH)"/>
+    </svg>
     <span class="brand-name">TERAPP</span>
   </a>
   <nav class="nav" aria-label="メインナビゲーション">
@@ -841,7 +853,18 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 <!-- ============================== FOOTER ============================== -->
 <footer>
   <div class="foot-wrap">
-    <span class="foot-brand">TERAPP</span>
+    <span class="foot-brand">
+      <svg class="foot-mark" viewBox="452 286 296 264" aria-hidden="true">
+        <defs><linearGradient id="lgF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".5" stop-color="#D9BE86"/><stop offset="1" stop-color="#C29B57"/></linearGradient></defs>
+        <g fill="none" stroke="url(#lgF)" stroke-width="8" stroke-linecap="round">
+          <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
+          <path d="M570,470 A30,30 0 0 1 630,470"/><path d="M542,470 A58,58 0 0 1 658,470"/>
+          <path d="M514,470 A86,86 0 0 1 686,470"/><path d="M486,470 A114,114 0 0 1 714,470"/>
+        </g>
+        <circle cx="600" cy="470" r="7" fill="url(#lgF)"/>
+      </svg>
+      <span class="foot-brand-text">TERAPP</span>
+    </span>
     <nav class="foot-links" aria-label="フッターナビゲーション">
       <!-- TODO(公開前): TERAPP専用の各法務ページを作成しリンク先を差し替える -->
       <a href="tokushoho.html">特定商取引法に基づく表記</a>
