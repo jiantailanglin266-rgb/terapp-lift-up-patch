@@ -365,8 +365,11 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .lead.muted{color:var(--muted)}
 
 /* Reveal on scroll */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.reveal.in{opacity:1;transform:none}
+/* 処方E-1: 高級感は「速く動く」でなく「ゆっくり像を結ぶ」。blur→芯が合う reveal（1.1s） */
+.reveal{opacity:0;transform:translateY(26px) scale(.988);filter:blur(7px);
+  transition:opacity 1100ms var(--ease),transform 1100ms var(--ease),filter 1100ms var(--ease);will-change:transform,filter}
+.reveal.in{opacity:1;transform:none;filter:blur(0)}
+/* スタッガー 80ms 刻み（同時に動かさない） */
 .reveal[data-d="1"]{transition-delay:.08s}
 .reveal[data-d="2"]{transition-delay:.16s}
 .reveal[data-d="3"]{transition-delay:.24s}
@@ -410,6 +413,15 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .areas{background:var(--soft)}
 .areas-figure{margin:0 auto;max-width:680px}
 .areas-figure img{width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow)}
+/* ===== 処方D: 焼き込み画像を馴染ませる（文字が透けるmask/multiply全面適用は避け、色温度統一に留める）===== */
+/* D-3: 全画像に同一カラーグレード（素材ごとの色温度差をなくす） */
+.concept-figure img,.concern-figure img,.areas-figure img{filter:saturate(.93) contrast(1.03) brightness(1.02)}
+/* 浮きを抑えるため強い影を環境影へ置換 */
+.concept-figure img,.concern-figure img,.areas-figure img{box-shadow:0 34px 60px -34px rgba(184,95,120,.30)}
+/* D-3: 素材の地色をページのピンクへわずかに寄せ「貼り付き」を減らす（上下だけ・ごく薄く） */
+.concept-figure,.concern-figure,.areas-figure{position:relative;isolation:isolate}
+.concept-figure::after,.concern-figure::after,.areas-figure::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:22px;mix-blend-mode:multiply;
+  background:linear-gradient(180deg, rgba(255,244,247,.14) 0%, rgba(255,244,247,0) 42%, rgba(255,244,247,.18) 100%)}
 .areas-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;margin-top:2.4rem}
 .areas-visual{position:relative}
 .areas-visual img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -584,7 +596,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .hero h1 .line span,.hero-eyebrow,.hero-sub,.hero-name,.hero-note,.hero-cta,.hero-price,.hero-pricenote,.scroll-cue{opacity:1!important;transform:none!important}
-  .reveal{opacity:1!important;transform:none!important}
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
   .mq-track{transform:none!important}
   .marquee{justify-content:flex-start}
   .product{animation:none}
@@ -690,7 +702,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
           <path d="M560,812 L600,804 L640,812 L600,820 Z" fill="url(#kvGold)"/>
         </svg>
       </div>
-      <div class="particles" id="particles" aria-hidden="true"></div>
+<!-- 処方E-7(引き算): ヒーローの光の粒子は"キラキラ"で装飾価値が低いため除去。署名は光の輪＋（要判断で）金の羽に集約 -->
     </div>
 
     <h1 aria-label="あなた史上、最高のフェイスラインへ">
@@ -1119,20 +1131,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
     });
   }
 
-  /* ---- Hero particles (軽量: CSS駆動の少数DOM) ---- */
-  (function(){
-    var box = document.getElementById('particles'); if(!box || reduce) return;
-    var N = 12;
-    for(var i=0;i<N;i++){
-      var s = document.createElement('i');
-      var x = 8 + (i*83 % 84), y = 10 + ((i*37) % 80);
-      s.style.left = x + '%'; s.style.top = y + '%';
-      s.style.setProperty('--pd', (5 + (i%5)) + 's');
-      s.style.setProperty('--pdl', (i*0.4) + 's');
-      s.style.transform = 'scale(' + (0.5 + (i%3)*0.3) + ')';
-      box.appendChild(s);
-    }
-  })();
+  /* ---- Hero particles: 処方E-7(引き算)により除去（キラキラは高級感を損なうため） ---- */
 
   /* ---- Hero parallax (pointer only; スマホのセンサー許可は要求しない) ---- */
   (function(){
