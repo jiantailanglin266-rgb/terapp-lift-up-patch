@@ -156,11 +156,30 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  background:var(--bg);color:var(--text);
+  background:transparent;color:var(--text);   /* 処方A: 背景は .bg-canvas に一元化 */
   font-family:var(--jp);font-weight:400;line-height:1.9;
   overflow-x:hidden;position:relative;
   letter-spacing:.02em;
 }
+html{background:#FFFCFD}  /* .bg-canvas 読み込み前のフォールバック地色 */
+
+/* ============================================================
+   処方A: ページ全体を1枚の連続背景に（セクション境界を消す）
+   処方B: 微細グレインで階調を撹拌しバンディングを消す
+   ============================================================ */
+.bg-canvas{position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(130% 70% at 50% -15%, #FFFAFC 0%, rgba(255,250,252,0) 62%),
+    radial-gradient(95% 60% at 108% 38%, #FFF0F4 0%, rgba(255,240,244,0) 58%),
+    radial-gradient(85% 60% at -8% 74%, #FDF7F9 0%, rgba(253,247,249,0) 60%),
+    linear-gradient(180deg, #FFFCFD 0%, #FFF4F7 46%, #FEF8FA 100%);}
+.bg-grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.038;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;}
+/* 処方A: 個別セクション背景を撤去し .bg-canvas に一元化（濃色 .story／フッター／マーキー帯は除く）
+   ※ main 子孫セレクタで詳細度を上げ、後方の個別 .concept{...} 等の背景指定に確実に勝たせる */
+main .hero,main .concept,main .concerns,main .features,main .areas,main .howto,main .scenes,main .terahertz,main .pricing,main .reviews,main .faq,main .final,main .biz{background:transparent}
+
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 ::selection{background:var(--pale);color:var(--deep)}
@@ -437,8 +456,13 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .thz-note p{font-size:.86rem;color:var(--muted);line-height:1.9}
 
 /* ---------- Brand story ---------- */
-.story{background:linear-gradient(160deg,#332B2E,#4a3a40);color:#fff;position:relative;overflow:hidden}
-.story::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 80% 10%,rgba(201,168,106,.18),transparent 60%),radial-gradient(50% 50% at 10% 90%,rgba(233,154,173,.16),transparent 60%)}
+/* 処方C-1: 濃色セクションは直角で切らず、上下±160pxの移行帯で連続背景へ溶かす */
+.story{background:transparent;color:#fff;position:relative;isolation:isolate;overflow:visible}
+.story::before{content:"";position:absolute;inset:-160px 0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(60% 55% at 80% 22%,rgba(201,168,106,.16),transparent 60%),
+    radial-gradient(50% 45% at 10% 78%,rgba(233,154,173,.14),transparent 60%),
+    linear-gradient(180deg, rgba(51,43,46,0) 0%, #332B2E 160px, #332B2E calc(100% - 160px), rgba(51,43,46,0) 100%)}
 .story .wrap{position:relative}
 .story .eyebrow{color:var(--gold-l)}
 .story-big{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.6rem,4.4vw,2.6rem);line-height:1.6;margin:1.4rem 0 2rem;color:#fff}
@@ -508,7 +532,10 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .biz-row .tbd{color:var(--muted);font-size:.85rem}
 
 /* ---------- Footer ---------- */
-footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
+footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem;position:relative;isolation:isolate}
+/* 処方C-1: フッター濃色への移行帯（biz→footer の直角段差を溶かす） */
+footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130px;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(51,43,46,0) 0%, #332B2E 100%)}
 .foot-wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
 .foot-brand{display:inline-flex;align-items:center;gap:.55rem}
 .foot-mark{width:34px;height:30px;flex-shrink:0}
@@ -567,6 +594,10 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 <body>
 <!-- スキップリンク（キーボード最初の要素・本文へ） -->
 <a href="#main" class="skip-link">本文へスキップ</a>
+
+<!-- 処方A/B: ページ全体の連続背景＋グレイン（固定・装飾・操作透過） -->
+<div class="bg-canvas" aria-hidden="true"></div>
+<div class="bg-grain" aria-hidden="true"></div>
 
 <!-- ============================== HEADER ============================== -->
 <header id="hdr">
