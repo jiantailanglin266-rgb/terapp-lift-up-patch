@@ -302,10 +302,15 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .reveal[data-d="2"]{transition-delay:.16s}
 .reveal[data-d="3"]{transition-delay:.24s}
 
+/* screen-reader only (視覚非表示・SEO/a11y用) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
 /* ---------- Concept ---------- */
 .concept{background:linear-gradient(180deg,#fff,#FFF9FB)}
 .concept .sec-title{margin-bottom:1.6rem}
 .concept .lead{max-width:640px}
+.concept-figure{margin:0}
+.concept-figure img{width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow)}
 
 /* ---------- Concern cards ---------- */
 .concerns{background:var(--soft)}
@@ -621,13 +626,14 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
 
 <!-- ============================== CONCEPT ============================== -->
 <section class="section concept" id="concept">
-  <div class="wrap-narrow center">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Concept</span>
-      <h2 class="sec-title">貼るだけで始まる、<br>新しい美容ルーティン。</h2>
-      <div class="s-line"></div>
-    </div>
-    <p class="lead reveal" data-d="1">TERAPP Lift Up Patchは、フェイスラインや首元など、印象が気になる部分へ貼って使用する美容ケア用パッチです。忙しい朝にも、ゆっくり過ごす夜にも。いつものスキンケアにプラスするだけで、無理なく続けられる美容習慣を提案します。</p>
+  <!-- 見出し・本文は画像内に含まれるが、SEO/スクリーンリーダー用に実テキストを保持（視覚的には非表示） -->
+  <h2 class="sr-only">貼るだけで始まる、新しい美容ルーティン。</h2>
+  <p class="sr-only">TERAPP Lift Up Patchは、フェイスラインや首元など、印象が気になる部分へ貼って使用する美容ケア用パッチです。忙しい朝にも、ゆっくり過ごす夜にも。いつものスキンケアにプラスするだけで、無理なく続けられる美容習慣を提案します。スキマ時間に、貼るだけ簡単、やさしい使い心地。自分らしい美しさを、もっと上向きに。</p>
+  <div class="wrap-narrow reveal">
+    <figure class="concept-figure">
+      <img src="images/terapp-concept.jpg" width="1181" height="1331" loading="lazy" decoding="async"
+           alt="貼るだけで始まる、新しい美容ルーティン。TERAPP Lift Up Patchを取り入れる女性と商品パッケージのイメージ。スキマ時間に・貼るだけ簡単・やさしい使い心地。">
+    </figure>
   </div>
 </section>
 
