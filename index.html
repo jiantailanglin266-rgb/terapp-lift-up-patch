@@ -198,7 +198,8 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 }
 .hero h1 .line{display:block;overflow:hidden}
 .hero h1 .line span{display:block;transform:translateY(110%);opacity:0}
-.hero-sub{margin-top:1.8rem;font-size:clamp(.92rem,2.4vw,1.08rem);color:var(--muted);line-height:2;opacity:0}
+.hero-sub{margin-top:1.6rem;font-size:clamp(1rem,2.8vw,1.32rem);color:var(--text);font-weight:500;letter-spacing:.06em;line-height:1.9;opacity:0}
+.hero-sub .accent{color:var(--deep);font-weight:700}
 .hero-sub .line span{display:inline-block}
 .hero-name{margin-top:2rem;font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,1.9rem);letter-spacing:.08em;color:var(--deep);opacity:0}
 .hero-note{margin-top:.6rem;font-size:.8rem;color:var(--muted);opacity:0}
@@ -232,6 +233,11 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .product-ph svg{width:46%;opacity:.55}
 .product-ph .ph-label{font-family:var(--sans);font-size:.56rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
 .product-ph .ph-name{font-family:var(--serif);font-size:1.05rem;color:var(--deep);letter-spacing:.05em}
+/* TERAPP ブランドキービジュアル（濃緑カード） */
+.product.brand-kv{width:82%;filter:none;border-radius:26px;overflow:hidden;
+  box-shadow:0 34px 70px rgba(10,32,28,.40),0 10px 26px rgba(184,95,120,.16);
+  border:1px solid rgba(201,168,106,.4)}
+.brand-kv svg{display:block;width:100%;height:auto}
 
 /* Particles */
 .particles{position:absolute;inset:0;z-index:2;pointer-events:none}
@@ -532,25 +538,56 @@ footer{background:#332B2E;color:#fff;padding:3.4rem 1.5rem 6rem}
     <div class="stage" data-h="2">
       <div class="stage-glow"></div>
       <div class="stage-rings"><span class="ring r3"></span><span class="ring r1"></span><span class="ring r2"></span></div>
-      <div class="product">
-        <!-- 実画像が用意され次第 <img> を使用。無い場合は下の上品なプレースホルダーを表示 -->
-        <img src="images/terapp-lift-up-patch-hero.webp" alt="TERAPP Lift Up Patch 商品イメージ" width="420" height="560" fetchpriority="high"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <div class="product-ph" style="display:none">
-          <svg viewBox="0 0 120 150" aria-hidden="true"><defs><linearGradient id="phg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E99AAD"/><stop offset="1" stop-color="#C9A86A"/></linearGradient></defs><rect x="18" y="14" width="84" height="122" rx="20" fill="none" stroke="url(#phg)" stroke-width="2.5"/><ellipse cx="60" cy="66" rx="30" ry="22" fill="none" stroke="url(#phg)" stroke-width="2"/><circle cx="60" cy="66" r="7" fill="url(#phg)"/></svg>
-          <span class="ph-label">Product Image</span>
-          <span class="ph-name">TERAPP Lift Up Patch</span>
-        </div>
+      <!-- TERAPP ブランドキービジュアル（提供ロゴを忠実再現したインラインSVG）。
+           正式ロゴ画像を使う場合は images/terapp-kv.webp を用意し <img> に差し替え可能。 -->
+      <div class="product brand-kv" role="img" aria-label="TERAPP ブランドキービジュアル">
+        <svg viewBox="0 0 1200 1060" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="kvBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#15413A"/><stop offset=".55" stop-color="#0C2A25"/><stop offset="1" stop-color="#081E1A"/>
+            </linearGradient>
+            <linearGradient id="kvGold" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F3E6B4"/><stop offset=".45" stop-color="#D9BE86"/><stop offset=".75" stop-color="#C29B57"/><stop offset="1" stop-color="#A9843F"/>
+            </linearGradient>
+            <filter id="kvGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- faceted dark-green background -->
+          <rect width="1200" height="1060" fill="url(#kvBg)"/>
+          <polygon points="0,0 1200,340 1200,0" fill="#ffffff" opacity=".035"/>
+          <polygon points="0,0 0,760 560,0" fill="#000000" opacity=".16"/>
+          <polygon points="1200,1060 560,1060 1200,470" fill="#ffffff" opacity=".03"/>
+          <polygon points="0,1060 0,560 460,1060" fill="#000000" opacity=".18"/>
+          <polygon points="360,0 1000,1060 1200,760 600,0" fill="#1c4d44" opacity=".35"/>
+          <polygon points="200,1060 760,0 900,0 420,1060" fill="#0a221e" opacity=".4"/>
+          <!-- terahertz emblem -->
+          <g fill="none" stroke="url(#kvGold)" stroke-width="8" stroke-linecap="round" filter="url(#kvGlow)">
+            <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
+            <path d="M570,470 A30,30 0 0 1 630,470"/>
+            <path d="M542,470 A58,58 0 0 1 658,470"/>
+            <path d="M514,470 A86,86 0 0 1 686,470"/>
+            <path d="M486,470 A114,114 0 0 1 714,470"/>
+          </g>
+          <circle cx="600" cy="470" r="7" fill="url(#kvGold)"/>
+          <!-- wordmark -->
+          <text x="600" y="712" text-anchor="middle" fill="url(#kvGold)" filter="url(#kvGlow)"
+                font-family="Montserrat, sans-serif" font-weight="800" font-size="186" letter-spacing="10">TERAPP</text>
+          <!-- divider with lens -->
+          <line x1="380" y1="812" x2="560" y2="812" stroke="url(#kvGold)" stroke-width="3"/>
+          <line x1="640" y1="812" x2="820" y2="812" stroke="url(#kvGold)" stroke-width="3"/>
+          <path d="M560,812 L600,804 L640,812 L600,820 Z" fill="url(#kvGold)"/>
+        </svg>
       </div>
       <div class="particles" id="particles" aria-hidden="true"></div>
     </div>
 
-    <h1 aria-label="貼るたび、わたしの輪郭に自信を。">
-      <span class="line" data-h="3"><span>貼るたび、</span></span>
-      <span class="line" data-h="4"><span>わたしの輪郭に自信を。</span></span>
+    <h1 aria-label="あなた史上、最高のフェイスラインへ">
+      <span class="line" data-h="3"><span>あなた史上、</span></span>
+      <span class="line" data-h="4"><span>最高のフェイスラインへ</span></span>
     </h1>
 
-    <p class="hero-sub" data-h="5">毎日のスキンケアに、<br>新しい美容習慣を。</p>
+    <p class="hero-sub" data-h="5">貼るだけ<span class="accent">&Prime;瞬感&Prime;</span>リフトケア</p>
     <p class="hero-name" data-h="6">TERAPP Lift Up Patch</p>
     <p class="hero-note" data-h="7">テラヘルツ特殊加工を施した、美容ケア用リフティングパッチ。</p>
 
