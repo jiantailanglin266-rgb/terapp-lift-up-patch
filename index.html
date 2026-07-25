@@ -135,23 +135,24 @@
   /* ===== Emerald Luxury（ダークエメラルド×ゴールド×クリームの2トーン） =====
      ※ 変数名は据え置き、値のみ remap。旧ピンク(rose/deep/soft/pale/line-rose)はゴールド/クリームへ写像し、
         全コンポーネントを一括で新トンマナへ移行する。 */
-  --bg:#F4EDE0;        /* クリーム地（ライト帯の基調） */
-  --soft:#EFE6D4;      /* クリーム淡（旧soft pinkの置換） */
-  --pale:#E7DBC3;      /* クリーム濃（旧pale pink） */
-  --rose:#C9A86A;      /* アクセント=ゴールド（旧rose） */
-  --deep:#A9843F;      /* 主役/CTA=濃ゴールド（旧deep rose） */
+  /* ===== 全面ダークエメラルド（背景はヘッダーと同じ濃緑に統一） ===== */
+  --bg:#0C2A25;        /* 濃緑（基調） */
+  --soft:#12332C;      /* 濃緑（面・カードの淡） */
+  --pale:#0E2A24;      /* 濃緑（深） */
+  --rose:#C9A86A;      /* アクセント=ゴールド */
+  --deep:#A9843F;      /* 主役/CTA=濃ゴールド */
   --gold:#C9A86A;      /* Champagne Gold */
   --gold-l:#E4CFA3;
-  --gold-text:#7A5E20; /* クリーム地でテキストに使える濃ゴールド（#F4EDE0で≈5.1:1・AA） */
-  --emerald:#0C2A25;   /* 濃緑ゾーンの基調 */
+  --gold-text:#E4CFA3; /* 濃緑地でテキストに使える明ゴールド（濃緑で≈9:1・AA） */
+  --emerald:#0C2A25;
   --emerald-2:#08201C; /* 濃緑（深） */
   --emerald-3:#153E35; /* 濃緑（明・面/カード） */
   --cream-text:#EFE9DB;/* 濃緑地の本文（明） */
-  --muted-dark:rgba(239,233,219,.66); /* 濃緑地のミュート */
-  --text:#241C20;      /* クリーム地の本文（濃） */
-  --muted:#6E5E63;     /* クリーム地のミュート（AA） */
+  --muted-dark:rgba(239,233,219,.66);
+  --text:#EFE9DB;      /* 本文（明・濃緑地） */
+  --muted:rgba(239,233,219,.62); /* ミュート（明・濃緑地） */
   --line:rgba(201,168,106,.40);       /* ゴールド罫線 */
-  --line-rose:rgba(201,168,106,.28);  /* 旧ピンク罫線→ゴールド罫線 */
+  --line-rose:rgba(201,168,106,.26);  /* 旧ピンク罫線→ゴールド罫線 */
   --serif:'Cormorant Garamond',serif;
   --sans:'Montserrat',sans-serif;
   --jp:'Zen Kaku Gothic New',sans-serif;
@@ -169,7 +170,7 @@ body{
   overflow-x:hidden;position:relative;
   letter-spacing:.02em;
 }
-html{background:#F4EDE0}  /* .bg-canvas 読み込み前のフォールバック地色（クリーム） */
+html{background:#0C2A25}  /* .bg-canvas 読み込み前のフォールバック地色（濃緑） */
 
 /* ============================================================
    処方A: ページ全体を1枚の連続背景に（セクション境界を消す）
@@ -177,10 +178,10 @@ html{background:#F4EDE0}  /* .bg-canvas 読み込み前のフォールバック�
    ============================================================ */
 .bg-canvas{position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:
-    radial-gradient(130% 70% at 50% -15%, #FBF6EC 0%, rgba(251,246,236,0) 62%),
-    radial-gradient(95% 60% at 108% 38%, #F0E7D4 0%, rgba(240,231,212,0) 58%),
-    radial-gradient(85% 60% at -8% 74%, #F6EFE0 0%, rgba(246,239,224,0) 60%),
-    linear-gradient(180deg, #F7F1E5 0%, #EFE6D4 46%, #F5EFE2 100%);}
+    radial-gradient(120% 75% at 50% -8%, #16413A 0%, rgba(22,65,58,0) 55%),
+    radial-gradient(80% 60% at 106% 100%, #0A2420 0%, rgba(10,36,32,0) 60%),
+    radial-gradient(70% 55% at -6% 30%, #113029 0%, rgba(17,48,41,0) 58%),
+    linear-gradient(180deg, #0C2A25 0%, #08201C 55%, #0C2A25 100%);}
 .bg-grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.038;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:200px 200px;}
@@ -314,7 +315,7 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .product.brand-kv{width:82%;filter:none;border-radius:26px;overflow:hidden;
   box-shadow:0 34px 70px rgba(10,32,28,.40),0 10px 26px rgba(184,95,120,.16);
   border:1px solid rgba(201,168,106,.4)}
-.brand-kv svg{display:block;width:100%;height:auto}
+.brand-kv svg,.brand-kv img{display:block;width:100%;height:auto;border-radius:26px}
 
 /* Particles */
 .particles{position:absolute;inset:0;z-index:2;pointer-events:none}
@@ -640,9 +641,19 @@ main .final::before{content:"";position:absolute;inset:-150px 0 0 0;z-index:-1;p
 footer{background:#0C2A25}
 footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 100%)}
 
-/* マーキー帯：クリーム2トーン＋ゴールド文字 */
-.marquee.row1{background:var(--soft)} .marquee.row2{background:#FBF6EC}
-.mq-item{color:var(--gold-text)} .marquee.row1 .mq-item{color:var(--deep)}
+/* マーキー帯：濃緑2トーン＋明ゴールド文字 */
+.marquee.row1{background:#0F312A} .marquee.row2{background:#0A2621}
+.mq-item{color:var(--gold-l)} .marquee.row1 .mq-item{color:var(--gold-l)}
+.mq-star{color:var(--gold)}
+
+/* 濃緑地の各カードをダークガラス面へ（旧#fffカードの置換） */
+.price-card,.faq-item,.review-empty,.assurance li,.notice,.concern-card,.feature-card,.step,.scene-card,.area-item{
+  background:rgba(255,255,255,.045);border-color:var(--line)!important}
+.faq-item{border:1px solid var(--line)}
+.price-card{border:1px solid var(--line)} .price-card.reco{border:1.5px solid var(--gold)}
+.biz-table{border-top-color:var(--line)} .biz-row{border-bottom-color:var(--line)}
+.biz-row dd a{color:var(--gold-l);border-bottom-color:var(--line)}
+.notice{border:1px dashed var(--line)}
 
 /* 追従購入バー：濃緑ガラス＋明色 */
 .sticky-bar{background:rgba(9,28,24,.92);box-shadow:0 -6px 24px rgba(0,0,0,.28)}
@@ -742,44 +753,9 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
       <div class="stage-rings"><span class="ring r3"></span><span class="ring r1"></span><span class="ring r2"></span></div>
       <!-- TERAPP ブランドキービジュアル（提供ロゴを忠実再現したインラインSVG）。
            正式ロゴ画像を使う場合は images/terapp-kv.webp を用意し <img> に差し替え可能。 -->
-      <div class="product brand-kv" role="img" aria-label="TERAPP ブランドキービジュアル">
-        <svg viewBox="0 0 1200 1060" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="kvBg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#15413A"/><stop offset=".55" stop-color="#0C2A25"/><stop offset="1" stop-color="#081E1A"/>
-            </linearGradient>
-            <linearGradient id="kvGold" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#F3E6B4"/><stop offset=".45" stop-color="#D9BE86"/><stop offset=".75" stop-color="#C29B57"/><stop offset="1" stop-color="#A9843F"/>
-            </linearGradient>
-            <filter id="kvGlow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-          <!-- faceted dark-green background -->
-          <rect width="1200" height="1060" fill="url(#kvBg)"/>
-          <polygon points="0,0 1200,340 1200,0" fill="#ffffff" opacity=".035"/>
-          <polygon points="0,0 0,760 560,0" fill="#000000" opacity=".16"/>
-          <polygon points="1200,1060 560,1060 1200,470" fill="#ffffff" opacity=".03"/>
-          <polygon points="0,1060 0,560 460,1060" fill="#000000" opacity=".18"/>
-          <polygon points="360,0 1000,1060 1200,760 600,0" fill="#1c4d44" opacity=".35"/>
-          <polygon points="200,1060 760,0 900,0 420,1060" fill="#0a221e" opacity=".4"/>
-          <!-- terahertz emblem -->
-          <g fill="none" stroke="url(#kvGold)" stroke-width="8" stroke-linecap="round" filter="url(#kvGlow)">
-            <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
-            <path d="M570,470 A30,30 0 0 1 630,470"/>
-            <path d="M542,470 A58,58 0 0 1 658,470"/>
-            <path d="M514,470 A86,86 0 0 1 686,470"/>
-            <path d="M486,470 A114,114 0 0 1 714,470"/>
-          </g>
-          <circle cx="600" cy="470" r="7" fill="url(#kvGold)"/>
-          <!-- wordmark -->
-          <text x="600" y="712" text-anchor="middle" fill="url(#kvGold)" filter="url(#kvGlow)"
-                font-family="Montserrat, sans-serif" font-weight="800" font-size="186" letter-spacing="10">TERAPP</text>
-          <!-- divider with lens -->
-          <line x1="380" y1="812" x2="560" y2="812" stroke="url(#kvGold)" stroke-width="3"/>
-          <line x1="640" y1="812" x2="820" y2="812" stroke="url(#kvGold)" stroke-width="3"/>
-          <path d="M560,812 L600,804 L640,812 L600,820 Z" fill="url(#kvGold)"/>
-        </svg>
+      <div class="product brand-kv" role="img" aria-label="TERAPP ブランドロゴ">
+        <!-- FVロゴ：提供いただいた濃緑×ゴールドのブランドロゴ画像 -->
+        <img src="images/terapp-hero-logo.jpg" alt="TERAPP" width="1000" height="880" fetchpriority="high" decoding="async">
       </div>
 <!-- 処方E-7(引き算): ヒーローの光の粒子は"キラキラ"で装飾価値が低いため除去。署名は光の輪＋（要判断で）金の羽に集約 -->
     </div>
