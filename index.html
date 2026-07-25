@@ -9,7 +9,7 @@
 <title>TERAPP Lift Up Patch｜貼る美容習慣を毎日に</title>
 <meta name="description" content="テラヘルツ特殊加工を施した美容ケア用パッチ「TERAPP Lift Up Patch」。フェイスライン、頬、首元、デコルテなど、気になる部分の毎日の美容ケアに。">
 <meta name="author" content="TERAPP">
-<meta name="theme-color" content="#FFF4F7">
+<meta name="theme-color" content="#0C2A25">
 
 <!-- canonical/OGP: 本番ドメイン terapp.jp を正とする（GitHub Pagesにカスタムドメイン設定＝CNAME同梱／DNSはクライアント側作業）
      TODO: 専用OGP画像(1200x630)を用意でき次第 og:image / twitter:image を差し替える -->
@@ -425,11 +425,11 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 /* D-3: 全画像に同一カラーグレード（素材ごとの色温度差をなくす） */
 .concept-figure img,.concern-figure img,.areas-figure img{filter:saturate(.93) contrast(1.03) brightness(1.02)}
 /* 浮きを抑えるため強い影を環境影へ置換 */
-.concept-figure img,.concern-figure img,.areas-figure img{box-shadow:0 34px 60px -34px rgba(184,95,120,.30)}
+.concept-figure img,.concern-figure img,.areas-figure img{box-shadow:0 34px 60px -34px rgba(10,32,28,.45)}
 /* D-3: 素材の地色をページのピンクへわずかに寄せ「貼り付き」を減らす（上下だけ・ごく薄く） */
 .concept-figure,.concern-figure,.areas-figure{position:relative;isolation:isolate}
 .concept-figure::after,.concern-figure::after,.areas-figure::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:22px;mix-blend-mode:multiply;
-  background:linear-gradient(180deg, rgba(255,244,247,.14) 0%, rgba(255,244,247,0) 42%, rgba(255,244,247,.18) 100%)}
+  background:linear-gradient(180deg, rgba(10,32,28,.06) 0%, rgba(10,32,28,0) 42%, rgba(10,32,28,.10) 100%)}
 .areas-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;margin-top:2.4rem}
 .areas-visual{position:relative}
 .areas-visual img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -643,6 +643,12 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
 /* マーキー帯：クリーム2トーン＋ゴールド文字 */
 .marquee.row1{background:var(--soft)} .marquee.row2{background:#FBF6EC}
 .mq-item{color:var(--gold-text)} .marquee.row1 .mq-item{color:var(--deep)}
+
+/* 追従購入バー：濃緑ガラス＋明色 */
+.sticky-bar{background:rgba(9,28,24,.92);box-shadow:0 -6px 24px rgba(0,0,0,.28)}
+.sticky-bar .sb-info b{color:var(--cream-text)}
+.sticky-bar .sb-info span{color:var(--muted-dark)}
+.sticky-bar .sb-price{color:var(--gold-l)}
 
 /* ============================================================
    RESPONSIVE
@@ -1013,7 +1019,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
     </div>
     <!-- 実在する許諾済みレビューが提供されるまで空状態を表示。捏造しない。 -->
     <div class="review-empty reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#E99AAD" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C9A86A" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linejoin="round"/></svg>
       <p>お客様の声は、掲載許可をいただいた内容を準備中です。</p>
     </div>
   </div>
