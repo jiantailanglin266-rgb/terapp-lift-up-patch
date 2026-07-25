@@ -132,25 +132,33 @@
    単一ファイル完結 / インラインCSS＋バニラJS（既存MOFURI構成に準拠）
    ============================================================ */
 :root{
-  --bg:#FFFFFF;
-  --soft:#FFF4F7;      /* Soft Pink */
-  --pale:#FCE5EC;      /* Pale Pink */
-  --rose:#E99AAD;      /* Rose Pink */
-  --deep:#B85F78;      /* Deep Rose */
-  --gold:#C9A86A;      /* Champagne Gold（装飾・線・背景用） */
+  /* ===== Emerald Luxury（ダークエメラルド×ゴールド×クリームの2トーン） =====
+     ※ 変数名は据え置き、値のみ remap。旧ピンク(rose/deep/soft/pale/line-rose)はゴールド/クリームへ写像し、
+        全コンポーネントを一括で新トンマナへ移行する。 */
+  --bg:#F4EDE0;        /* クリーム地（ライト帯の基調） */
+  --soft:#EFE6D4;      /* クリーム淡（旧soft pinkの置換） */
+  --pale:#E7DBC3;      /* クリーム濃（旧pale pink） */
+  --rose:#C9A86A;      /* アクセント=ゴールド（旧rose） */
+  --deep:#A9843F;      /* 主役/CTA=濃ゴールド（旧deep rose） */
+  --gold:#C9A86A;      /* Champagne Gold */
   --gold-l:#E4CFA3;
-  --gold-text:#8A6A24; /* A11y: 白地でテキストに使える濃いゴールド（≈5:1・WCAG AA） */
-  --text:#332B2E;
-  --muted:#6E5E63;     /* A11y: 白地で≈5.7:1（旧#8A7A80は約4.1:1でAA不足のため是正） */
-  --line:rgba(201,168,106,.35);
-  --line-rose:rgba(233,154,173,.30);
+  --gold-text:#7A5E20; /* クリーム地でテキストに使える濃ゴールド（#F4EDE0で≈5.1:1・AA） */
+  --emerald:#0C2A25;   /* 濃緑ゾーンの基調 */
+  --emerald-2:#08201C; /* 濃緑（深） */
+  --emerald-3:#153E35; /* 濃緑（明・面/カード） */
+  --cream-text:#EFE9DB;/* 濃緑地の本文（明） */
+  --muted-dark:rgba(239,233,219,.66); /* 濃緑地のミュート */
+  --text:#241C20;      /* クリーム地の本文（濃） */
+  --muted:#6E5E63;     /* クリーム地のミュート（AA） */
+  --line:rgba(201,168,106,.40);       /* ゴールド罫線 */
+  --line-rose:rgba(201,168,106,.28);  /* 旧ピンク罫線→ゴールド罫線 */
   --serif:'Cormorant Garamond',serif;
   --sans:'Montserrat',sans-serif;
   --jp:'Zen Kaku Gothic New',sans-serif;
   --jp-serif:'Shippori Mincho',serif;
   --radius:18px;
-  --shadow:0 20px 60px rgba(184,95,120,.12);
-  --shadow-sm:0 8px 30px rgba(184,95,120,.10);
+  --shadow:0 24px 60px rgba(10,32,28,.14);
+  --shadow-sm:0 10px 30px rgba(10,32,28,.10);
   --ease:cubic-bezier(.22,1,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -161,7 +169,7 @@ body{
   overflow-x:hidden;position:relative;
   letter-spacing:.02em;
 }
-html{background:#FFFCFD}  /* .bg-canvas 読み込み前のフォールバック地色 */
+html{background:#F4EDE0}  /* .bg-canvas 読み込み前のフォールバック地色（クリーム） */
 
 /* ============================================================
    処方A: ページ全体を1枚の連続背景に（セクション境界を消す）
@@ -169,10 +177,10 @@ html{background:#FFFCFD}  /* .bg-canvas 読み込み前のフォールバック�
    ============================================================ */
 .bg-canvas{position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:
-    radial-gradient(130% 70% at 50% -15%, #FFFAFC 0%, rgba(255,250,252,0) 62%),
-    radial-gradient(95% 60% at 108% 38%, #FFF0F4 0%, rgba(255,240,244,0) 58%),
-    radial-gradient(85% 60% at -8% 74%, #FDF7F9 0%, rgba(253,247,249,0) 60%),
-    linear-gradient(180deg, #FFFCFD 0%, #FFF4F7 46%, #FEF8FA 100%);}
+    radial-gradient(130% 70% at 50% -15%, #FBF6EC 0%, rgba(251,246,236,0) 62%),
+    radial-gradient(95% 60% at 108% 38%, #F0E7D4 0%, rgba(240,231,212,0) 58%),
+    radial-gradient(85% 60% at -8% 74%, #F6EFE0 0%, rgba(246,239,224,0) 60%),
+    linear-gradient(180deg, #F7F1E5 0%, #EFE6D4 46%, #F5EFE2 100%);}
 .bg-grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.038;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:200px 200px;}
@@ -570,6 +578,71 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 .sticky-bar .sb-info span{font-size:.72rem;color:var(--muted)}
 .sticky-bar .sb-price{font-family:var(--jp-serif);font-weight:600;color:var(--deep);font-size:1rem;margin-left:auto}
 .sticky-bar .btn{padding:.7rem 1.3rem;font-size:.78rem}
+
+/* ============================================================
+   EMERALD LUXURY THEME — 濃緑ゾーンの上書き
+   （ヒーロー/テラヘルツ/ストーリー/最終CTA/フッター/ヘッダーを濃緑に。
+     コンセプト〜FAQ等のライト帯はトークンremapでクリーム×ゴールドへ自動移行）
+   ============================================================ */
+/* ヘッダー：透明→スクロールで濃緑ブラー。ナビは常に明色 */
+.nav a:not(.nav-cta){color:rgba(239,233,219,.82)}
+.nav a:not(.nav-cta):hover{color:#fff}
+.nav a:not(.nav-cta)::after{background:var(--gold-l)}
+header.scrolled{background:rgba(9,28,24,.86);box-shadow:0 1px 0 var(--line),0 10px 30px rgba(0,0,0,.28)}
+.burger span{background:var(--gold-l)}
+/* モバイルドロワーも濃緑に */
+.drawer{background:rgba(9,28,24,.97)}
+.drawer a:not(.nav-cta){color:var(--cream-text)}
+
+/* CTA：ゴールド面＋濃色文字 */
+.btn-primary{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#241C20;box-shadow:0 12px 26px rgba(201,168,106,.30)}
+.btn-primary:hover{box-shadow:0 16px 34px rgba(201,168,106,.42)}
+.nav-cta{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#241C20}
+.nav-cta:hover{color:#20180F}
+.price-badge{color:#241C20}
+
+/* ヒーロー：濃緑地＋明色テキスト（KVは元々濃緑で馴染む） */
+main .hero{background:linear-gradient(165deg,#0C2A25 0%,#08201C 55%,#0C2A25 100%)}
+.hero .stage-glow{background:radial-gradient(closest-side,rgba(201,168,106,.22),rgba(201,168,106,.06) 60%,transparent 75%)}
+.hero .ring.r1{background:radial-gradient(closest-side,transparent 78%,rgba(201,168,106,.30) 92%,transparent 100%)}
+.hero .ring.r3{background:radial-gradient(closest-side,transparent 82%,rgba(201,168,106,.16) 94%,transparent 100%)}
+.hero .eyebrow{color:var(--gold-l)}
+.hero h1{color:var(--cream-text)}
+.hero-sub{color:var(--cream-text)} .hero-sub .accent{color:var(--gold-l)}
+.hero-name{color:var(--gold-l)}
+.hero-note{color:var(--muted-dark)}
+.hero-price .p{color:var(--cream-text)} .hero-price .p b{color:var(--gold-l)}
+.hero-pricenote{color:var(--muted-dark)}
+.scroll-cue .txt{color:var(--gold-l)}
+.btn-ghost{background:rgba(239,233,219,.06);color:var(--gold-l);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--gold-l)}
+
+/* ※ テラヘルツ節は現在ピンクの焼き込み画像のため、濃緑化せずクリーム帯のまま
+     （画像を濃緑版に再生成できれば濃緑反転に変更可）。 */
+
+/* ストーリー：エメラルドへ（処方Cの上下移行帯を濃緑で再定義） */
+.story::before{background:
+  radial-gradient(60% 55% at 80% 22%,rgba(201,168,106,.14),transparent 60%),
+  radial-gradient(50% 45% at 10% 78%,rgba(201,168,106,.10),transparent 60%),
+  linear-gradient(180deg, rgba(12,42,37,0) 0%, #0C2A25 160px, #0C2A25 calc(100% - 160px), rgba(12,42,37,0) 100%)}
+.story .beat{color:var(--gold-l)}
+.story .close{color:#fff}
+
+/* 最終CTA：濃緑帯＋上に移行帯（faq クリームから溶かす） */
+main .final{background:#0C2A25;position:relative;isolation:isolate}
+main .final::before{content:"";position:absolute;inset:-150px 0 0 0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(12,42,37,0) 0%, #0C2A25 150px)}
+.final-big{color:var(--cream-text)}
+.final-sub{color:var(--muted-dark)}
+.final-note{color:var(--muted-dark)}
+
+/* フッター：エメラルド */
+footer{background:#0C2A25}
+footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 100%)}
+
+/* マーキー帯：クリーム2トーン＋ゴールド文字 */
+.marquee.row1{background:var(--soft)} .marquee.row2{background:#FBF6EC}
+.mq-item{color:var(--gold-text)} .marquee.row1 .mq-item{color:var(--deep)}
 
 /* ============================================================
    RESPONSIVE
