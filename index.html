@@ -116,7 +116,7 @@
         { "@type": "Question", "name": "入浴中や就寝中に使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "使用に適した場面は商品パッケージおよび取扱説明の記載に従ってください。水濡れや長時間の使用が想定されていない場合がありますので、記載の使用方法をご確認のうえお使いください。" } },
         { "@type": "Question", "name": "メイクの上から貼れますか？", "acceptedAnswer": { "@type": "Answer", "text": "清潔で乾いた肌へのご使用をおすすめします。使い方の詳細は取扱説明の記載をご確認ください。" } },
         { "@type": "Question", "name": "保管方法を教えてください。", "acceptedAnswer": { "@type": "Answer", "text": "高温・多湿・直射日光を避け、乳幼児の手の届かない場所に保管してください。詳しくは商品パッケージの記載に従ってください。" } },
-        { "@type": "Question", "name": "送料はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "配送方法・送料は購入手続き画面にてご確認いただけます。最新の配送条件は特定商取引法に基づく表記および購入ページの記載をご確認ください。" } },
+        { "@type": "Question", "name": "送料はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "送料は全国一律250円（税込）です。一定金額以上のご購入で送料無料になります（対象金額は準備中）。詳しくは特定商取引法に基づく表記をご確認ください。" } },
         { "@type": "Question", "name": "返品・交換はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "返品・交換の条件は特定商取引法に基づく表記および購入ページの記載をご確認ください。不良品の場合の対応についても、そちらに従います。" } },
         { "@type": "Question", "name": "どのくらいで届きますか？", "acceptedAnswer": { "@type": "Answer", "text": "お届け時期は購入手続き画面および特定商取引法に基づく表記をご確認ください。" } },
         { "@type": "Question", "name": "使用をやめたほうがよいのはどんなときですか？", "acceptedAnswer": { "@type": "Answer", "text": "使用中・使用後に赤み、はれ、かゆみ、刺激などの異常が現れた場合は、ただちに使用を中止してください。異常が続く場合は医師にご相談ください。" } }
@@ -316,6 +316,7 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
   box-shadow:0 34px 70px rgba(10,32,28,.40),0 10px 26px rgba(184,95,120,.16);
   border:1px solid rgba(201,168,106,.4)}
 .brand-kv svg,.brand-kv img{display:block;width:100%;height:auto;border-radius:26px}
+picture{display:block}  /* WebP<picture>ラッパを画像と同じブロック挙動に */
 
 /* Particles */
 .particles{position:absolute;inset:0;z-index:2;pointer-events:none}
@@ -755,7 +756,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
            正式ロゴ画像を使う場合は images/terapp-kv.webp を用意し <img> に差し替え可能。 -->
       <div class="product brand-kv" role="img" aria-label="TERAPP ブランドロゴ">
         <!-- FVロゴ：提供いただいた濃緑×ゴールドのブランドロゴ画像 -->
-        <img src="images/terapp-hero-logo.jpg" alt="TERAPP" width="1000" height="880" fetchpriority="high" decoding="async">
+        <picture><source srcset="images/terapp-hero-logo.webp" type="image/webp"><img src="images/terapp-hero-logo.jpg" alt="TERAPP" width="1000" height="880" fetchpriority="high" decoding="async"></picture>
       </div>
 <!-- 処方E-7(引き算): ヒーローの光の粒子は"キラキラ"で装飾価値が低いため除去。署名は光の輪＋（要判断で）金の羽に集約 -->
     </div>
@@ -778,7 +779,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
       <span class="p">1セット<b>2,200円</b></span>
       <span class="p">3セット<b>5,500円</b></span>
     </div>
-    <p class="hero-pricenote" data-h="10">※販売単位、税込表示、送料は公開前に確定情報へ更新します。</p>
+    <p class="hero-pricenote" data-h="10">※表示価格はすべて税込です。送料は全国一律250円（一定金額以上のご購入で送料無料）。</p>
   </div>
 
   <div class="scroll-cue" data-h="11">
@@ -804,8 +805,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   <p class="sr-only">TERAPP Lift Up Patchは、フェイスラインや首元など、印象が気になる部分へ貼って使用する美容ケア用パッチです。忙しい朝にも、ゆっくり過ごす夜にも。いつものスキンケアにプラスするだけで、無理なく続けられる美容習慣を提案します。スキマ時間に、貼るだけ簡単、やさしい使い心地。自分らしい毎日を、もっと心地よく。</p>
   <div class="wrap-narrow reveal">
     <figure class="concept-figure">
+      <picture><source srcset="images/terapp-concept.webp" type="image/webp">
       <img src="images/terapp-concept.jpg" width="1181" height="1331" loading="lazy" decoding="async"
            alt="貼るだけで始まる、新しい美容ルーティン。TERAPP Lift Up Patchを取り入れる女性と商品パッケージのイメージ。スキマ時間に・貼るだけ簡単・やさしい使い心地。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -824,8 +827,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </ul>
   <div class="wrap reveal">
     <figure class="concern-figure">
+      <picture><source srcset="images/terapp-concern.webp" type="image/webp">
       <img src="images/terapp-concern.jpg" width="864" height="1821" loading="lazy" decoding="async"
            alt="Your Concern こんな美容のお悩みはありませんか？ フェイスラインの印象が気になる／頬や口元をすっきり見せたい／首元やデコルテまで美容ケアしたい／忙しくて美容時間を確保しにくい／毎日無理なく続けられるケアを探している／いつものスキンケアに新しい習慣を加えたい。TERAPP商品パッケージと花のイメージ。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -842,8 +847,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </ol>
   <div class="wrap reveal">
     <figure class="concern-figure">
+      <picture><source srcset="images/terapp-features.webp" type="image/webp">
       <img src="images/terapp-features.jpg" width="864" height="1821" loading="lazy" decoding="async"
            alt="Features Beauty Care, Made Simple. 01 テラヘルツ特殊加工／02 貼るだけの手軽さ／03 気になる部分に使える／04 毎日の美容習慣へ。TERAPP Lift Up Patchの4つの特徴と商品パッケージのイメージ。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -860,8 +867,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </ul>
   <div class="wrap reveal">
     <figure class="areas-figure">
+      <picture><source srcset="images/terapp-areas.webp" type="image/webp">
       <img src="images/terapp-areas.jpg" width="1024" height="1536" loading="lazy" decoding="async"
            alt="Application Areas 気になる部分に、やさしく寄り添う。TERAPP Lift Up Patchを使用できる部位：フェイスライン／頬／首元／デコルテ。使用イメージと商品パッケージ。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -879,8 +888,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   <p class="sr-only">使用上の注意：肌に異常がないことを確認してご使用ください。傷、はれ、湿疹などがある部分にはご使用にならないでください。使用中または使用後に、赤み、はれ、かゆみ、刺激などの異常が現れた場合は使用を中止してください。肌の弱い方は短時間からお試しください。乳幼児の手の届かない場所に保管してください。高温・多湿・直射日光を避けて保管してください。メーカーの正式な注意事項が確定した場合は、その内容を優先して掲載します。</p>
   <div class="wrap reveal">
     <figure class="concern-figure">
+      <picture><source srcset="images/terapp-howto.webp" type="image/webp">
       <img src="images/terapp-howto.jpg" width="864" height="1821" loading="lazy" decoding="async"
            alt="How to Use 3ステップの、やさしい美容習慣。Step01 肌を清潔な状態にする／Step02 気になる部分に貼る／Step03 使用後はゆっくり剥がす。使用上の注意を含むTERAPP Lift Up Patchの使い方イメージ。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -900,8 +911,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </ul>
   <div class="wrap reveal">
     <figure class="concern-figure">
+      <picture><source srcset="images/terapp-scenes.webp" type="image/webp">
       <img src="images/terapp-scenes.jpg" width="864" height="1821" loading="lazy" decoding="async"
            alt="Beauty Routine わたしの時間に、そっと寄り添う。使用シーン：朝のスキンケア／メイク前の美容時間／在宅ワーク中／リラックスタイム／外出前の身支度／特別な日のセルフケア。TERAPP Lift Up Patchのある日常のイメージ。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -914,8 +927,10 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   <p class="sr-only">※本商品は医薬品・医療機器ではありません。テラヘルツ波に関する記述は一般的な情報であり、本商品の効果・効能を示すものではありません。</p>
   <div class="wrap reveal">
     <figure class="concern-figure">
+      <picture><source srcset="images/terapp-terahertz.webp" type="image/webp">
       <img src="images/terapp-terahertz.jpg" width="864" height="1821" loading="lazy" decoding="async"
            alt="Technology What is Terahertz? テラヘルツ波は電波と赤外線の間に位置する周波数帯の電磁波で、通信・センシング・分析などで研究が進められています。本商品は医薬品・医療機器ではなく、記述は一般的な情報です。">
+      </picture>
     </figure>
   </div>
 </section>
@@ -960,21 +975,21 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
         <a class="btn btn-primary pc-cta" href="contact.html" data-ev="three_set_click" data-checkout="">購入について問い合わせる</a>
       </div>
     </div>
-    <p class="price-note reveal">※価格は表示のとおりです。税込／税抜の区分、販売単位、送料などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
+    <p class="price-note reveal">※表示価格はすべて税込です。送料は全国一律250円（一定金額以上のご購入で送料無料）。販売単位・内容量などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
 
     <!-- 購入安心ブロック（不安要素を価格直下で解消） -->
     <ul class="assurance reveal" data-d="1">
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h13v8H3zM16 10h3l2 2v3h-5" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
-        <b>配送について</b><span>一定金額以上のご購入で送料無料。詳細は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
+        <b>配送について</b><span>送料は全国一律250円（一定金額以上で送料無料）。<a href="tokushoho.html">特商法表記</a>もご確認ください。</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18" stroke-linejoin="round"/></svg>
-        <b>お支払い</b><span>お支払い方法の詳細は<a href="tokushoho.html">特商法表記</a>に記載します。</span>
+        <b>お支払い</b><span>銀行振込／代金引換／クレジットカード／キャリア決済に対応。</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12a9 9 0 109-9M3 12l3-2M3 12l2 3" stroke-linejoin="round" stroke-linecap="round"/></svg>
-        <b>返品・交換</b><span>条件は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
+        <b>返品・交換</b><span>未開封に限り到着後30日以内は返品可能。詳細は<a href="tokushoho.html">特商法表記</a>を。</span>
       </li>
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.5 8.5 0 118-11.9" stroke-linecap="round"/><path d="M8 12l3 3 6-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1052,7 +1067,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" id="faq-q-10" aria-expanded="false" aria-controls="faq-a-10"><span class="qmark">Q</span><span>送料はいくらですか？</span><span class="plus" aria-hidden="true"></span></button>
-        <div class="faq-a" id="faq-a-10" role="region" aria-labelledby="faq-q-10"><div class="faq-a-inner">配送方法・送料は購入手続き画面にてご確認いただけます。最新の配送条件は<a href="tokushoho.html">特定商取引法に基づく表記</a>および購入ページの記載をご確認ください。</div></div>
+        <div class="faq-a" id="faq-a-10" role="region" aria-labelledby="faq-q-10"><div class="faq-a-inner">送料は全国一律250円（税込）です。一定金額以上のご購入で送料無料になります（対象金額は準備中）。詳しくは<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" id="faq-q-11" aria-expanded="false" aria-controls="faq-a-11"><span class="qmark">Q</span><span>返品・交換はできますか？</span><span class="plus" aria-hidden="true"></span></button>
