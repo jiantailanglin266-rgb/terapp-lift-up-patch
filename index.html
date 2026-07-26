@@ -216,8 +216,15 @@ html{background:#0C2A25}  /* .bg-canvas 読み込み前のフォールバック�
   animation:bdTwinkle var(--sd,5s) ease-in-out var(--sdl,0s) infinite}
 @keyframes bdTwinkle{0%,100%{opacity:.1;transform:scale(.5) rotate(0deg) translateY(0)}50%{opacity:.85;transform:scale(1.12) rotate(45deg) translateY(-9px)}}
 @media(max-width:560px){
-  .bd-corner{width:min(48vw,230px);opacity:.34}
-  .bd-corner.c-tr,.bd-corner.c-bl,.bd-ray{display:none}
+  /* スマホでも装飾を確実に見せる：四隅・光シャフトは消さず、グローを画面内へ大きく再配置 */
+  .bd-corner{width:min(58vw,250px);opacity:.5}
+  .bd-glow{filter:blur(46px)}
+  .bd-glow.g1{top:-4%;left:-28%;width:96vw;height:96vw;background:radial-gradient(circle,rgba(203,168,95,.30),transparent 70%)}
+  .bd-glow.g2{bottom:-6%;right:-30%;width:104vw;height:104vw;background:radial-gradient(circle,rgba(230,205,146,.26),transparent 70%)}
+  .bd-glow.g3{top:40%;left:-22%;width:90vw;height:90vw;background:radial-gradient(circle,rgba(150,175,120,.20),transparent 72%)}
+  .bd-glow.g4{top:72%;right:-24%;left:auto;width:84vw;height:84vw;background:radial-gradient(circle,rgba(203,168,95,.22),transparent 72%)}
+  .bd-ray{width:32vw;opacity:.55}
+  .bd-ray.r2{left:58%}
 }
 
 /* 処方A: 個別セクション背景を撤去し .bg-canvas に一元化（濃色 .story／フッター／マーキー帯は除く）
