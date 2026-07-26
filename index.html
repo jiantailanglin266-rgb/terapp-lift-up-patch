@@ -353,6 +353,17 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .brand-kv svg,.brand-kv img{display:block;width:100%;height:auto;border-radius:26px}
 picture{display:block}  /* WebP<picture>ラッパを画像と同じブロック挙動に */
 
+/* ===== 使用シーン 画像マーキー（ホバーで止めない・無限ループ） ===== */
+.scene-marquee{position:relative;z-index:2;padding:clamp(1.5rem,5vw,3rem) 0}
+.sm-viewport{overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.sm-track{display:flex;width:max-content;animation:smScroll 55s linear infinite;will-change:transform}
+.sm-card{flex:0 0 auto;width:clamp(150px,40vw,212px);aspect-ratio:2/3;margin-right:clamp(.7rem,2vw,1.1rem);
+  border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 46px -26px rgba(0,0,0,.6)}
+.sm-card img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes smScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
 /* Particles */
 .particles{position:absolute;inset:0;z-index:2;pointer-events:none}
 .particles i{position:absolute;width:5px;height:5px;border-radius:50%;
@@ -968,6 +979,14 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </div>
 </section>
 
+<!-- ============================== 使用シーン 画像マーキー（ホバーで止めない） ============================== -->
+<section class="scene-marquee" aria-label="TERAPP Lift Up Patch のある日常シーン">
+  <p class="sr-only">朝のスキンケア、メイク前の身支度、在宅ワーク中、リラックスタイム、スポーツ前後、旅行、特別な日の前に。TERAPP Lift Up Patch を毎日のさまざまなシーンで。</p>
+  <div class="sm-viewport">
+    <div class="sm-track" id="sm-track" aria-hidden="true"></div>
+  </div>
+</section>
+
 <!-- ============================== TERAHERTZ ============================== -->
 <section class="section terahertz">
   <!-- 見出し・本文・注記は画像内に含まれるが、SEO/スクリーンリーダー用に実テキストを保持 -->
@@ -1361,6 +1380,19 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
     }
     build(document.getElementById('mq1'), row1);
     build(document.getElementById('mq2'), row2);
+  })();
+
+  /* ---- 使用シーン 画像マーキー：7枚を2回複製して継ぎ目レス（ホバーで止めない） ---- */
+  (function(){
+    var track = document.getElementById('sm-track'); if(!track) return;
+    var N = 7, html = '';
+    for(var dup=0; dup<2; dup++){
+      for(var i=1; i<=N; i++){
+        html += '<div class="sm-card"><picture><source srcset="images/terapp-scene-'+i+'.webp" type="image/webp">'+
+                '<img src="images/terapp-scene-'+i+'.jpg" alt="" width="400" height="600" loading="lazy" decoding="async"></picture></div>';
+      }
+    }
+    track.innerHTML = html;
   })();
 
   /* ---- Pricing: カードは静的HTML。JSはcheckoutURL確定時のみ href/文言を差し替える補助 ---- */
