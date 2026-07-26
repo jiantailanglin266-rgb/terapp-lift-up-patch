@@ -438,15 +438,22 @@ header.scrolled{background:rgba(9,28,24,.86);backdrop-filter:blur(18px) saturate
 .notice .foot{margin-top:1rem;font-size:.74rem;color:var(--muted-dark)}
 
 /* ============================================================
-   SCENES
+   SCENES — 画像マーキー（ホバーで停止しない＝マーキー基本仕様）
    ============================================================ */
-.scene-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2.6rem}
-.scene-card{aspect-ratio:4/3;border-radius:var(--radius);background:rgba(255,255,255,.045);border:1px solid var(--line-2);
-  display:flex;align-items:flex-end;padding:1.2rem;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;transition:transform .45s var(--ease),border-color .45s}
-.scene-card:hover{transform:translateY(-4px);border-color:var(--line)}
-.scene-card .ico{position:absolute;top:1.1rem;right:1.1rem;color:var(--gold-l);opacity:.8}
-.scene-card .ico svg{width:24px;height:24px}
-.scene-card span{font-size:.9rem;font-weight:500;color:var(--cream-text)}
+.scene-marquee{margin-top:clamp(2.2rem,5vw,3.2rem);overflow:hidden;
+  /* 左右端を地色へフェード（高級感） */
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+          mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%)}
+.scene-mq-track{display:flex;gap:1.2rem;width:max-content;will-change:transform;
+  animation:sceneMq 55s linear infinite}
+/* ★マーキー基本仕様: カーソルを当てても停止しない（hoverでのplay-state変更は行わない） */
+@keyframes sceneMq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.scene-slide{flex:0 0 auto;width:clamp(200px,52vw,280px);border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line-2);box-shadow:var(--shadow-sm);position:relative;margin:0;background:#0A2621}
+.scene-slide::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:var(--radius);
+  box-shadow:inset 0 0 0 1px rgba(201,168,106,.12);
+  background:linear-gradient(180deg,rgba(8,32,28,0) 62%,rgba(8,32,28,.18) 100%)}
+.scene-slide img{width:100%;height:auto;display:block;aspect-ratio:2/3;object-fit:cover}
 
 /* ============================================================
    TERAHERTZ
@@ -600,6 +607,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   .mq-track{transform:none!important}
   .marquee{justify-content:flex-start}
   .product,.prod-box{animation:none}
+  /* 画像マーキー: 自動スクロールを止め、手動横スクロールに（端フェードも解除） */
+  .scene-marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+  .scene-mq-track{animation:none!important}
 }
 </style>
 </head>
@@ -923,13 +933,26 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
       <h2 class="sec-title"><span class="en">Fits Your Every Day.</span>わたしの時間に、そっと寄り添う。</h2>
       <div class="s-line"></div>
     </div>
-    <div class="scene-grid">
-      <div class="scene-card reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M5 12H3M21 12h-2M6 6l-1.5-1.5M18 6l1.5-1.5"/><circle cx="12" cy="12" r="4"/></svg></span><span>朝の身支度に</span></div>
-      <div class="scene-card reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span><span>デスクワークの合間に</span></div>
-      <div class="scene-card reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l4 4M12 13l-4 4M9 9l6 1"/></svg></span><span>トレーニングの前後に</span></div>
-      <div class="scene-card reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/></svg></span><span>立ち仕事の日に</span></div>
-      <div class="scene-card reveal" data-d="1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/><circle cx="12" cy="12" r="10"/></svg></span><span>移動・外出のおともに</span></div>
-      <div class="scene-card reveal" data-d="2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg></span><span>一日の終わりのリラックスに</span></div>
+  </div>
+  <!-- 使用シーン画像マーキー（自動スクロール／ホバーで停止しない） -->
+  <div class="scene-marquee reveal" role="group" aria-label="使用シーンのイメージ">
+    <div class="scene-mq-track">
+      <!-- 1周目 -->
+      <figure class="scene-slide"><img src="images/scene-01-morning.jpg" width="560" height="840" loading="lazy" decoding="async" alt="朝のスキンケア 一日の始まりに。洗面まわりで肌を整える女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-02-makeup.jpg" width="560" height="840" loading="lazy" decoding="async" alt="メイク前 身支度の時間に。鏡の前で身支度をする女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-03-remote.jpg" width="560" height="840" loading="lazy" decoding="async" alt="在宅ワーク ながらケアに。ノートPCの前でセルフケアをする女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-04-sports.jpg" width="560" height="840" loading="lazy" decoding="async" alt="スポーツ前後 コンディショニングに。タオルを掛けてケアする女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-05-travel.jpg" width="560" height="840" loading="lazy" decoding="async" alt="旅行 持ち運びやすく。トラベルポーチに小物を詰める女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-06-relax.jpg" width="560" height="840" loading="lazy" decoding="async" alt="リラックスタイム 夜のひとときに。キャンドルの灯りでくつろぐ女性のイメージ。"></figure>
+      <figure class="scene-slide"><img src="images/scene-07-special.jpg" width="560" height="840" loading="lazy" decoding="async" alt="特別な日 大切な予定の前に。ドレッサーで身支度を整える女性のイメージ。"></figure>
+      <!-- 2周目（継ぎ目を消すための複製・支援技術には非表示） -->
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-01-morning.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-02-makeup.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-03-remote.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-04-sports.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-05-travel.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-06-relax.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
+      <figure class="scene-slide" aria-hidden="true"><img src="images/scene-07-special.jpg" width="560" height="840" loading="lazy" decoding="async" alt=""></figure>
     </div>
   </div>
 </section>
