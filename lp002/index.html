@@ -172,6 +172,43 @@ body{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size:200px 200px;}
 
+/* ============================================================
+   BACKGROUND DECOR（TERAPP公式ブランドサイトの装飾をそのまま移植）
+   四隅のボタニカル線画 + アンビエントグロー + 光シャフト + きらめき
+   本文背面（sections z:2 の下）／pointer-events:none
+   ============================================================ */
+#bg-decor{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+#bg-decor .bd-glow{position:absolute;border-radius:50%;filter:blur(70px);will-change:transform,opacity}
+.bd-glow.g1{top:-14%;left:-10%;width:54vw;height:54vw;background:radial-gradient(circle,rgba(203,168,95,.24),transparent 70%);animation:bdGlow 15s ease-in-out infinite}
+.bd-glow.g2{bottom:-16%;right:-12%;width:58vw;height:58vw;background:radial-gradient(circle,rgba(230,205,146,.20),transparent 70%);animation:bdGlow 19s ease-in-out -5s infinite}
+.bd-glow.g3{top:26%;left:24%;width:54vw;height:54vw;background:radial-gradient(circle,rgba(150,175,120,.15),transparent 72%);animation:bdGlow 17s ease-in-out -9s infinite}
+.bd-glow.g4{top:62%;left:12%;width:44vw;height:44vw;background:radial-gradient(circle,rgba(203,168,95,.14),transparent 72%);animation:bdGlow 21s ease-in-out -3s infinite}
+@keyframes bdGlow{0%,100%{transform:scale(1);opacity:.72}50%{transform:scale(1.18);opacity:1}}
+/* 斜めに差し込む金の光シャフト（ゆっくり明滅） */
+.bd-ray{position:absolute;top:-25%;height:150%;width:clamp(70px,11vw,150px);filter:blur(8px);
+  background:linear-gradient(90deg,transparent,rgba(233,210,154,.13),transparent);
+  animation:bdRay var(--rd,16s) ease-in-out var(--rdl,0s) infinite}
+.bd-ray.r1{left:14%;transform:rotate(16deg)}
+.bd-ray.r2{left:52%;transform:rotate(16deg)}
+.bd-ray.r3{left:80%;transform:rotate(16deg)}
+@keyframes bdRay{0%,100%{opacity:0}45%,55%{opacity:1}}
+/* 四隅のボタニカル線画（ゆっくりシマー） */
+.bd-corner{position:absolute;width:min(35vw,380px);height:auto;opacity:.45;will-change:opacity,filter}
+.bd-corner.c-tl{top:-1.4rem;left:-1.4rem;animation:bdShimmer 8s ease-in-out infinite}
+.bd-corner.c-tr{top:-1.4rem;right:-1.4rem;transform:scaleX(-1);animation:bdShimmer 8s ease-in-out -2s infinite}
+.bd-corner.c-bl{bottom:-1.4rem;left:-1.4rem;transform:scaleY(-1);animation:bdShimmer 8s ease-in-out -4s infinite}
+.bd-corner.c-br{bottom:-1.4rem;right:-1.4rem;transform:scale(-1,-1);animation:bdShimmer 8s ease-in-out -6s infinite}
+@keyframes bdShimmer{0%,100%{opacity:.34;filter:drop-shadow(0 0 5px rgba(203,168,95,.15))}50%{opacity:.62;filter:drop-shadow(0 0 18px rgba(233,210,154,.5))}}
+/* きらめき（金の四芒星） */
+.bd-spark{position:absolute;width:var(--ss,16px);height:var(--ss,16px);opacity:.5;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='%23E9D29A'/%3E%3C/svg%3E") center/contain no-repeat;
+  animation:bdTwinkle var(--sd,5s) ease-in-out var(--sdl,0s) infinite}
+@keyframes bdTwinkle{0%,100%{opacity:.1;transform:scale(.5) rotate(0deg) translateY(0)}50%{opacity:.85;transform:scale(1.12) rotate(45deg) translateY(-9px)}}
+@media(max-width:560px){
+  .bd-corner{width:min(48vw,230px);opacity:.34}
+  .bd-corner.c-tr,.bd-corner.c-bl,.bd-ray{display:none}
+}
+
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 ::selection{background:rgba(201,168,106,.28);color:#fff}
@@ -265,8 +302,9 @@ header.scrolled{background:rgba(9,28,24,.86);backdrop-filter:blur(18px) saturate
    ============================================================ */
 .hero{
   position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-  overflow:hidden;padding:6rem 1.5rem 4rem;isolation:isolate;
-  background:linear-gradient(165deg,#0C2A25 0%,#08201C 55%,#0C2A25 100%);
+  overflow:hidden;padding:6rem 1.5rem 4rem;
+  /* 背景は .bg-canvas＋#bg-decor を透過で見せる（装飾を全体に効かせる） */
+  background:transparent;
 }
 .hero-inner{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:920px}
 .hero-eyebrow{margin-bottom:1.4rem;opacity:0}
@@ -619,6 +657,32 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 <!-- 処方A/B: ページ全体の連続背景＋グレイン -->
 <div class="bg-canvas" aria-hidden="true"></div>
 <div class="bg-grain" aria-hidden="true"></div>
+
+<!-- 背景装飾（TERAPP公式ブランドサイトの装飾をそのまま移植）: グロー4＋光シャフト3＋四隅ボタニカル4＋きらめき14 -->
+<div id="bg-decor" aria-hidden="true">
+  <span class="bd-glow g1"></span><span class="bd-glow g2"></span><span class="bd-glow g3"></span><span class="bd-glow g4"></span>
+  <span class="bd-ray r1" style="--rd:16s;--rdl:0s"></span>
+  <span class="bd-ray r2" style="--rd:20s;--rdl:-6s"></span>
+  <span class="bd-ray r3" style="--rd:18s;--rdl:-11s"></span>
+  <img class="bd-corner c-tl" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
+  <img class="bd-corner c-tr" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
+  <img class="bd-corner c-bl" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
+  <img class="bd-corner c-br" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
+  <span class="bd-spark" style="left:10vw;top:16vh;--ss:10px;--sd:4s;--sdl:0.0s"></span>
+  <span class="bd-spark" style="left:22vw;top:52vh;--ss:13px;--sd:5s;--sdl:0.4s"></span>
+  <span class="bd-spark" style="left:34vw;top:22vh;--ss:16px;--sd:6s;--sdl:0.8s"></span>
+  <span class="bd-spark" style="left:46vw;top:72vh;--ss:20px;--sd:7s;--sdl:1.2s"></span>
+  <span class="bd-spark" style="left:58vw;top:34vh;--ss:10px;--sd:8s;--sdl:1.6s"></span>
+  <span class="bd-spark" style="left:68vw;top:64vh;--ss:13px;--sd:4s;--sdl:2.0s"></span>
+  <span class="bd-spark" style="left:78vw;top:18vh;--ss:16px;--sd:5s;--sdl:2.4s"></span>
+  <span class="bd-spark" style="left:88vw;top:48vh;--ss:20px;--sd:6s;--sdl:2.8s"></span>
+  <span class="bd-spark" style="left:16vw;top:80vh;--ss:10px;--sd:7s;--sdl:3.2s"></span>
+  <span class="bd-spark" style="left:40vw;top:90vh;--ss:13px;--sd:8s;--sdl:3.6s"></span>
+  <span class="bd-spark" style="left:62vw;top:12vh;--ss:16px;--sd:4s;--sdl:4.0s"></span>
+  <span class="bd-spark" style="left:72vw;top:86vh;--ss:20px;--sd:5s;--sdl:4.4s"></span>
+  <span class="bd-spark" style="left:92vw;top:68vh;--ss:10px;--sd:6s;--sdl:4.8s"></span>
+  <span class="bd-spark" style="left:28vw;top:40vh;--ss:13px;--sd:7s;--sdl:5.2s"></span>
+</div>
 
 <!-- ============================== HEADER ============================== -->
 <header id="hdr">
