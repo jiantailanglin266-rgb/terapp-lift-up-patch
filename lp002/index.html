@@ -205,8 +205,11 @@ body{
   animation:bdTwinkle var(--sd,5s) ease-in-out var(--sdl,0s) infinite}
 @keyframes bdTwinkle{0%,100%{opacity:.1;transform:scale(.5) rotate(0deg) translateY(0)}50%{opacity:.85;transform:scale(1.12) rotate(45deg) translateY(-9px)}}
 @media(max-width:560px){
-  .bd-corner{width:min(48vw,230px);opacity:.34}
-  .bd-corner.c-tr,.bd-corner.c-bl,.bd-ray{display:none}
+  /* スマホでも装飾をしっかり見せる: 四隅すべて表示＋光シャフトも残す（サイズと濃度のみ最適化） */
+  .bd-corner{width:min(46vw,200px);opacity:.42}
+  .bd-ray{width:clamp(46px,16vw,90px);filter:blur(6px)}
+  .bd-glow.g1,.bd-glow.g3{width:80vw;height:80vw}
+  .bd-spark{opacity:.6}
 }
 
 img{max-width:100%;height:auto;display:block}
