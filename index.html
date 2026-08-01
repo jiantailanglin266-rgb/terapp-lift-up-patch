@@ -538,6 +538,7 @@ picture{display:block}  /* WebP<picture>ラッパを画像と同じブロック�
 .story .wrap{position:relative}
 .story .eyebrow{color:var(--gold-l)}
 .story-big{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.6rem,4.4vw,2.6rem);line-height:1.6;margin:1.4rem 0 2rem;color:#fff}
+.story-big span,.final-big span{display:inline-block}
 .story p{color:rgba(255,255,255,.78);font-size:.96rem;line-height:2.1;max-width:640px}
 .story .beat{margin:1.6rem 0;display:flex;gap:1.4rem;flex-wrap:wrap;color:var(--gold-l);font-family:var(--serif);font-size:1.2rem;letter-spacing:.12em}
 .story .close{margin-top:2rem;font-family:var(--jp-serif);font-size:1.15rem;color:#fff}
@@ -802,8 +803,8 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
 <!-- 処方E-7(引き算): ヒーローの光の粒子は"キラキラ"で装飾価値が低いため除去。署名は光の輪＋（要判断で）金の羽に集約 -->
     </div>
 
-    <h1 aria-label="あなた史上、最高のフェイスラインへ">
-      <span class="line" data-h="3"><span>あなた史上、</span></span>
+    <h1 aria-label="あなた史上最高のフェイスラインへ">
+      <span class="line" data-h="3"><span>あなた史上</span></span>
       <span class="line" data-h="4"><span>最高のフェイスラインへ</span></span>
     </h1>
 
@@ -1012,7 +1013,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
 <section class="section story">
   <div class="wrap">
     <span class="eyebrow reveal">The Invisible Possibility.</span>
-    <h2 class="story-big reveal" data-d="1">目に見えない可能性を、<br>毎日の習慣に。</h2>
+    <h2 class="story-big reveal" data-d="1"><span>目に見えない</span><span>可能性を</span><span>毎日の</span><span>習慣に</span></h2>
     <p class="reveal" data-d="1">TERAPPは、テラヘルツ波の可能性に着目し、美容、健康、スポーツなど、日常のさまざまな場面で取り入れやすい製品づくりを目指しています。美容と健康は、特別な日のためだけにあるものではありません。毎日の小さな積み重ねが、自分らしいコンディションにつながっていく。</p>
     <div class="beat reveal" data-d="2"><span>誰でも。</span><span>いつでも。</span><span>どこでも。</span></div>
     <p class="reveal" data-d="2">テラヘルツの可能性を、もっと身近に。</p>
@@ -1161,7 +1162,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
 <!-- ============================== FINAL CTA ============================== -->
 <section class="section final">
   <div class="wrap">
-    <h2 class="final-big reveal">美しさは、<br>毎日の小さな習慣から。</h2>
+    <h2 class="final-big reveal"><span>美しさは</span><span>毎日の</span><span>小さな</span><span>習慣から</span></h2>
     <p class="final-sub reveal" data-d="1">いつものスキンケアに、<br>TERAPP Lift Up Patchという新しい選択を。</p>
     <a href="https://terapp.base.shop/items/152366986" target="_blank" rel="noopener noreferrer" class="btn btn-primary reveal" data-d="2" data-ev="purchase_start">TERAPP Lift Up Patchを購入する</a>
     <p class="final-note reveal" data-d="2">※使用感や感じ方には個人差があります。</p>
