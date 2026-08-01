@@ -351,16 +351,6 @@ header.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(18px) satu
 .brand-kv svg,.brand-kv img{display:block;width:100%;height:auto;border-radius:26px}
 picture{display:block}  /* WebP<picture>ラッパを画像と同じブロック挙動に */
 
-/* ===== 使用シーン 画像マーキー（ホバーで止めない・無限ループ） ===== */
-.scene-marquee{position:relative;z-index:2;padding:clamp(1.5rem,5vw,3rem) 0}
-.sm-viewport{overflow:hidden;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.sm-track{display:flex;width:max-content;animation:smScroll 55s linear infinite;will-change:transform}
-.sm-card{flex:0 0 auto;width:clamp(150px,40vw,212px);aspect-ratio:2/3;margin-right:clamp(.7rem,2vw,1.1rem);
-  border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 46px -26px rgba(0,0,0,.6)}
-.sm-card img{width:100%;height:100%;object-fit:cover;display:block}
-@keyframes smScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ===== ブランドフィルム（FV直下） ===== */
 .brand-film{position:relative;z-index:2;padding:clamp(1.4rem,5vw,3.4rem) 1.5rem}
@@ -397,22 +387,6 @@ picture{display:block}  /* WebP<picture>ラッパを画像と同じブロック�
 .scroll-cue .bar::after{content:"";position:absolute;top:-50%;left:0;width:100%;height:50%;background:var(--gold);animation:scrollDot 2.2s var(--ease) infinite}
 @keyframes scrollDot{0%{top:-50%}60%,100%{top:100%}}
 
-/* ============================================================
-   DUAL MARQUEE (上下2段・逆方向)
-   ============================================================ */
-.marquee-band{position:relative;z-index:3;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.marquee{overflow:hidden;white-space:nowrap;height:clamp(48px,7vw,64px);display:flex;align-items:center}
-.marquee.row1{background:var(--soft);border-bottom:1px solid var(--line)}
-.marquee.row2{background:#fff}
-.mq-track{display:flex;flex-shrink:0;align-items:center;will-change:transform}
-.mq-track.ltr{animation:mqRight 34s linear infinite}
-.mq-track.rtl{animation:mqLeft 28s linear infinite}
-@keyframes mqLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes mqRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.mq-item{font-family:var(--sans);font-size:clamp(.72rem,1.8vw,.95rem);letter-spacing:.28em;
-  text-transform:uppercase;color:var(--text);padding:0 1.6rem;display:inline-flex;align-items:center;gap:1.6rem}
-.marquee.row1 .mq-item{color:var(--deep)}
-.mq-star{color:var(--gold-text);font-size:.7em}
 
 /* ============================================================
    GENERIC SECTION HEADS
@@ -693,10 +667,6 @@ main .final::before{content:"";position:absolute;inset:-150px 0 0 0;z-index:-1;p
 footer{background:#0C2A25}
 footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 100%)}
 
-/* マーキー帯：濃緑2トーン＋明ゴールド文字 */
-.marquee.row1{background:#0F312A} .marquee.row2{background:#0A2621}
-.mq-item{color:var(--gold-l)} .marquee.row1 .mq-item{color:var(--gold-l)}
-.mq-star{color:var(--gold)}
 
 /* 濃緑地の各カードをダークガラス面へ（旧#fffカードの置換） */
 .price-card,.faq-item,.review-empty,.assurance li,.notice,.concern-card,.feature-card,.step,.scene-card,.area-item{
@@ -739,8 +709,6 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .hero h1 .line span,.hero-eyebrow,.hero-sub,.hero-name,.hero-note,.hero-cta,.hero-price,.hero-pricenote,.scroll-cue{opacity:1!important;transform:none!important}
   .reveal{opacity:1!important;transform:none!important;filter:none!important}
-  .mq-track{transform:none!important}
-  .marquee{justify-content:flex-start}
   .product{animation:none}
 }
 </style>
@@ -840,15 +808,6 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </div>
 </section>
 
-<!-- ============================== DUAL MARQUEE ============================== -->
-<div class="marquee-band" aria-hidden="true">
-  <div class="marquee row1">
-    <div class="mq-track ltr" id="mq1"></div>
-  </div>
-  <div class="marquee row2">
-    <div class="mq-track rtl" id="mq2"></div>
-  </div>
-</div>
 
 <!-- ============================== CONCEPT ============================== -->
 <section class="section concept" id="concept">
@@ -985,13 +944,6 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
   </div>
 </section>
 
-<!-- ============================== 使用シーン 画像マーキー（ホバーで止めない） ============================== -->
-<section class="scene-marquee" aria-label="TERAPP Lift Up Patch のある日常シーン">
-  <p class="sr-only">朝のスキンケア、メイク前の身支度、在宅ワーク中、リラックスタイム、スポーツ前後、旅行、特別な日の前に。TERAPP Lift Up Patch を毎日のさまざまなシーンで。</p>
-  <div class="sm-viewport">
-    <div class="sm-track" id="sm-track" aria-hidden="true"></div>
-  </div>
-</section>
 
 <!-- ============================== TERAHERTZ ============================== -->
 <section class="section terahertz">
@@ -1373,33 +1325,7 @@ footer::before{background:linear-gradient(180deg, rgba(8,32,28,0) 0%, #0C2A25 10
     setInterval(function(){ if(Math.random()<.85) spawn(); }, 2600);
   })();
 
-  /* ---- Dual marquee content (seamless: 内容を2回複製) ---- */
-  (function(){
-    var row1 = ['BEAUTY','DAILY RITUAL','TERAHERTZ','DAILY CARE','TERAPP','貼る美容習慣','フェイスラインへの毎日ケア'];
-    var row2 = ['LIFT UP PATCH','FACE LINE','NECK & DÉCOLLETÉ','BEAUTY ROUTINE','毎日のスキンケアに','手軽に、わたしらしく'];
-    function build(el, items){
-      if(!el) return;
-      var half = items.map(function(t){
-        return '<span class="mq-item">'+t+'<span class="mq-star">✦</span></span>';
-      }).join('');
-      el.innerHTML = half + half; // 2回複製で継ぎ目を消す
-    }
-    build(document.getElementById('mq1'), row1);
-    build(document.getElementById('mq2'), row2);
-  })();
 
-  /* ---- 使用シーン 画像マーキー：7枚を2回複製して継ぎ目レス（ホバーで止めない） ---- */
-  (function(){
-    var track = document.getElementById('sm-track'); if(!track) return;
-    var N = 7, html = '';
-    for(var dup=0; dup<2; dup++){
-      for(var i=1; i<=N; i++){
-        html += '<div class="sm-card"><picture><source srcset="images/terapp-scene-'+i+'.webp" type="image/webp">'+
-                '<img src="images/terapp-scene-'+i+'.jpg" alt="" width="400" height="600" loading="lazy" decoding="async"></picture></div>';
-      }
-    }
-    track.innerHTML = html;
-  })();
 
   /* ---- ブランドフィルム: reduced-motion では自動再生しない（controlsで再生可） ---- */
   (function(){
