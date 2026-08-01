@@ -231,6 +231,8 @@ a{color:inherit}
 .sec-head .eyebrow{display:block;margin-bottom:1rem}
 .sec-title{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.5;color:var(--cream-text);letter-spacing:.03em}
 .sec-title .en{font-family:var(--serif);font-weight:400;color:var(--gold-l);display:block}
+/* 見出しは単語単位でのみ改行（PC/スマホ共通）: 和文は文字途中で折り返さず、<wbr>/空白の位置でのみ改行 */
+.sec-title,.hero h1,.story-big,.final-big,.recommend h3,.film-head .t{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
 .lead{font-size:clamp(.94rem,2.2vw,1.05rem);line-height:2.1;color:var(--cream-text)}
 .lead.muted{color:var(--muted-dark)}
 
@@ -757,9 +759,9 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
     </div>
 
     <h1>
-      <span class="line" data-h="3"><span>肩も、首も、膝も。</span></span>
-      <span class="line" data-h="4"><span>貼るという、</span></span>
-      <span class="line" data-h="5"><span class="gold">上質なセルフケア。</span></span>
+      <span class="line" data-h="3"><span>肩も　首も　膝も</span></span>
+      <span class="line" data-h="4"><span>貼るという</span></span>
+      <span class="line" data-h="5"><span class="gold">上質なセルフケア</span></span>
     </h1>
 
     <p class="hero-sub" data-h="6">部位に合わせて切って貼る、<span class="accent">&Prime;わたし&Prime;</span>のコンディショニング習慣。</p>
@@ -784,7 +786,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="film-head reveal">
       <span class="eyebrow">Brand Film</span>
-      <p class="t"><span class="en">The Invisible Possibility.</span>目に見えない可能性を、映像で。</p>
+      <p class="t"><span class="en">The Invisible Possibility.</span>目に見えない可能性を<wbr>映像で</p>
     </div>
     <div class="film-wrap reveal" data-d="1">
       <div class="film-glow" aria-hidden="true"></div>
@@ -812,7 +814,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
     <div class="concept-copy reveal">
       <div class="sec-head" style="margin-bottom:0">
         <span class="eyebrow" style="display:block;margin-bottom:1rem">Concept</span>
-        <h2 class="sec-title"><span class="en">A New Daily Ritual.</span>貼る、という<br>あたらしいセルフケア習慣。</h2>
+        <h2 class="sec-title"><span class="en">A New Daily Ritual.</span>貼るという<wbr>あたらしい<wbr>セルフケア習慣</h2>
         <div class="s-line left"></div>
       </div>
       <p class="lead" style="margin-top:1.6rem">TERAPP Conditioning Tape は、ロールから必要な長さに切って、肩・首・背中・腰・ひじ・ひざ・足首など、気になる部位へ貼って使うボディテープです。特別な準備はいりません。忙しい朝も、一日の終わりも、いつもの時間にそっと寄り添う——毎日つづけられる、上質なセルフケア習慣を提案します。</p>
@@ -847,7 +849,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Your Day</span>
-      <h2 class="sec-title"><span class="en">Everyday Moments.</span>こんな毎日に、貼る習慣を。</h2>
+      <h2 class="sec-title"><span class="en">Everyday Moments.</span>こんな毎日に<wbr>貼る習慣を</h2>
       <div class="s-line"></div>
     </div>
     <div class="concern-grid">
@@ -900,7 +902,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Features</span>
-      <h2 class="sec-title"><span class="en">Body Care, Made Simple.</span>TERAPP Conditioning Tape の特徴</h2>
+      <h2 class="sec-title"><span class="en">Body Care, Made Simple.</span>TERAPP Conditioning Tape<wbr>の特徴</h2>
       <div class="s-line"></div>
     </div>
     <div class="feature-grid">
@@ -937,7 +939,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Application Areas</span>
-      <h2 class="sec-title"><span class="en">Where to Apply.</span>気になる部位へ、やさしく寄り添う。</h2>
+      <h2 class="sec-title"><span class="en">Where to Apply.</span>気になる部位へ<wbr>やさしく寄り添う</h2>
       <div class="s-line"></div>
     </div>
     <div class="areas-grid">
@@ -1007,7 +1009,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">How to Use</span>
-      <h2 class="sec-title"><span class="en">Cut, Apply, Care.</span>3ステップの、やさしい習慣。</h2>
+      <h2 class="sec-title"><span class="en">Cut, Apply, Care.</span>3ステップの<wbr>やさしい習慣</h2>
       <div class="s-line"></div>
     </div>
     <div class="steps">
@@ -1052,7 +1054,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Daily Routine</span>
-      <h2 class="sec-title"><span class="en">Fits Your Every Day.</span>わたしの時間に、そっと寄り添う。</h2>
+      <h2 class="sec-title"><span class="en">Fits Your Every Day.</span>わたしの時間に<wbr>そっと寄り添う</h2>
       <div class="s-line"></div>
     </div>
   </div>
@@ -1098,7 +1100,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 <section class="section story">
   <div class="wrap">
     <span class="eyebrow reveal">The Invisible Possibility.</span>
-    <h2 class="story-big reveal" data-d="1">目に見えない可能性を、<br>毎日の習慣に。</h2>
+    <h2 class="story-big reveal" data-d="1">目に見えない可能性を<wbr>毎日の習慣に</h2>
     <p class="reveal" data-d="1">TERAPPは、テラヘルツ波の可能性に着目し、美容、健康、スポーツなど、日常のさまざまな場面で取り入れやすい製品づくりを目指しています。コンディションを意識する時間は、特別な日のためだけにあるものではありません。毎日の小さな積み重ねが、自分らしい心地よさにつながっていく。</p>
     <div class="beat reveal" data-d="2"><span>誰でも。</span><span>いつでも。</span><span>どこでも。</span></div>
     <p class="reveal" data-d="2">テラヘルツの可能性を、もっと身近に。</p>
@@ -1197,7 +1199,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 <!-- ============================== FINAL CTA ============================== -->
 <section class="section final">
   <div class="wrap">
-    <h2 class="final-big reveal">心地よさは、<br>毎日の小さな習慣から。</h2>
+    <h2 class="final-big reveal">心地よさは<wbr>毎日の小さな習慣から</h2>
     <p class="final-sub reveal" data-d="1">いつものセルフケアに、<br>TERAPP Conditioning Tape という新しい選択を。</p>
     <a href="#pricing" class="btn btn-primary reveal" data-d="2" data-ev="purchase_start">TERAPP Conditioning Tape の購入について</a>
     <p class="final-note reveal" data-d="2">※使用感や感じ方には個人差があります。本商品は雑貨です。</p>
