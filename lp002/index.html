@@ -507,18 +507,6 @@ header.scrolled{background:rgba(9,28,24,.86);backdrop-filter:blur(18px) saturate
 .notice li::before{content:"•";position:absolute;left:.2rem;color:var(--gold)}
 .notice .foot{margin-top:1rem;font-size:.74rem;color:var(--muted-dark)}
 
-/* ============================================================
-   SCENES — 使用シーン画像（静止グリッド／マーキー廃止）
-   ============================================================ */
-.scene-grid{margin-top:clamp(2.2rem,5vw,3.2rem);display:grid;gap:1.1rem;grid-template-columns:repeat(2,1fr)}
-@media(min-width:600px){.scene-grid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:900px){.scene-grid{grid-template-columns:repeat(4,1fr)}}
-.scene-slide{border-radius:var(--radius);overflow:hidden;position:relative;margin:0;background:#0A2621;
-  border:1px solid var(--line-2);box-shadow:var(--shadow-sm)}
-.scene-slide::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:var(--radius);
-  box-shadow:inset 0 0 0 1px rgba(201,168,106,.12);
-  background:linear-gradient(180deg,rgba(8,32,28,0) 62%,rgba(8,32,28,.18) 100%)}
-.scene-slide img{width:100%;height:auto;display:block;aspect-ratio:2/3;object-fit:cover}
 
 /* ============================================================
    TERAHERTZ
@@ -617,7 +605,6 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   background:linear-gradient(180deg, rgba(8,34,29,0) 0%, #08221D 100%)}
 .foot-wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
 .foot-brand{display:inline-flex;align-items:center;gap:.55rem}
-.foot-mark{width:34px;height:30px;flex-shrink:0}
 .foot-brand-text{font-family:var(--sans);font-weight:700;font-size:1.1rem;letter-spacing:.24em;
   background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
 .foot-links{display:flex;flex-wrap:wrap;gap:1.3rem}
@@ -1041,27 +1028,6 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
   </div>
 </section>
 
-<!-- ============================== SCENES ============================== -->
-<section class="section scenes">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Daily Routine</span>
-      <h2 class="sec-title"><span class="en">Fits Your Every Day.</span>わたしの時間に<wbr>そっと寄り添う</h2>
-      <div class="s-line"></div>
-    </div>
-  </div>
-  <!-- 使用シーン画像マーキー（自動スクロール／ホバーで停止しない） -->
-  <div class="scene-grid reveal">
-    <figure class="scene-slide"><img src="images/scene-01-morning.jpg" width="560" height="840" loading="lazy" decoding="async" alt="朝のスキンケア 一日の始まりに。洗面まわりで肌を整える女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-02-makeup.jpg" width="560" height="840" loading="lazy" decoding="async" alt="メイク前 身支度の時間に。鏡の前で身支度をする女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-03-remote.jpg" width="560" height="840" loading="lazy" decoding="async" alt="在宅ワーク ながらケアに。ノートPCの前でセルフケアをする女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-04-sports.jpg" width="560" height="840" loading="lazy" decoding="async" alt="スポーツ前後 コンディショニングに。タオルを掛けてケアする女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-05-travel.jpg" width="560" height="840" loading="lazy" decoding="async" alt="旅行 持ち運びやすく。トラベルポーチに小物を詰める女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-06-relax.jpg" width="560" height="840" loading="lazy" decoding="async" alt="リラックスタイム 夜のひとときに。キャンドルの灯りでくつろぐ女性のイメージ。"></figure>
-    <figure class="scene-slide"><img src="images/scene-07-special.jpg" width="560" height="840" loading="lazy" decoding="async" alt="特別な日 大切な予定の前に。ドレッサーで身支度を整える女性のイメージ。"></figure>
-  </div>
-</section>
-
 <!-- ============================== TERAHERTZ ============================== -->
 <section class="section terahertz">
   <div class="wrap wrap-narrow thz-inner reveal">
@@ -1212,15 +1178,6 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 <footer>
   <div class="foot-wrap">
     <span class="foot-brand">
-      <svg class="foot-mark" viewBox="452 286 296 264" aria-hidden="true">
-        <defs><linearGradient id="lgF" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".5" stop-color="#D9BE86"/><stop offset="1" stop-color="#C29B57"/></linearGradient></defs>
-        <g fill="none" stroke="url(#lgF)" stroke-width="8" stroke-linecap="round">
-          <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
-          <path d="M570,470 A30,30 0 0 1 630,470"/><path d="M542,470 A58,58 0 0 1 658,470"/>
-          <path d="M514,470 A86,86 0 0 1 686,470"/><path d="M486,470 A114,114 0 0 1 714,470"/>
-        </g>
-        <circle cx="600" cy="470" r="7" fill="url(#lgF)"/>
-      </svg>
       <span class="foot-brand-text">TERAPP</span>
     </span>
     <nav class="foot-links" aria-label="フッターナビゲーション">
