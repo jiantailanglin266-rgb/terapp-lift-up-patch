@@ -72,7 +72,11 @@
       "description": "テラヘルツ特殊加工を施したコンディショニング用のボディテープ。ロールから必要な長さにカットし、肩・首・背中・腰・ひじ・ひざ・足首など気になる部位へ貼って使用します。本商品は雑貨であり、医薬品・医薬部外品・化粧品・医療機器ではありません。",
       "brand": { "@id": "https://terapp.jp/#org" },
       "category": "HealthAndBeauty",
-      "image": "https://terapp.jp/conditioning-tape/images/terapp-hero-logo.jpg"
+      "image": "https://terapp.jp/conditioning-tape/images/og-conditioning-tape.jpg",
+      "offers": [
+        { "@type": "Offer", "name": "1本", "price": "4400", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#pricing" },
+        { "@type": "Offer", "name": "3本セット", "price": "9900", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#pricing" }
+      ]
     },
     {
       "@type": "HowTo",
@@ -1063,24 +1067,24 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
       <h2 class="sec-title"><span class="en">Choose Your Routine.</span>ご購入について</h2>
       <div class="s-line"></div>
     </div>
-    <!-- 価格データTODO: 税込/税抜区分・1本の内容量(長さ)・セット販売単位・定期購入の有無・購入URL。（送料=全国無料で確定）
-         確定するまで捏造せず「準備中」表示＋問い合わせ導線とする（JSはcheckoutURL確定時にhref/文言を差し替える補助のみ）。 -->
+    <!-- 価格確定（2026-07 ユーザー提供）: 1本 4,400円 / 3本セット 9,900円（税込）。送料=全国無料。
+         購入URL(checkoutURL)は未確定のため当面は問い合わせ導線。data-checkout 設定時にJSがhref/文言を差し替え。 -->
     <div class="price-grid" id="price-grid">
       <div class="price-card reveal" data-plan="one">
         <span class="pc-name">TERAPP Conditioning Tape</span>
-        <span class="pc-qty">ロール 1本</span>
-        <span class="pc-price">価格準備中</span>
+        <span class="pc-qty">1本</span>
+        <span class="pc-price">4,400<small>円（税込）</small></span>
         <a class="btn btn-primary pc-cta" href="contact.html" data-ev="one_set_click" data-checkout="">購入について問い合わせる</a>
       </div>
       <div class="price-card reveal reco" data-plan="set" data-d="1">
         <span class="price-badge">おすすめ</span>
         <span class="pc-name">TERAPP Conditioning Tape</span>
-        <span class="pc-qty">お得なセット</span>
-        <span class="pc-price">価格準備中</span>
+        <span class="pc-qty">3本セット</span>
+        <span class="pc-price">9,900<small>円（税込）</small></span>
         <a class="btn btn-primary pc-cta" href="contact.html" data-ev="set_click" data-checkout="">購入について問い合わせる</a>
       </div>
     </div>
-    <p class="price-note reveal">※送料は全国無料です。価格・販売単位・内容量・税区分などの詳細は、確定次第この画面および<a href="tokushoho.html">特定商取引法に基づく表記</a>に掲載します。</p>
+    <p class="price-note reveal">※表示価格はすべて税込です。全国送料無料でお届けします。販売単位・内容量などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
 
     <ul class="assurance reveal" data-d="1">
       <li>
@@ -1192,8 +1196,8 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
 
 <!-- ============================== STICKY PURCHASE BAR (mobile) ============================== -->
 <div class="sticky-bar" id="stickyBar" aria-hidden="true">
-  <div class="sb-info"><b>TERAPP Conditioning Tape</b><span>気になる部位のセルフケアに</span></div>
-  <span class="sb-price">購入について</span>
+  <div class="sb-info"><b>TERAPP Conditioning Tape</b><span>1本 4,400円／3本セット 9,900円（税込）</span></div>
+  <span class="sb-price">4,400円〜</span>
   <a href="#pricing" class="btn btn-primary" data-ev="sticky_cta_click">見る</a>
 </div>
 
