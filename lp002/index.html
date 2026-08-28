@@ -7,9 +7,9 @@
 
 <!-- ===== SEO ===== -->
 <title>TERAPP Conditioning Tape｜貼る、上質なボディセルフケア習慣</title>
-<meta name="description" content="テラヘルツ特殊加工を施したコンディショニング用ボディテープ「TERAPP Conditioning Tape」。肩・首・背中・腰・ひじ・ひざ・足首など、部位に合わせて切って貼る、毎日のセルフケア習慣に。">
+<meta name="description" content="テラヘルツ特殊加工を施したコンディショニング用ボディテープ「TERAPP Conditioning Tape」。肩・首・背中・腰・ひじ・ひざ・足首など、部位に合わせて切って貼る、毎日のセルフケア習慣に。1本4,400円／3本セット9,900円（税込）送料無料。">
 <meta name="author" content="TERAPP">
-<meta name="theme-color" content="#0C2A25">
+<meta name="theme-color" content="#F7F4EF">
 
 <link rel="canonical" href="https://terapp.jp/conditioning-tape/">
 
@@ -17,7 +17,7 @@
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="TERAPP">
 <meta property="og:title" content="TERAPP Conditioning Tape｜貼る、上質なボディセルフケア習慣">
-<meta property="og:description" content="テラヘルツ特殊加工のコンディショニング用ボディテープ。肩・首・腰・ひざ・ひじ・足首など、部位に合わせて切って貼る毎日のセルフケア習慣に。">
+<meta property="og:description" content="テラヘルツ特殊加工のコンディショニング用ボディテープ。部位に合わせて切って貼る、毎日のセルフケア習慣に。">
 <meta property="og:url" content="https://terapp.jp/conditioning-tape/">
 <meta property="og:image" content="https://terapp.jp/conditioning-tape/images/og-conditioning-tape.jpg">
 <meta property="og:image:width" content="1200">
@@ -36,14 +36,13 @@
 <link rel="alternate" hreflang="ja" href="https://terapp.jp/conditioning-tape/">
 <link rel="alternate" hreflang="x-default" href="https://terapp.jp/conditioning-tape/">
 
-<!-- ===== Fonts (欧文ディスプレイ×和文明朝の2層構成) ===== -->
+<!-- ===== Fonts: 欧文ディスプレイ(Cormorant) × 欧文UI(Inter) × 和文明朝/ゴシック(Noto) ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
 
-<!-- ===== Structured Data (@graph 統合) =====
-     捏造しない方針: review/rating/在庫/送料/GTIN/SKU/price は確定するまで入れない。
-     FAQPage は画面表示の設問と完全一致させること。 -->
+<!-- ===== Structured Data (@graph) =====
+     捏造しない方針: review/rating/在庫/GTIN/SKU は入れない。FAQPage は画面表示の12問と完全一致。 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,8 +73,8 @@
       "category": "HealthAndBeauty",
       "image": "https://terapp.jp/conditioning-tape/images/og-conditioning-tape.jpg",
       "offers": [
-        { "@type": "Offer", "name": "1本", "price": "4400", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#pricing" },
-        { "@type": "Offer", "name": "3本セット", "price": "9900", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#pricing" }
+        { "@type": "Offer", "name": "1本", "price": "4400", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#price" },
+        { "@type": "Offer", "name": "3本セット", "price": "9900", "priceCurrency": "JPY", "url": "https://terapp.jp/conditioning-tape/#price" }
       ]
     },
     {
@@ -119,907 +118,921 @@
 
 <style>
 /* ============================================================
-   TERAPP Conditioning Tape — Emerald Luxury × Champagne Gold
-   単一ファイル完結 / インラインCSS＋バニラJS
-   トンマナ: 深いエメラルドグリーン × シャンパンゴールド（DIOR/Clé de Peau級の質感）
+   TERAPP Conditioning Tape — CINEMATIC LUXURY
+   Japanese Luxury Wellness Technology
+   Warm Ivory base × Emerald deep tone × Champagne Bronze
+   単一ファイル完結 / 外部JS依存なし
    ============================================================ */
 :root{
-  --bg:#0C2A25;        /* 濃緑（基調） */
-  --soft:#12332C;      /* 濃緑（面・カードの淡） */
-  --pale:#0E2A24;      /* 濃緑（深） */
-  --rose:#C9A86A;      /* アクセント=ゴールド */
-  --deep:#A9843F;      /* 主役/CTA=濃ゴールド */
-  --gold:#C9A86A;      /* Champagne Gold */
-  --gold-l:#E4CFA3;    /* Antique / Light Gold */
-  --gold-text:#E4CFA3; /* 濃緑地でテキストに使える明ゴールド */
-  --emerald:#0C2A25;
-  --emerald-2:#08201C; /* 濃緑（深） */
-  --emerald-3:#153E35; /* 濃緑（明・面/カード） */
-  --cream-text:#EFE9DB;/* 濃緑地の本文（明・淡ベージュ寄り） */
-  --champagne:#F1E7D3; /* シャンパン */
-  --muted-dark:rgba(239,233,219,.66);
-  --text:#EFE9DB;
-  --muted:rgba(239,233,219,.62);
-  --line:rgba(201,168,106,.40);
-  --line-2:rgba(201,168,106,.22);
-  --serif:'Cormorant Garamond',serif;
-  --sans:'Montserrat',sans-serif;
-  --jp:'Zen Kaku Gothic New',sans-serif;
-  --jp-serif:'Shippori Mincho',serif;
-  --radius:18px;
-  --shadow:0 24px 60px rgba(3,14,12,.40);
-  --shadow-sm:0 10px 30px rgba(3,14,12,.30);
+  /* --- Color System --- */
+  --ivory:#F7F4EF;      /* Warm Ivory (base) */
+  --beige:#EEE8DE;      /* Soft Beige */
+  --stone:#F4F0EA;      /* Product stage */
+  --sand:#D7C5AE;       /* Sand Gold */
+  --bronze:#B79C7B;     /* Champagne Bronze (accent) */
+  --white:#FFFFFF;
+  --ink:#181818;        /* Luxury Black (text) */
+  --ink-2:#4A4642;      /* secondary text */
+  --ink-3:#8A837B;      /* muted text */
+  --line:rgba(24,24,24,.14);
+  --line-2:rgba(24,24,24,.08);
+  /* Brand deep tone (logo emerald) — 暗転セクション用 */
+  --deep:#0C2A25;
+  --deep-2:#08201C;
+  --gold:#C9A86A;
+  --gold-l:#E4CFA3;
+  --cream:#EFE9DB;
+  --cream-mute:rgba(239,233,219,.62);
+  /* --- Type --- */
+  --display:'Cormorant Garamond',serif;
+  --ui:'Inter',sans-serif;
+  --jp:'Noto Sans JP',sans-serif;
+  --jp-serif:'Noto Serif JP',serif;
+  /* --- Layout --- */
+  --pad:clamp(1.25rem,5vw,4rem);
+  --wrap:1240px;
+  --measure:720px;
   --ease:cubic-bezier(.22,1,.36,1);
+  --ease-io:cubic-bezier(.65,.05,.36,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#0C2A25;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--ivory);overflow-x:hidden}
 body{
-  background:transparent;color:var(--text);
-  font-family:var(--jp);font-weight:400;line-height:1.9;
-  overflow-x:hidden;position:relative;letter-spacing:.02em;
+  background:var(--ivory);color:var(--ink);
+  font-family:var(--jp);font-weight:400;
+  font-size:clamp(.875rem,1.6vw,.95rem);line-height:2.1;letter-spacing:.04em;
+  overflow-x:hidden;position:relative;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
-
-/* ============================================================
-   処方A: ページ全体を1枚の連続背景に（セクション境界を消す）
-   処方B: 微細グレインで階調を撹拌しバンディングを消す
-   ============================================================ */
-.bg-canvas{position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:
-    radial-gradient(120% 75% at 50% -8%, #16413A 0%, rgba(22,65,58,0) 55%),
-    radial-gradient(80% 60% at 106% 100%, #0A2420 0%, rgba(10,36,32,0) 60%),
-    radial-gradient(70% 55% at -6% 30%, #113029 0%, rgba(17,48,41,0) 58%),
-    linear-gradient(180deg, #0C2A25 0%, #08201C 55%, #0C2A25 100%);}
-.bg-grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:200px 200px;}
-
-/* ============================================================
-   BACKGROUND DECOR（TERAPP公式ブランドサイトの装飾をそのまま移植）
-   四隅のボタニカル線画 + アンビエントグロー + 光シャフト + きらめき
-   本文背面（sections z:2 の下）／pointer-events:none
-   ============================================================ */
-#bg-decor{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-#bg-decor .bd-glow{position:absolute;border-radius:50%;filter:blur(70px);will-change:transform,opacity}
-.bd-glow.g1{top:-14%;left:-10%;width:54vw;height:54vw;background:radial-gradient(circle,rgba(203,168,95,.24),transparent 70%);animation:bdGlow 15s ease-in-out infinite}
-.bd-glow.g2{bottom:-16%;right:-12%;width:58vw;height:58vw;background:radial-gradient(circle,rgba(230,205,146,.20),transparent 70%);animation:bdGlow 19s ease-in-out -5s infinite}
-.bd-glow.g3{top:26%;left:24%;width:54vw;height:54vw;background:radial-gradient(circle,rgba(150,175,120,.15),transparent 72%);animation:bdGlow 17s ease-in-out -9s infinite}
-.bd-glow.g4{top:62%;left:12%;width:44vw;height:44vw;background:radial-gradient(circle,rgba(203,168,95,.14),transparent 72%);animation:bdGlow 21s ease-in-out -3s infinite}
-@keyframes bdGlow{0%,100%{transform:scale(1);opacity:.72}50%{transform:scale(1.18);opacity:1}}
-/* 斜めに差し込む金の光シャフト（ゆっくり明滅） */
-.bd-ray{position:absolute;top:-25%;height:150%;width:clamp(70px,11vw,150px);filter:blur(8px);
-  background:linear-gradient(90deg,transparent,rgba(233,210,154,.13),transparent);
-  animation:bdRay var(--rd,16s) ease-in-out var(--rdl,0s) infinite}
-.bd-ray.r1{left:14%;transform:rotate(16deg)}
-.bd-ray.r2{left:52%;transform:rotate(16deg)}
-.bd-ray.r3{left:80%;transform:rotate(16deg)}
-@keyframes bdRay{0%,100%{opacity:0}45%,55%{opacity:1}}
-/* 四隅のボタニカル線画（ゆっくりシマー） */
-.bd-corner{position:absolute;width:min(35vw,380px);height:auto;opacity:.45;will-change:opacity,filter}
-.bd-corner.c-tl{top:-1.4rem;left:-1.4rem;animation:bdShimmer 8s ease-in-out infinite}
-.bd-corner.c-tr{top:-1.4rem;right:-1.4rem;transform:scaleX(-1);animation:bdShimmer 8s ease-in-out -2s infinite}
-.bd-corner.c-bl{bottom:-1.4rem;left:-1.4rem;transform:scaleY(-1);animation:bdShimmer 8s ease-in-out -4s infinite}
-.bd-corner.c-br{bottom:-1.4rem;right:-1.4rem;transform:scale(-1,-1);animation:bdShimmer 8s ease-in-out -6s infinite}
-@keyframes bdShimmer{0%,100%{opacity:.34;filter:drop-shadow(0 0 5px rgba(203,168,95,.15))}50%{opacity:.62;filter:drop-shadow(0 0 18px rgba(233,210,154,.5))}}
-/* きらめき（金の四芒星） */
-.bd-spark{position:absolute;width:var(--ss,16px);height:var(--ss,16px);opacity:.5;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z' fill='%23E9D29A'/%3E%3C/svg%3E") center/contain no-repeat;
-  animation:bdTwinkle var(--sd,5s) ease-in-out var(--sdl,0s) infinite}
-@keyframes bdTwinkle{0%,100%{opacity:.1;transform:scale(.5) rotate(0deg) translateY(0)}50%{opacity:.85;transform:scale(1.12) rotate(45deg) translateY(-9px)}}
-@media(max-width:560px){
-  /* スマホでも装飾をしっかり見せる: 四隅すべて表示＋光シャフトも残す（サイズと濃度のみ最適化） */
-  .bd-corner{width:min(46vw,200px);opacity:.42}
-  .bd-ray{width:clamp(46px,16vw,90px);filter:blur(6px)}
-  .bd-glow.g1,.bd-glow.g3{width:80vw;height:80vw}
-  .bd-spark{opacity:.6}
-}
-
-img{max-width:100%;height:auto;display:block}
-a{color:inherit}
-::selection{background:rgba(201,168,106,.28);color:#fff}
-:focus-visible{outline:2px solid var(--gold-l);outline-offset:3px;border-radius:4px}
-.skip-link{position:fixed;top:-60px;left:12px;z-index:300;background:var(--gold);color:#241C20;font-family:var(--jp);font-size:.85rem;padding:.7rem 1.2rem;border-radius:0 0 10px 10px;text-decoration:none;transition:top .25s var(--ease)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+::selection{background:var(--sand);color:var(--ink)}
+:focus-visible{outline:1.5px solid var(--bronze);outline-offset:4px}
+.skip-link{position:fixed;top:-60px;left:12px;z-index:400;background:var(--ink);color:var(--ivory);
+  font-size:.8rem;padding:.7rem 1.2rem;border-radius:0 0 6px 6px;transition:top .25s var(--ease)}
 .skip-link:focus{top:0}
-
-/* ---------- Typographic helpers ---------- */
-.eyebrow{font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-text);font-weight:500}
-.serif-h{font-family:var(--serif);font-weight:400;line-height:1.15;letter-spacing:.01em}
-.section{padding:clamp(4rem,9vw,8rem) 1.5rem;position:relative;z-index:2}
-.wrap{max-width:1120px;margin:0 auto}
-.wrap-narrow{max-width:820px;margin:0 auto}
-.center{text-align:center}
-.s-line{width:44px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));margin:1.4rem auto 0;border-radius:2px}
-.s-line.left{margin-left:0}
-
-/* ---------- Section heads ---------- */
-.sec-head{margin-bottom:clamp(2.2rem,5vw,3.4rem)}
-.sec-head .eyebrow{display:block;margin-bottom:1rem}
-.sec-title{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.5;color:var(--cream-text);letter-spacing:.03em}
-.sec-title .en{font-family:var(--serif);font-weight:400;color:var(--gold-l);display:block}
-/* 見出しは単語単位でのみ改行（PC/スマホ共通）: 和文は文字途中で折り返さず、<wbr>/空白の位置でのみ改行 */
-.sec-title,.hero h1,.story-big,.final-big,.recommend h3,.film-head .t{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
-.lead{font-size:clamp(.94rem,2.2vw,1.05rem);line-height:2.1;color:var(--cream-text)}
-.lead.muted{color:var(--muted-dark)}
-
-/* Reveal on scroll: blur→芯が合う（1.1s）＋stagger 80ms */
-.reveal{opacity:0;transform:translateY(26px) scale(.988);filter:blur(7px);
-  transition:opacity 1100ms var(--ease),transform 1100ms var(--ease),filter 1100ms var(--ease);will-change:transform,filter}
-.reveal.in{opacity:1;transform:none;filter:blur(0)}
-.reveal[data-d="1"]{transition-delay:.08s}
-.reveal[data-d="2"]{transition-delay:.16s}
-.reveal[data-d="3"]{transition-delay:.24s}
-.reveal[data-d="4"]{transition-delay:.32s}
-
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ============================================================
+   TYPOGRAPHY SYSTEM
+   ============================================================ */
+.eyebrow{font-family:var(--ui);font-weight:400;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--bronze)}
+.display{font-family:var(--display);font-weight:300;line-height:.94;letter-spacing:.005em;
+  font-size:clamp(2.4rem,8.4vw,7.2rem);text-transform:uppercase}
+.display--sm{font-size:clamp(2rem,6vw,4.4rem)}
+.display--xl{font-size:clamp(2.8rem,10vw,9rem)}
+/* 和文見出し: 句読点なし・単語単位改行 */
+.jp-h{font-family:var(--jp-serif);font-weight:500;letter-spacing:.1em;line-height:1.8;
+  font-size:clamp(1.05rem,2.6vw,1.6rem);word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+.jp-h--lg{font-size:clamp(1.3rem,3.6vw,2.3rem);line-height:1.75}
+.lead{max-width:var(--measure);color:var(--ink-2);line-height:2.3;letter-spacing:.05em}
+.note{font-family:var(--ui);font-size:.7rem;line-height:1.9;color:var(--ink-3);letter-spacing:.04em}
+.num{font-family:var(--display);font-weight:300;line-height:1;color:var(--bronze);
+  font-size:clamp(3rem,11vw,9rem)}
+.hair{width:100%;height:1px;background:var(--line-2);border:0}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.sec{position:relative;padding:clamp(5rem,14vh,11rem) var(--pad)}
+.sec--tight{padding-block:clamp(3.5rem,9vh,7rem)}
+.wrap{max-width:var(--wrap);margin:0 auto;width:100%}
+.wrap--narrow{max-width:var(--measure);margin:0 auto}
+.sec-head{margin-bottom:clamp(2.5rem,7vw,5rem)}
+.sec-head .eyebrow{display:block;margin-bottom:1.4rem}
+.sec-head .display{margin-bottom:1.6rem}
+.center{text-align:center}
+.dark{background:var(--deep);color:var(--cream)}
+.dark .eyebrow{color:var(--gold-l)}
+.dark .lead{color:var(--cream-mute)}
+.dark .note{color:var(--cream-mute)}
+.dark .num{color:rgba(228,207,163,.5)}
+.dark .hair{background:rgba(228,207,163,.16)}
+
+/* ============================================================
+   MOTION — reveal / line reveal / parallax
+   ============================================================ */
+/* JSが動く環境でのみ初期非表示にする（no-JS/クローラでは常に可視＝コンテンツ消失を防ぐ） */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.1s}
+.rv[data-d="2"]{transition-delay:.2s}
+.rv[data-d="3"]{transition-delay:.3s}
+.rv[data-d="4"]{transition-delay:.4s}
+/* 行マスクリビール */
+.rl{display:block;overflow:hidden}
+.js .rl>span{display:block;transform:translateY(108%);transition:transform 1.25s var(--ease)}
+.rl>span{display:block}
+.rl.in>span,.in .rl>span{transform:none}
+.rl[data-d="1"]>span{transition-delay:.12s}
+.rl[data-d="2"]>span{transition-delay:.24s}
+.rl[data-d="3"]>span{transition-delay:.36s}
+/* 画像/映像のスケールリビール */
+.mv{overflow:hidden}
+.js .mv>*{transform:scale(1.12);transition:transform 1.8s var(--ease)}
+.mv.in>*{transform:scale(1)}
+
+/* ============================================================
+   MEDIA SLOT（映像は後日差し替え／無くても崩れない）
+   ============================================================ */
+.media{position:relative;overflow:hidden;background:var(--beige);isolation:isolate}
+.media-fb{position:absolute;inset:0;z-index:0}
+/* fallback: 上質なグラデーション＋グレイン（映像が無い間も"意図された画面"に見せる） */
+.media-fb::before{content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 90% at 30% 20%, rgba(255,255,255,.9), rgba(255,255,255,0) 60%),
+    radial-gradient(90% 70% at 80% 80%, rgba(215,197,174,.55), rgba(215,197,174,0) 65%),
+    linear-gradient(160deg,#F3EEE6 0%,#E7DFD3 55%,#DCD2C3 100%)}
+.media-fb::after{content:"";position:absolute;inset:0;opacity:.5;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E")}
+.dark .media-fb::before,.media-fb--dark::before{
+  background:
+    radial-gradient(110% 80% at 50% 0%, rgba(201,168,106,.22), rgba(201,168,106,0) 60%),
+    radial-gradient(90% 70% at 80% 100%, rgba(12,42,37,.9), rgba(12,42,37,0) 70%),
+    linear-gradient(165deg,#123A32 0%,#0C2A25 55%,#071B17 100%)}
+.dark .media-fb::after,.media-fb--dark::after{mix-blend-mode:overlay;opacity:.35}
+.media-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;
+  opacity:0;transition:opacity 1.4s var(--ease)}
+.media-video.is-playing{opacity:1}
+.media-label{position:absolute;left:0;right:0;bottom:clamp(1rem,3vw,2rem);z-index:2;text-align:center;
+  font-family:var(--display);font-weight:300;letter-spacing:.3em;text-transform:uppercase;
+  font-size:.68rem;color:rgba(24,24,24,.28)}
+.media-fb--dark ~ .media-label,.dark .media-label{color:rgba(239,233,219,.28)}
+.media-veil{position:absolute;inset:0;z-index:2;pointer-events:none}
+
+/* ============================================================
+   LOADER
+   ============================================================ */
+#loader{position:fixed;inset:0;z-index:500;background:var(--deep);display:grid;place-items:center;
+  transition:opacity 1s var(--ease),visibility 1s}
+#loader.done{opacity:0;visibility:hidden}
+.ld-mark{font-family:var(--ui);font-weight:500;font-size:clamp(1.1rem,3.4vw,1.5rem);letter-spacing:.5em;
+  text-indent:.5em;color:var(--gold-l);opacity:0;transform:translateY(6px);
+  animation:ldIn 1.5s var(--ease) .15s forwards}
+.ld-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:1.4rem auto 0;animation:ldLine 1.5s var(--ease) .5s forwards}
+@keyframes ldIn{to{opacity:1;transform:none}}
+@keyframes ldLine{to{width:min(220px,42vw)}}
 
 /* ============================================================
    HEADER
    ============================================================ */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:120;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 clamp(1.2rem,4vw,3rem);height:70px;
-  background:transparent;transition:background .4s var(--ease),box-shadow .4s var(--ease),backdrop-filter .4s;
-}
-header.scrolled{background:rgba(9,28,24,.86);backdrop-filter:blur(18px) saturate(1.1);box-shadow:0 1px 0 var(--line),0 10px 30px rgba(0,0,0,.28)}
-.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none}
-.brand-mark{width:30px;height:27px;flex-shrink:0}
-.brand-name{font-family:var(--sans);font-weight:700;font-size:1.08rem;letter-spacing:.24em;
-  background:linear-gradient(180deg,#E4CFA3,#C9A86A 55%,#A9843F);-webkit-background-clip:text;background-clip:text;color:transparent}
-.nav{display:flex;align-items:center;gap:2rem}
-.nav a{font-family:var(--sans);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(239,233,219,.82);text-decoration:none;transition:color .3s;position:relative}
-.nav a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--gold-l);transition:width .3s var(--ease)}
-.nav a:not(.nav-cta):hover{color:#fff}
-.nav a:not(.nav-cta):hover::after{width:100%}
-.nav-cta{
-  font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;text-transform:none;
-  background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#241C20;
-  padding:.6rem 1.4rem;border-radius:50px;text-decoration:none;
-  box-shadow:0 6px 18px rgba(201,168,106,.28);transition:transform .3s var(--ease),box-shadow .3s
-}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,168,106,.4);color:#20180F}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:130}
-.burger span{width:24px;height:2px;background:var(--gold-l);border-radius:2px;transition:transform .35s var(--ease),opacity .3s}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-.drawer{position:fixed;inset:0;z-index:115;background:rgba(9,28,24,.97);backdrop-filter:blur(10px);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;
-  opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.hdr{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;
+  justify-content:space-between;padding:0 var(--pad);height:76px;
+  transition:background .5s var(--ease),box-shadow .5s var(--ease),height .4s var(--ease)}
+.hdr.scrolled{background:rgba(247,244,239,.86);backdrop-filter:blur(16px) saturate(1.1);
+  box-shadow:0 1px 0 var(--line-2);height:64px}
+.hdr-brand{font-family:var(--ui);font-weight:500;font-size:1rem;letter-spacing:.42em;text-indent:.42em;color:var(--ink)}
+.hdr.on-dark .hdr-brand,.hdr.on-dark .hdr-nav a,.hdr.on-dark .brg span{color:var(--cream)}
+.hdr.on-dark .brg span{background:var(--cream)}
+.hdr-nav{display:flex;align-items:center;gap:clamp(1.4rem,3vw,2.6rem)}
+.hdr-nav a{font-family:var(--ui);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2);
+  position:relative;transition:color .4s}
+.hdr-nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1px;background:var(--bronze);transition:width .45s var(--ease)}
+.hdr-nav a:hover{color:var(--ink)}
+.hdr-nav a:hover::after{width:100%}
+.hdr-cta{border:1px solid var(--line);padding:.62rem 1.5rem;border-radius:0;transition:background .4s var(--ease),color .4s,border-color .4s}
+.hdr-cta::after{display:none}
+.hdr-cta:hover{background:var(--ink);color:var(--ivory)!important;border-color:var(--ink)}
+.brg{display:none;flex-direction:column;gap:5px;padding:10px;margin-right:-10px;z-index:210}
+.brg span{width:22px;height:1px;background:var(--ink);transition:transform .45s var(--ease),opacity .3s}
+.brg.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.brg.open span:nth-child(2){opacity:0}
+.brg.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:190;background:var(--deep);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:2rem;opacity:0;visibility:hidden;transition:opacity .6s var(--ease),visibility .6s}
 .drawer.open{opacity:1;visibility:visible}
-.drawer a{font-family:var(--sans);font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-text);text-decoration:none}
-.drawer a.nav-cta{color:#241C20}
+.drawer a{font-family:var(--display);font-size:1.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream)}
+.drawer .d-jp{font-family:var(--ui);font-size:.6rem;letter-spacing:.3em;color:var(--gold-l);display:block;text-align:center;margin-top:.3rem}
 
 /* ============================================================
-   FALLING GOLD FEATHERS (global, decorative)
+   1. HERO
    ============================================================ */
-#feathers{position:fixed;inset:0;pointer-events:none;z-index:110;overflow:hidden}
-.feather{position:absolute;top:-6vh;will-change:transform,opacity;opacity:0}
-.feather svg{display:block}
-@keyframes feather-fall{
-  0%{transform:translate3d(0,-6vh,0) rotate(0deg);opacity:0}
-  8%{opacity:var(--fo,.5)}
-  92%{opacity:var(--fo,.5)}
-  100%{transform:translate3d(var(--fx,40px),108vh,0) rotate(var(--fr,220deg));opacity:0}
-}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{
-  position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
-  overflow:hidden;padding:6rem 1.5rem 4rem;
-  /* 背景は .bg-canvas＋#bg-decor を透過で見せる（装飾を全体に効かせる） */
-  background:transparent;
-}
-.hero-inner{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:920px}
-.hero-eyebrow{margin-bottom:1.4rem;opacity:0}
-.hero h1{
-  font-family:var(--jp-serif);font-weight:600;color:var(--cream-text);
-  font-size:clamp(2rem,6.2vw,4rem);line-height:1.32;letter-spacing:.05em;
-}
-.hero h1 .line{display:block;overflow:hidden}
-.hero h1 .line span{display:block;transform:translateY(110%);opacity:0}
-.hero h1 .gold{color:var(--gold-l)}
-.hero-sub{margin-top:1.6rem;font-size:clamp(1rem,2.8vw,1.28rem);color:var(--cream-text);font-weight:500;letter-spacing:.06em;line-height:1.9;opacity:0}
-.hero-sub .accent{color:var(--gold-l);font-weight:700}
-.hero-name{margin-top:2rem;font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,1.9rem);letter-spacing:.14em;color:var(--gold-l);opacity:0}
-.hero-note{margin-top:.6rem;font-size:.8rem;color:var(--muted-dark);opacity:0}
-
-/* Hero stage: brand KV */
-.stage{position:relative;width:min(78vw,400px);aspect-ratio:1/1;margin:2.4rem auto 1rem;display:grid;place-items:center}
-.stage-rings{position:absolute;inset:0;display:grid;place-items:center;z-index:1}
-.ring{position:absolute;border-radius:50%;border:1px solid transparent}
-.ring.r1{inset:6%;background:radial-gradient(closest-side,transparent 78%,rgba(201,168,106,.30) 92%,transparent 100%);
-  animation:ringSpin 22s linear infinite,ringBreath 7s ease-in-out infinite}
-.ring.r2{inset:16%;background:radial-gradient(closest-side,transparent 74%,rgba(228,207,163,.26) 90%,transparent 100%);
-  animation:ringSpin 30s linear infinite reverse,ringBreath 6s ease-in-out infinite}
-.ring.r3{inset:-4%;background:radial-gradient(closest-side,transparent 82%,rgba(201,168,106,.16) 94%,transparent 100%);
-  animation:ringSpin 40s linear infinite}
-@keyframes ringSpin{to{transform:rotate(360deg)}}
-@keyframes ringBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-.stage-glow{position:absolute;inset:12%;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(201,168,106,.22),rgba(201,168,106,.06) 60%,transparent 75%);
-  filter:blur(6px);z-index:0}
-.product{position:relative;z-index:3;width:84%;animation:floatY 6s ease-in-out infinite}
-@keyframes floatY{0%,100%{transform:translateY(-2%)}50%{transform:translateY(3%)}}
-.product.brand-kv{filter:none;border-radius:26px;overflow:hidden;
-  box-shadow:0 34px 70px rgba(3,14,12,.55),0 10px 26px rgba(201,168,106,.14);
-  border:1px solid rgba(201,168,106,.4)}
-.brand-kv img{display:block;width:100%;height:auto;border-radius:26px}
-
-/* Hero CTAs & price */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
-  font-family:var(--sans);font-size:.82rem;letter-spacing:.06em;text-decoration:none;cursor:pointer;border:none;
-  padding:.95rem 2rem;border-radius:50px;transition:transform .3s var(--ease),box-shadow .3s,background .3s}
-.btn-primary{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#241C20;box-shadow:0 12px 26px rgba(201,168,106,.30)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(201,168,106,.42)}
-.btn-ghost{background:rgba(239,233,219,.06);color:var(--gold-l);border:1.5px solid var(--line);box-shadow:var(--shadow-sm)}
-.btn-ghost:hover{transform:translateY(-3px);border-color:var(--gold-l)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2.4rem;opacity:0}
-.hero-note2{margin-top:1.2rem;font-size:.72rem;color:var(--muted-dark);opacity:0;max-width:40ch;line-height:1.8}
-
-/* Scroll cue */
-.scroll-cue{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:5;
-  display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0}
-.scroll-cue .txt{font-family:var(--sans);font-size:.55rem;letter-spacing:.34em;color:var(--gold-l)}
-.scroll-cue .bar{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);position:relative;overflow:hidden}
-.scroll-cue .bar::after{content:"";position:absolute;top:-50%;left:0;width:100%;height:50%;background:var(--gold);animation:scrollDot 2.2s var(--ease) infinite}
-@keyframes scrollDot{0%{top:-50%}60%,100%{top:100%}}
-
-/* ============================================================
-   BRAND FILM（FV直下・シネマティック）
-   ============================================================ */
-.brandfilm{padding:clamp(2.6rem,6vw,4.6rem) 1.5rem clamp(3rem,6vw,4.6rem)}
-.film-head{margin-bottom:clamp(1.4rem,3.2vw,2.2rem);text-align:center}
-.film-head .eyebrow{display:block;margin-bottom:.7rem}
-.film-head .t{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.15rem,3vw,1.7rem);color:var(--cream-text);letter-spacing:.05em}
-.film-head .t .en{font-family:var(--serif);font-weight:400;color:var(--gold-l);display:block;font-size:1.15em;line-height:1.2;margin-bottom:.3rem}
-.film-wrap{position:relative;max-width:1000px;margin:0 auto}
-.film-glow{position:absolute;inset:-10% 0;z-index:0;pointer-events:none;border-radius:50%;
-  background:radial-gradient(60% 55% at 50% 45%,rgba(201,168,106,.22),transparent 70%);filter:blur(34px)}
-.film-frame{position:relative;z-index:1;border-radius:20px;overflow:hidden;isolation:isolate;
-  border:1px solid var(--line);box-shadow:0 44px 90px -34px rgba(0,0,0,.75)}
-.film-frame::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:20px;z-index:2;
-  box-shadow:inset 0 0 0 1px rgba(228,207,163,.16);
-  background:linear-gradient(180deg,rgba(8,32,28,.06),transparent 16%,transparent 84%,rgba(8,32,28,.20))}
-.brand-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#08201C}
-
-/* ============================================================
-   DUAL MARQUEE (上下2段・逆方向)
-   ============================================================ */
-.marquee-band{position:relative;z-index:3;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.marquee{overflow:hidden;white-space:nowrap;height:clamp(48px,7vw,64px);display:flex;align-items:center}
-.marquee.row1{background:#0F312A;border-bottom:1px solid var(--line)}
-.marquee.row2{background:#0A2621}
-.mq-track{display:flex;flex-shrink:0;align-items:center;will-change:transform}
-.mq-track.ltr{animation:mqRight 34s linear infinite}
-.mq-track.rtl{animation:mqLeft 28s linear infinite}
-@keyframes mqLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes mqRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-.mq-item{font-family:var(--sans);font-size:clamp(.72rem,1.8vw,.95rem);letter-spacing:.28em;
-  text-transform:uppercase;color:var(--gold-l);padding:0 1.6rem;display:inline-flex;align-items:center;gap:1.6rem}
-.mq-star{color:var(--gold);font-size:.7em}
-
-/* ============================================================
-   CONCEPT
-   ============================================================ */
-.concept .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,5vw,4rem);align-items:center}
-.concept-copy .sec-title{margin-bottom:1.4rem}
-.concept-copy .lead{max-width:44ch}
-
-/* ---- Product render: 黒箱＋ゴールドロゴ＋台座＋反射＋スポットライト ---- */
-.prod-stage{position:relative;width:min(78vw,360px);margin:0 auto;aspect-ratio:1/1.08;display:grid;place-items:center}
-.prod-spot{position:absolute;inset:-14% 0 4% 0;pointer-events:none;
-  background:radial-gradient(70% 46% at 50% 30%,rgba(201,168,106,.26),transparent 62%);filter:blur(6px)}
-.prod-pedestal{position:absolute;bottom:12%;width:74%;height:30px;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(201,168,106,.34),transparent 72%);filter:blur(4px);z-index:1}
-.prod-box{position:relative;z-index:2;width:66%;aspect-ratio:1/1.28;border-radius:12px;
-  background:linear-gradient(150deg,#16160f 0%,#0c0c08 52%,#040403 100%);
-  border:1px solid rgba(201,168,106,.5);
-  box-shadow:0 34px 54px -22px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.07),inset 0 0 40px rgba(201,168,106,.06);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:1.6rem;overflow:hidden;
-  animation:floatY 6.5s ease-in-out infinite;
-  -webkit-box-reflect:below 8px linear-gradient(transparent 62%,rgba(0,0,0,.22))}
-.prod-box::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(135deg,rgba(255,255,255,.10) 0%,transparent 30%,transparent 70%,rgba(201,168,106,.06) 100%)}
-.prod-box .pb-emblem{width:42%}
-.prod-box .pb-wm{font-family:var(--sans);font-weight:700;font-size:1.15rem;letter-spacing:.28em;
-  background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
-.prod-box .pb-sub{font-family:var(--sans);font-size:.5rem;letter-spacing:.32em;color:var(--gold-l);text-transform:uppercase;opacity:.85}
-.prod-box .pb-line{width:34px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-
-/* ============================================================
-   CONCERNS
-   ============================================================ */
-.concern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:2.4rem}
-.concern-card{background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:var(--radius);padding:1.5rem 1.4rem;
-  display:flex;align-items:flex-start;gap:.9rem;box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s,border-color .4s}
-.concern-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line)}
-.concern-card .ci{flex-shrink:0;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
-  display:grid;place-items:center;margin-top:2px;color:var(--gold-l)}
-.concern-card .ci svg{width:20px;height:20px}
-.concern-card p{font-size:.92rem;line-height:1.75;color:var(--cream-text)}
-/* こんな方におすすめ */
-.recommend{max-width:820px;margin:clamp(2.4rem,5vw,3.4rem) auto 0;
-  background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:var(--radius);
-  padding:clamp(1.8rem,4vw,2.6rem);box-shadow:var(--shadow-sm)}
-.recommend .eyebrow{display:block;text-align:center;margin-bottom:.7rem}
-.recommend h3{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.15rem,3vw,1.5rem);color:var(--gold-l);text-align:center;letter-spacing:.06em}
-.recommend .s-line{margin-top:1rem;margin-bottom:.4rem}
-.recommend ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:.9rem 1.6rem;margin-top:1.8rem;padding:0}
-.recommend li{display:flex;align-items:flex-start;gap:.85rem;font-size:.94rem;color:var(--cream-text);line-height:1.7}
-.recommend li .chk{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:grid;place-items:center;margin-top:3px}
-.recommend li .chk svg{width:12px;height:12px;stroke:#20180F}
-.recommend .r-note{margin-top:1.6rem;text-align:center;font-size:.74rem;color:var(--muted-dark);line-height:1.7}
-
-/* ============================================================
-   FEATURES
-   ============================================================ */
-.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:2.6rem}
-.feature-card{position:relative;background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:var(--radius);
-  padding:2.2rem 1.6rem;box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s,border-color .45s}
-.feature-card::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 58%,rgba(201,168,106,.08));opacity:0;transition:opacity .45s}
-.feature-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
-.feature-card:hover::before{opacity:1}
-.feature-ico{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold-l);margin-bottom:1.1rem;position:relative}
-.feature-ico svg{width:22px;height:22px}
-.feature-num{font-family:var(--serif);font-size:.9rem;color:var(--gold);letter-spacing:.2em;margin-bottom:.5rem;position:relative}
-.feature-card h3{font-family:var(--jp);font-weight:700;font-size:1.05rem;color:var(--cream-text);margin-bottom:.7rem;position:relative;letter-spacing:.03em}
-.feature-card p{font-size:.88rem;line-height:1.85;color:var(--muted-dark);position:relative}
-
-/* ============================================================
-   AREAS — 人体シルエット部位マップ（キー演出）
-   ============================================================ */
-.areas-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(1.8rem,5vw,3.4rem);align-items:center;margin-top:2.6rem}
-.bodymap{position:relative;max-width:340px;margin:0 auto;width:100%}
-.bodymap-glow{position:absolute;inset:6% 12%;border-radius:50%/60%;
-  background:radial-gradient(closest-side,rgba(201,168,106,.14),transparent 70%);filter:blur(8px);z-index:0}
-.bodymap svg{position:relative;z-index:1;width:100%;height:auto;display:block;overflow:visible}
-.bm-fig{fill:rgba(201,168,106,.05);stroke:rgba(228,207,163,.55);stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round}
-.bm-line{fill:none;stroke:rgba(228,207,163,.5);stroke-width:1.4;stroke-linecap:round}
-.bm-pin circle.dot{fill:var(--gold-l)}
-.bm-pin circle.halo{fill:none;stroke:var(--gold);stroke-width:1;opacity:.7}
-.bm-pin text{fill:#20180F;font-family:var(--sans);font-weight:600;font-size:11px;text-anchor:middle;dominant-baseline:central}
-.bm-pin .halo-anim{transform-box:fill-box;transform-origin:center;animation:pinPulse 3.4s var(--ease) infinite}
-@keyframes pinPulse{0%,100%{opacity:.15;transform:scale(1)}50%{opacity:.7;transform:scale(1.5)}}
-
-.area-list{display:flex;flex-direction:column;gap:.7rem}
-.area-item{display:flex;align-items:center;gap:1rem;background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:14px;padding:.9rem 1.2rem;box-shadow:var(--shadow-sm);transition:border-color .35s,transform .35s}
-.area-item:hover{border-color:var(--line);transform:translateX(3px)}
-.area-item .no{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#20180F;
-  font-family:var(--sans);font-weight:700;font-size:.72rem;display:grid;place-items:center}
-.area-item b{font-weight:500;font-size:.98rem;color:var(--cream-text)}
-.area-item .en{font-family:var(--serif);font-size:1.05rem;color:var(--gold-l);margin-left:auto;letter-spacing:.05em}
-.area-note{margin-top:1.4rem;font-size:.76rem;color:var(--muted-dark);line-height:1.8}
-
-/* ============================================================
-   HOW TO USE
-   ============================================================ */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:2.6rem}
-.step{position:relative;background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:var(--radius);padding:2rem 1.5rem;box-shadow:var(--shadow-sm)}
-.step .step-no{font-family:var(--sans);font-size:.6rem;letter-spacing:.24em;color:var(--gold-l);text-transform:uppercase}
-.step .step-big{font-family:var(--serif);font-size:2.6rem;color:rgba(201,168,106,.32);line-height:1;position:absolute;top:1.2rem;right:1.3rem}
-.step .step-ico{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold-l);margin:.4rem 0 .8rem}
-.step .step-ico svg{width:22px;height:22px}
-.step h3{font-family:var(--jp);font-weight:700;font-size:1.02rem;margin:.2rem 0 .6rem;color:var(--cream-text)}
-.step p{font-size:.86rem;color:var(--muted-dark);line-height:1.8}
-.notice{margin-top:2.6rem;background:rgba(255,255,255,.03);border:1px dashed var(--line);border-radius:var(--radius);padding:1.8rem;box-shadow:var(--shadow-sm)}
-.notice h3{font-family:var(--jp);font-weight:700;font-size:.95rem;color:var(--cream-text);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
-.notice ul{list-style:none;display:grid;gap:.6rem}
-.notice li{position:relative;padding-left:1.3rem;font-size:.85rem;color:var(--muted-dark);line-height:1.7}
-.notice li::before{content:"•";position:absolute;left:.2rem;color:var(--gold)}
-.notice .foot{margin-top:1rem;font-size:.74rem;color:var(--muted-dark)}
-
-
-/* ============================================================
-   TERAHERTZ
-   ============================================================ */
-.thz-inner{max-width:760px}
-.thz-note{margin-top:2rem;background:rgba(255,255,255,.04);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:1.4rem 1.6rem}
-.thz-note p{font-size:.86rem;color:var(--muted-dark);line-height:1.9}
-
-/* ============================================================
-   BRAND STORY（濃色帯・上下移行帯で連続背景へ溶かす）
-   ============================================================ */
-.story{background:transparent;color:#fff;position:relative;isolation:isolate;overflow:visible}
-.story::before{content:"";position:absolute;inset:-160px 0;z-index:-1;pointer-events:none;
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;
+  padding:7rem var(--pad) 5rem;overflow:hidden;isolation:isolate;background:var(--deep)}
+.hero .media{position:absolute;inset:0;z-index:0}
+.hero .media-fb::before{
   background:
-    radial-gradient(60% 55% at 80% 22%,rgba(201,168,106,.14),transparent 60%),
-    radial-gradient(50% 45% at 10% 78%,rgba(201,168,106,.10),transparent 60%),
-    linear-gradient(180deg, rgba(8,32,28,0) 0%, #08221D 160px, #08221D calc(100% - 160px), rgba(8,32,28,0) 100%)}
-.story .wrap{position:relative}
-.story .eyebrow{color:var(--gold-l)}
-.story-big{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.6rem,4.4vw,2.6rem);line-height:1.6;margin:1.4rem 0 2rem;color:#fff}
-.story p{color:rgba(255,255,255,.78);font-size:.96rem;line-height:2.1;max-width:640px}
-.story .beat{margin:1.6rem 0;display:flex;gap:1.4rem;flex-wrap:wrap;color:var(--gold-l);font-family:var(--serif);font-size:1.2rem;letter-spacing:.12em}
-.story .close{margin-top:2rem;font-family:var(--jp-serif);font-size:1.15rem;color:#fff}
+    radial-gradient(100% 70% at 50% 8%, rgba(228,207,163,.20), rgba(228,207,163,0) 62%),
+    radial-gradient(80% 60% at 15% 90%, rgba(18,58,50,.9), rgba(18,58,50,0) 70%),
+    linear-gradient(168deg,#133A32 0%,#0C2A25 52%,#061715 100%)}
+.hero .media-fb::after{mix-blend-mode:overlay;opacity:.4}
+.hero-veil{position:absolute;inset:0;z-index:2;
+  background:linear-gradient(180deg,rgba(6,23,21,.55) 0%,rgba(6,23,21,.18) 35%,rgba(6,23,21,.42) 100%)}
+.hero-in{position:relative;z-index:3;text-align:center;color:var(--cream);max-width:1000px}
+.hero-eyebrow{display:flex;justify-content:center;gap:1.1em;margin-bottom:clamp(2rem,5vw,3.4rem)}
+.hero-eyebrow span{font-family:var(--ui);font-size:.6rem;letter-spacing:.44em;text-transform:uppercase;
+  color:var(--gold-l);opacity:0;transform:translateY(8px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.ready .hero-eyebrow span{opacity:1;transform:none}
+.ready .hero-eyebrow span:nth-child(1){transition-delay:.15s}
+.ready .hero-eyebrow span:nth-child(2){transition-delay:.3s}
+.ready .hero-eyebrow span:nth-child(3){transition-delay:.45s}
+.hero h1{margin:0}
+.hero-brand{display:block;font-family:var(--display);font-weight:300;color:var(--cream);
+  font-size:clamp(3.4rem,13vw,10rem);line-height:1;letter-spacing:.06em;text-indent:.06em}
+.hero-jp{display:block;margin-top:clamp(1.4rem,4vw,2.6rem);font-family:var(--jp-serif);font-weight:500;
+  font-size:clamp(1.05rem,3vw,1.9rem);letter-spacing:.16em;line-height:2;color:var(--cream);
+  word-break:keep-all;line-break:strict}
+.hero h1 .rl>span{transition-duration:1.4s}
+.hero-name{margin-top:clamp(1.8rem,4vw,2.8rem);font-family:var(--ui);font-size:.66rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold-l);opacity:0;transition:opacity 1s var(--ease) 1.1s}
+.ready .hero-name{opacity:1}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:clamp(2rem,5vw,3rem);
+  opacity:0;transform:translateY(10px);transition:opacity 1s var(--ease) 1.35s,transform 1s var(--ease) 1.35s}
+.ready .hero-cta{opacity:1;transform:none}
+.hero-note{margin-top:1.6rem;font-family:var(--ui);font-size:.62rem;letter-spacing:.08em;color:rgba(239,233,219,.5);
+  opacity:0;transition:opacity 1s var(--ease) 1.6s}
+.ready .hero-note{opacity:1}
+.scroll-cue{position:absolute;left:50%;bottom:2rem;transform:translateX(-50%);z-index:3;display:flex;
+  flex-direction:column;align-items:center;gap:.8rem;opacity:0;transition:opacity 1s var(--ease) 1.8s}
+.ready .scroll-cue{opacity:1}
+.scroll-cue span{font-family:var(--ui);font-size:.54rem;letter-spacing:.36em;color:rgba(239,233,219,.7)}
+.scroll-cue i{width:1px;height:52px;background:linear-gradient(rgba(228,207,163,.6),transparent);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;top:-60%;left:0;width:100%;height:60%;background:var(--gold-l);
+  animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{top:-60%}65%,100%{top:100%}}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.9em;
+  font-family:var(--ui);font-size:.7rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
+  padding:1.15rem 2.4rem;border:1px solid transparent;transition:background .45s var(--ease),color .45s,border-color .45s,box-shadow .45s}
+.btn .ar{display:inline-block;transition:transform .45s var(--ease)}
+.btn:hover .ar{transform:translateX(6px)}
+.btn-fill{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn-fill:hover{background:var(--bronze);border-color:var(--bronze);color:var(--white);box-shadow:0 8px 30px rgba(183,156,123,.32)}
+.btn-line{border-color:rgba(239,233,219,.4);color:var(--cream)}
+.btn-line:hover{border-color:var(--gold-l);color:var(--gold-l)}
+.btn-ink-line{border-color:var(--line);color:var(--ink)}
+.btn-ink-line:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.btn-lg{padding:1.3rem 3.2rem;font-size:.74rem}
 
 /* ============================================================
-   PRICING
+   2. BRAND FILM
    ============================================================ */
-.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;margin-top:2.8rem;max-width:840px;margin-left:auto;margin-right:auto}
-.price-card{position:relative;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:22px;padding:2.4rem 2rem;box-shadow:var(--shadow-sm);
-  display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .45s var(--ease),box-shadow .45s}
-.price-card.reco{border:1.5px solid var(--gold)}
-.price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold-l),var(--gold));
-  color:#20180F;font-family:var(--sans);font-size:.62rem;letter-spacing:.14em;padding:.4rem 1.1rem;border-radius:50px;box-shadow:0 6px 16px rgba(201,168,106,.3)}
-.price-card .pc-name{font-family:var(--serif);font-size:1.2rem;color:var(--cream-text);letter-spacing:.05em}
-.price-card .pc-qty{font-family:var(--sans);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin:.6rem 0 1.2rem}
-.price-card .pc-price{font-family:var(--jp-serif);font-weight:600;font-size:1.9rem;color:var(--gold-l);line-height:1.2}
-.price-card .pc-price small{font-size:.8rem;font-weight:400;margin-left:.2rem;color:var(--muted-dark)}
-.price-card .pc-cta{margin-top:1.8rem;width:100%}
-.price-note{margin-top:1.8rem;text-align:center;font-size:.74rem;color:var(--muted-dark);line-height:1.8;max-width:56ch;margin-left:auto;margin-right:auto}
-.price-note a,.assurance a{color:var(--gold-l);text-decoration:underline;text-underline-offset:2px}
-.assurance{list-style:none;max-width:840px;margin:2.4rem auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;padding:0}
-.assurance li{display:flex;flex-direction:column;gap:.35rem;background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:14px;padding:1.2rem 1.3rem;box-shadow:var(--shadow-sm)}
-.assurance svg{width:26px;height:26px;color:var(--gold-l)}
-.assurance b{font-size:.9rem;font-weight:700;color:var(--cream-text)}
-.assurance span{font-size:.8rem;color:var(--muted-dark);line-height:1.7}
-
-/* Reviews empty state */
-.review-empty{max-width:560px;margin:2rem auto 0;text-align:center;background:rgba(255,255,255,.045);border:1px dashed var(--line-2);border-radius:var(--radius);padding:2.4rem 1.6rem;box-shadow:var(--shadow-sm)}
-.review-empty svg{width:34px;height:34px;margin:0 auto 1rem;opacity:.6}
-.review-empty p{color:var(--muted-dark);font-size:.9rem}
+.film{background:var(--ivory);padding-block:clamp(4rem,10vh,8rem)}
+.film-head{text-align:center;margin-bottom:clamp(2.2rem,5vw,3.4rem)}
+.film-frame{position:relative;aspect-ratio:16/9;background:var(--deep);overflow:hidden}
+.film-frame video{width:100%;height:100%;object-fit:cover;display:block}
+.film-cap{margin-top:1.4rem;text-align:center}
 
 /* ============================================================
-   FAQ
+   3. CONCEPT
    ============================================================ */
-.faq-list{max-width:760px;margin:2.4rem auto 0;display:flex;flex-direction:column;gap:.8rem}
-.faq-item{background:rgba(255,255,255,.045);border:1px solid var(--line-2);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:1.2rem 1.4rem;display:flex;align-items:center;gap:1rem;
-  font-family:var(--jp);font-weight:500;font-size:.95rem;color:var(--cream-text)}
-.faq-q .qmark{font-family:var(--serif);color:var(--gold-l);font-size:1.2rem;flex-shrink:0}
-.faq-q .plus{margin-left:auto;flex-shrink:0;width:18px;height:18px;position:relative;transition:transform .35s var(--ease)}
-.faq-q .plus::before,.faq-q .plus::after{content:"";position:absolute;background:var(--gold-l);border-radius:2px}
-.faq-q .plus::before{top:50%;left:0;width:100%;height:2px;transform:translateY(-50%)}
-.faq-q .plus::after{left:50%;top:0;height:100%;width:2px;transform:translateX(-50%);transition:opacity .3s}
-.faq-item.open .plus{transform:rotate(180deg)}
-.faq-item.open .plus::after{opacity:0}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
-.faq-a-inner{padding:0 1.4rem 1.3rem 3rem;font-size:.88rem;color:var(--muted-dark);line-height:1.9}
-.faq-a-inner a{color:var(--gold-l);text-decoration:underline;text-underline-offset:2px}
+.concept{background:var(--ivory)}
+.concept .display{color:var(--ink)}
+.concept-grid{display:grid;gap:clamp(2rem,6vw,4.5rem);grid-template-columns:1fr;align-items:start}
+@media(min-width:900px){.concept-grid{grid-template-columns:1.05fr .95fr}}
+.concept-copy p+p{margin-top:1.6rem}
 
 /* ============================================================
-   FINAL CTA（濃緑帯＋上に移行帯）
+   4. PRODUCT REVEAL (sticky)
    ============================================================ */
-.final{position:relative;overflow:hidden;text-align:center;background:#08221D;isolation:isolate}
-.final::before{content:"";position:absolute;inset:-150px 0 0 0;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg, rgba(8,34,29,0) 0%, #08221D 150px)}
-.final .wrap{position:relative;z-index:3}
-.final-big{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.8rem,5vw,3rem);line-height:1.5;color:var(--cream-text)}
-.final-sub{margin:1.6rem 0 2.4rem;font-size:clamp(.95rem,2.4vw,1.1rem);color:var(--muted-dark);line-height:2}
-.final-note{margin-top:1.4rem;font-size:.76rem;color:var(--muted-dark)}
+.product{background:var(--stone);padding:0}
+.product-in{display:grid;grid-template-columns:1fr;max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+@media(min-width:900px){.product-in{grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}}
+.product-sticky{position:sticky;top:0;height:100svh;display:grid;place-items:center;z-index:1}
+.product-stage{position:relative;width:min(78%,420px);aspect-ratio:3/4;display:grid;place-items:center}
+.product-halo{position:absolute;inset:-6% 0;border-radius:50%;
+  background:radial-gradient(60% 50% at 50% 45%,rgba(183,156,123,.28),transparent 70%);filter:blur(30px)}
+.product-obj{position:relative;z-index:2;width:70%;aspect-ratio:1/1.3;
+  background:linear-gradient(155deg,#1b1b18 0%,#0d0d0b 55%,#050504 100%);
+  border:1px solid rgba(215,197,174,.42);
+  box-shadow:0 50px 70px -34px rgba(24,24,24,.55),inset 0 1px 0 rgba(255,255,255,.08);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:2rem;
+  transition:transform 1.4s var(--ease)}
+.product-obj::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 32%,transparent 72%,rgba(215,197,174,.08))}
+.product-obj .pw{font-family:var(--ui);font-weight:500;font-size:1rem;letter-spacing:.36em;text-indent:.36em;
+  background:linear-gradient(180deg,#F3E6B4,#D7C5AE 55%,#B79C7B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.product-obj .pl{width:34px;height:1px;background:linear-gradient(90deg,transparent,var(--sand),transparent)}
+.product-obj .ps{font-family:var(--ui);font-size:.48rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(215,197,174,.85)}
+.product-shadow{position:absolute;bottom:6%;width:56%;height:16px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(24,24,24,.22),transparent 72%);filter:blur(6px)}
+.product-obj video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s var(--ease)}
+.product-obj video.is-playing{opacity:1}
+.product-steps{display:flex;flex-direction:column}
+.pstep{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:clamp(3rem,10vh,6rem)}
+.pstep .eyebrow{display:block;margin-bottom:1.2rem}
+.pstep .display{margin-bottom:1.4rem;color:var(--ink)}
+@media(max-width:899px){
+  .product-sticky{height:56svh;top:64px}
+  .pstep{min-height:auto;padding-block:clamp(2.5rem,8vh,4rem)}
+  .product-steps{padding-bottom:3rem}
+}
 
 /* ============================================================
-   BUSINESS INFO
+   5. BODY / APPLICATION
    ============================================================ */
-.biz-table{max-width:760px;margin:2.4rem auto 0;border-top:1px solid var(--line-2)}
-.biz-row{display:grid;grid-template-columns:180px 1fr;gap:1rem;padding:1.1rem .4rem;border-bottom:1px solid var(--line-2)}
-.biz-row dt{font-family:var(--sans);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);font-weight:500}
-.biz-row dd{font-size:.92rem;color:var(--cream-text);line-height:1.7}
-.biz-row dd a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid var(--line-2)}
+.bodysec{background:var(--ivory)}
+.body-grid{display:grid;gap:clamp(1.8rem,5vw,4rem);grid-template-columns:1fr;align-items:center}
+@media(min-width:900px){.body-grid{grid-template-columns:1.02fr .98fr}}
+.body-stage{position:relative;aspect-ratio:4/5;background:var(--beige);overflow:hidden}
+.body-shot{position:absolute;inset:0;opacity:0;transition:opacity 1.1s var(--ease)}
+.body-shot.on{opacity:1}
+.body-shot .media-fb::before{
+  background:
+    radial-gradient(110% 80% at 32% 18%, rgba(255,255,255,.92), rgba(255,255,255,0) 58%),
+    radial-gradient(85% 65% at 78% 82%, rgba(215,197,174,.62), rgba(215,197,174,0) 66%),
+    linear-gradient(158deg,#F5F1EA 0%,#E6DED2 58%,#D9CEBE 100%)}
+.body-shot-name{position:absolute;left:clamp(1.2rem,4vw,2.4rem);bottom:clamp(1.2rem,4vw,2.2rem);z-index:2}
+.body-shot-name .en{display:block;font-family:var(--display);font-weight:300;text-transform:uppercase;
+  font-size:clamp(1.6rem,5vw,3rem);line-height:1;color:var(--ink);letter-spacing:.02em}
+.body-shot-name .jp{display:block;margin-top:.5rem;font-family:var(--ui);font-size:.62rem;letter-spacing:.28em;color:var(--ink-3)}
+.body-list{list-style:none}
+.body-list li+li{border-top:1px solid var(--line-2)}
+.body-list button{display:flex;align-items:center;gap:1.2rem;width:100%;text-align:left;
+  padding:clamp(.9rem,2.2vw,1.25rem) .2rem;transition:padding-left .5s var(--ease),color .4s}
+.body-list button:hover,.body-list button.on{padding-left:.9rem}
+.body-list .idx{font-family:var(--ui);font-size:.6rem;letter-spacing:.2em;color:var(--ink-3);width:2ch;flex-shrink:0;transition:color .4s}
+.body-list .en{font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.06em;
+  font-size:clamp(1.1rem,2.8vw,1.7rem);line-height:1.2;color:var(--ink);transition:color .4s}
+.body-list .jp{margin-left:auto;font-size:.78rem;letter-spacing:.14em;color:var(--ink-3);transition:color .4s}
+.body-list button.on .idx,.body-list button.on .jp{color:var(--bronze)}
+.body-list button.on .en{color:var(--bronze)}
+.body-note{margin-top:1.8rem}
+
+/* ============================================================
+   6. EVERYDAY MOMENTS
+   ============================================================ */
+.moments{background:var(--ivory);padding-inline:0}
+.moments .m-head{padding-inline:var(--pad);max-width:var(--wrap);margin:0 auto clamp(2.5rem,6vw,4rem)}
+.m-row{position:relative;display:grid;grid-template-columns:1fr;align-items:center;
+  max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad);gap:clamp(1.2rem,4vw,3rem)}
+@media(min-width:820px){
+  .m-row{grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+  .m-row:nth-child(even) .m-media{order:2}
+}
+.m-row+.m-row{margin-top:clamp(3rem,9vh,7rem)}
+.m-media{position:relative;aspect-ratio:4/3;overflow:hidden}
+@media(min-width:820px){.m-media{aspect-ratio:5/6}}
+.m-copy .idx{font-family:var(--display);font-weight:300;font-size:clamp(2.2rem,6vw,4rem);line-height:1;color:var(--sand);display:block;margin-bottom:.8rem}
+.m-copy .en{display:block;font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.08em;
+  font-size:clamp(1.5rem,4vw,2.6rem);line-height:1.1;margin-bottom:.9rem}
+.m-copy p{max-width:34ch}
+
+/* ============================================================
+   7. FEATURES (full-bleed)
+   ============================================================ */
+.feat{position:relative;min-height:88svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;
+  padding:clamp(4rem,10vh,7rem) var(--pad)}
+.feat .media{position:absolute;inset:0;z-index:0}
+.feat-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(247,244,239,.94) 0%,rgba(247,244,239,.78) 42%,rgba(247,244,239,.22) 100%)}
+.feat:nth-child(even) .feat-veil{background:linear-gradient(270deg,rgba(247,244,239,.94) 0%,rgba(247,244,239,.78) 42%,rgba(247,244,239,.22) 100%)}
+.feat-in{position:relative;z-index:2;max-width:var(--wrap);margin:0 auto;width:100%}
+.feat:nth-child(even) .feat-in{text-align:right}
+.feat:nth-child(even) .feat-in .lead{margin-left:auto}
+.feat-num{display:block;font-family:var(--display);font-weight:300;line-height:1;color:var(--bronze);
+  font-size:clamp(3.4rem,13vw,10rem);opacity:.34;margin-bottom:-.1em}
+.feat-en{display:block;font-family:var(--display);font-weight:300;text-transform:uppercase;letter-spacing:.04em;
+  font-size:clamp(1.7rem,5.2vw,3.6rem);line-height:1.08;margin:.4rem 0 1rem}
+.feat-jp{display:block;margin-bottom:1.2rem}
+
+/* ============================================================
+   8. TERAHERTZ (dark)
+   ============================================================ */
+.tech{position:relative;overflow:hidden}
+.tech .p-field{position:absolute;inset:0;z-index:0;pointer-events:none}
+.tech .p-field i{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--gold-l);opacity:.16;
+  animation:pf var(--pd,14s) ease-in-out var(--pl,0s) infinite}
+@keyframes pf{0%,100%{transform:translate3d(0,0,0);opacity:.1}50%{transform:translate3d(0,-26px,0);opacity:.5}}
+.tech .wrap{position:relative;z-index:2}
+.tech-wave{margin:clamp(2.5rem,7vw,4.5rem) auto 0;max-width:760px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(228,207,163,.5),transparent);position:relative}
+.tech-wave::after{content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;
+  background:var(--gold-l);box-shadow:0 0 18px 4px rgba(228,207,163,.5);animation:wv 7s var(--ease) infinite}
+@keyframes wv{0%{left:0;opacity:0}12%{opacity:1}88%{opacity:1}100%{left:100%;opacity:0}}
+.tech-note{margin-top:clamp(2rem,5vw,3rem);padding-top:1.6rem;border-top:1px solid rgba(228,207,163,.16)}
+
+/* ============================================================
+   9. HOW TO USE
+   ============================================================ */
+.howto{background:var(--white)}
+.steps{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3rem)}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step .s-media{position:relative;aspect-ratio:4/3;overflow:hidden;margin-bottom:1.6rem}
+.step .num{display:block;font-size:clamp(2.4rem,7vw,4.4rem);margin-bottom:.6rem}
+.step h3{font-family:var(--jp-serif);font-weight:500;font-size:1.02rem;letter-spacing:.1em;margin-bottom:.8rem;
+  word-break:keep-all;line-break:strict}
+.step p{color:var(--ink-2);font-size:.86rem;line-height:2}
+.caution{margin-top:clamp(3rem,8vw,5rem);border-top:1px solid var(--line-2);padding-top:clamp(2rem,5vw,3rem)}
+.caution h3{font-family:var(--ui);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze);margin-bottom:1.4rem}
+.caution ul{list-style:none;display:grid;gap:.7rem;max-width:var(--measure)}
+.caution li{position-relative;padding-left:1.2rem;position:relative;font-size:.82rem;line-height:1.95;color:var(--ink-2)}
+.caution li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:1px;background:var(--sand)}
+.caution .foot{margin-top:1.4rem}
+
+/* ============================================================
+   10. RECOMMENDED FOR
+   ============================================================ */
+.reco{background:var(--beige)}
+.reco-list{list-style:none;display:grid;grid-template-columns:1fr;gap:0;max-width:var(--measure);margin-inline:auto}
+.reco-list li{display:flex;align-items:flex-start;gap:1.1rem;padding:1.15rem 0;border-bottom:1px solid var(--line-2);
+  font-size:.9rem;line-height:1.9;letter-spacing:.05em}
+.reco-list li:first-child{border-top:1px solid var(--line-2)}
+.reco-list .mk{flex-shrink:0;margin-top:.62em;width:16px;height:1px;background:var(--bronze)}
+
+/* ============================================================
+   11. PRICE
+   ============================================================ */
+.price{background:var(--ivory)}
+.price-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.2rem,3vw,2rem);max-width:900px;margin:0 auto}
+@media(min-width:760px){.price-grid{grid-template-columns:1fr 1fr}}
+.pcard{position:relative;background:var(--white);border:1px solid var(--line-2);padding:clamp(2.2rem,5vw,3.2rem) clamp(1.6rem,4vw,2.4rem);
+  display:flex;flex-direction:column;align-items:center;text-align:center;transition:border-color .5s var(--ease),transform .6s var(--ease)}
+.pcard:hover{border-color:var(--sand);transform:translateY(-4px)}
+.pcard.reco-card{border-color:var(--bronze)}
+.pcard .badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--bronze);color:var(--white);
+  font-family:var(--ui);font-size:.54rem;letter-spacing:.24em;text-transform:uppercase;padding:.45rem 1.2rem}
+.pcard .pn{font-family:var(--display);font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.pcard .pq{font-family:var(--ui);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bronze);margin:.9rem 0 1.4rem}
+.pcard .pp{font-family:var(--display);font-weight:300;font-size:clamp(2.6rem,7vw,3.6rem);line-height:1;color:var(--ink)}
+.pcard .pp .cur{font-size:.5em;vertical-align:.35em;margin-right:.06em}
+.pcard .tax{display:block;margin-top:.7rem;font-family:var(--ui);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.pcard .btn{margin-top:2rem;width:100%}
+.ship{margin:clamp(2rem,5vw,2.8rem) auto 0;text-align:center;display:flex;align-items:center;justify-content:center;gap:.9rem}
+.ship .en{font-family:var(--display);font-size:1.1rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze)}
+.assure{list-style:none;display:grid;grid-template-columns:1fr;gap:0;max-width:900px;margin:clamp(2.4rem,6vw,3.4rem) auto 0}
+@media(min-width:700px){.assure{grid-template-columns:1fr 1fr}}
+.assure li{padding:1.15rem .2rem;border-bottom:1px solid var(--line-2);display:flex;gap:1rem;align-items:baseline}
+.assure b{font-family:var(--ui);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);
+  flex-shrink:0;width:10ch}
+.assure span{font-size:.82rem;line-height:1.9;color:var(--ink-2)}
+.assure a{border-bottom:1px solid var(--line);padding-bottom:1px}
+.price-note{max-width:var(--measure);margin:1.8rem auto 0;text-align:center}
+
+/* ============================================================
+   12. VOICE
+   ============================================================ */
+.voice{background:var(--white)}
+.voice-empty{max-width:560px;margin:0 auto;text-align:center;border:1px solid var(--line-2);padding:clamp(2.4rem,6vw,3.4rem)}
+.voice-empty p{color:var(--ink-3);font-size:.86rem}
+
+/* ============================================================
+   13. FAQ
+   ============================================================ */
+.faq{background:var(--ivory)}
+.faq-list{max-width:820px;margin:0 auto;border-top:1px solid var(--line-2)}
+.faq-item{border-bottom:1px solid var(--line-2)}
+.faq-q{width:100%;display:flex;align-items:flex-start;gap:1.2rem;text-align:left;padding:1.5rem .2rem;
+  font-family:var(--jp);font-size:.92rem;letter-spacing:.05em;line-height:1.7;transition:color .4s}
+.faq-q:hover{color:var(--bronze)}
+.faq-q .qm{font-family:var(--display);font-size:1rem;color:var(--bronze);flex-shrink:0;line-height:1.6}
+.faq-q .pm{margin-left:auto;flex-shrink:0;width:14px;height:14px;position:relative;margin-top:.45em}
+.faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--ink-3);transition:transform .45s var(--ease),opacity .35s}
+.faq-q .pm::before{top:50%;left:0;width:100%;height:1px;transform:translateY(-50%)}
+.faq-q .pm::after{left:50%;top:0;height:100%;width:1px;transform:translateX(-50%)}
+.faq-item.open .pm::after{opacity:0;transform:translateX(-50%) rotate(90deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .55s var(--ease)}
+.faq-a-in{padding:0 2.4rem 1.7rem 2.4rem;font-size:.85rem;line-height:2.1;color:var(--ink-2)}
+.faq-a-in a{border-bottom:1px solid var(--line)}
+
+/* ============================================================
+   14. FINAL CTA
+   ============================================================ */
+.final{position:relative;min-height:92svh;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;isolation:isolate;text-align:center;padding:clamp(5rem,12vh,8rem) var(--pad);background:var(--deep)}
+.final .media{position:absolute;inset:0;z-index:0}
+.final-veil{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(6,23,21,.62),rgba(6,23,21,.42) 45%,rgba(6,23,21,.78))}
+.final-in{position:relative;z-index:2;max-width:900px}
+.final .display{color:var(--cream)}
+.final-line{display:block}
+.final-jp{margin-top:clamp(1.6rem,4vw,2.4rem);color:var(--cream)}
+.final-name{margin-top:2rem;font-family:var(--ui);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-l)}
+.final .btn{margin-top:2.4rem}
+
+/* ============================================================
+   15. COMPANY
+   ============================================================ */
+.biz{background:var(--white)}
+.biz-table{max-width:820px;margin:0 auto;border-top:1px solid var(--line-2)}
+.biz-row{display:grid;grid-template-columns:1fr;gap:.3rem;padding:1.15rem .2rem;border-bottom:1px solid var(--line-2)}
+@media(min-width:720px){.biz-row{grid-template-columns:200px 1fr;gap:1.5rem}}
+.biz-row dt{font-family:var(--ui);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze)}
+.biz-row dd{font-size:.86rem;line-height:1.9;color:var(--ink-2)}
+.biz-row dd a{border-bottom:1px solid var(--line)}
 
 /* ============================================================
    FOOTER
    ============================================================ */
-footer{background:#08221D;color:#fff;padding:3.4rem 1.5rem 6rem;position:relative;isolation:isolate}
-footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130px;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg, rgba(8,34,29,0) 0%, #08221D 100%)}
-.foot-wrap{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
-.foot-brand{display:inline-flex;align-items:center;gap:.55rem}
-.foot-brand-text{font-family:var(--sans);font-weight:700;font-size:1.1rem;letter-spacing:.24em;
-  background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
-.foot-links{display:flex;flex-wrap:wrap;gap:1.3rem}
-.foot-links a{font-family:var(--sans);font-size:.72rem;letter-spacing:.05em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .3s}
-.foot-links a:hover{color:#fff}
-.foot-copy{width:100%;margin-top:2rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.12);
-  font-family:var(--sans);font-size:.6rem;letter-spacing:.1em;color:rgba(255,255,255,.35);text-align:center}
+.ft{background:var(--deep);color:var(--cream);padding:clamp(3.4rem,8vw,5rem) var(--pad) calc(2.6rem + env(safe-area-inset-bottom))}
+.ft-in{max-width:var(--wrap);margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between}
+.ft-brand{font-family:var(--ui);font-weight:500;font-size:1.05rem;letter-spacing:.44em;text-indent:.44em;color:var(--gold-l)}
+.ft-nav{display:flex;flex-wrap:wrap;gap:clamp(1.1rem,3vw,2rem)}
+.ft-nav a{font-family:var(--ui);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,233,219,.62);transition:color .4s}
+.ft-nav a:hover{color:var(--gold-l)}
+.ft-cp{width:100%;margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid rgba(239,233,219,.12);
+  font-family:var(--ui);font-size:.56rem;letter-spacing:.14em;color:rgba(239,233,219,.34)}
 
 /* ============================================================
-   STICKY PURCHASE BAR (mobile)
+   STICKY CTA (mobile)
    ============================================================ */
-.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:100;display:none;
-  align-items:center;gap:.8rem;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
-  background:rgba(9,28,24,.92);backdrop-filter:blur(14px);border-top:1px solid var(--line);
-  box-shadow:0 -6px 24px rgba(0,0,0,.28);transition:transform .4s var(--ease)}
-.sticky-bar.hidden{transform:translateY(120%)}
-.sticky-bar .sb-info{display:flex;flex-direction:column;line-height:1.2}
-.sticky-bar .sb-info b{font-size:.82rem;color:var(--cream-text);font-weight:600}
-.sticky-bar .sb-info span{font-size:.72rem;color:var(--muted-dark)}
-.sticky-bar .sb-price{font-family:var(--jp-serif);font-weight:600;color:var(--gold-l);font-size:1rem;margin-left:auto}
-.sticky-bar .btn{padding:.7rem 1.3rem;font-size:.78rem}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media(max-width:860px){
-  .nav{display:none}
-  .burger{display:flex}
-  .concept .wrap{grid-template-columns:1fr;gap:2.6rem}
-  .concept-copy{text-align:center}
-  .concept-copy .lead{max-width:none}
-  .areas-grid{grid-template-columns:1fr;gap:2.4rem}
-  .biz-row{grid-template-columns:1fr;gap:.2rem}
-  .biz-row dt{margin-bottom:.1rem}
-  .sticky-bar{display:flex}
-  footer{padding-bottom:calc(5rem + env(safe-area-inset-bottom))}
-}
-@media(max-width:520px){
-  .hero-cta{flex-direction:column;width:100%;max-width:300px}
-  .hero-cta .btn{width:100%}
-  .foot-wrap{flex-direction:column;text-align:center}
-  .foot-links{justify-content:center}
+.sbar{position:fixed;left:0;right:0;bottom:0;z-index:180;display:none;align-items:center;gap:.9rem;
+  padding:.7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom));
+  background:rgba(247,244,239,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line-2);
+  transform:translateY(120%);transition:transform .5s var(--ease)}
+.sbar.show{transform:none}
+.sbar .si{display:flex;flex-direction:column;line-height:1.35;min-width:0}
+.sbar .si b{font-family:var(--ui);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:500;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbar .si span{font-family:var(--display);font-size:1rem;color:var(--bronze)}
+.sbar .btn{margin-left:auto;padding:.85rem 1.6rem;font-size:.64rem;flex-shrink:0}
+@media(max-width:899px){
+  .hdr-nav{display:none}
+  .brg{display:flex}
+  .sbar{display:flex}
+  .ft{padding-bottom:calc(5.5rem + env(safe-area-inset-bottom))}
 }
 
 /* ============================================================
    REDUCED MOTION
    ============================================================ */
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .hero h1 .line span,.hero-eyebrow,.hero-sub,.hero-name,.hero-note,.hero-cta,.hero-note2,.scroll-cue{opacity:1!important;transform:none!important}
-  .reveal{opacity:1!important;transform:none!important;filter:none!important}
-  .mq-track{transform:none!important}
-  .marquee{justify-content:flex-start}
-  .product,.prod-box{animation:none}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv,.rl>span,.mv>*{opacity:1!important;transform:none!important}
+  .hero-eyebrow span,.hero-name,.hero-cta,.hero-note,.scroll-cue{opacity:1!important;transform:none!important}
+  .media-video{display:none}
+  #loader{display:none}
 }
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 <a href="#main" class="skip-link">本文へスキップ</a>
 
-<!-- 処方A/B: ページ全体の連続背景＋グレイン -->
-<div class="bg-canvas" aria-hidden="true"></div>
-<div class="bg-grain" aria-hidden="true"></div>
-
-<!-- 背景装飾（TERAPP公式ブランドサイトの装飾をそのまま移植）: グロー4＋光シャフト3＋四隅ボタニカル4＋きらめき14 -->
-<div id="bg-decor" aria-hidden="true">
-  <span class="bd-glow g1"></span><span class="bd-glow g2"></span><span class="bd-glow g3"></span><span class="bd-glow g4"></span>
-  <span class="bd-ray r1" style="--rd:16s;--rdl:0s"></span>
-  <span class="bd-ray r2" style="--rd:20s;--rdl:-6s"></span>
-  <span class="bd-ray r3" style="--rd:18s;--rdl:-11s"></span>
-  <img class="bd-corner c-tl" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
-  <img class="bd-corner c-tr" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
-  <img class="bd-corner c-bl" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
-  <img class="bd-corner c-br" src="images/ornament-corner.svg" alt="" width="480" height="480" decoding="async">
-  <span class="bd-spark" style="left:10vw;top:16vh;--ss:10px;--sd:4s;--sdl:0.0s"></span>
-  <span class="bd-spark" style="left:22vw;top:52vh;--ss:13px;--sd:5s;--sdl:0.4s"></span>
-  <span class="bd-spark" style="left:34vw;top:22vh;--ss:16px;--sd:6s;--sdl:0.8s"></span>
-  <span class="bd-spark" style="left:46vw;top:72vh;--ss:20px;--sd:7s;--sdl:1.2s"></span>
-  <span class="bd-spark" style="left:58vw;top:34vh;--ss:10px;--sd:8s;--sdl:1.6s"></span>
-  <span class="bd-spark" style="left:68vw;top:64vh;--ss:13px;--sd:4s;--sdl:2.0s"></span>
-  <span class="bd-spark" style="left:78vw;top:18vh;--ss:16px;--sd:5s;--sdl:2.4s"></span>
-  <span class="bd-spark" style="left:88vw;top:48vh;--ss:20px;--sd:6s;--sdl:2.8s"></span>
-  <span class="bd-spark" style="left:16vw;top:80vh;--ss:10px;--sd:7s;--sdl:3.2s"></span>
-  <span class="bd-spark" style="left:40vw;top:90vh;--ss:13px;--sd:8s;--sdl:3.6s"></span>
-  <span class="bd-spark" style="left:62vw;top:12vh;--ss:16px;--sd:4s;--sdl:4.0s"></span>
-  <span class="bd-spark" style="left:72vw;top:86vh;--ss:20px;--sd:5s;--sdl:4.4s"></span>
-  <span class="bd-spark" style="left:92vw;top:68vh;--ss:10px;--sd:6s;--sdl:4.8s"></span>
-  <span class="bd-spark" style="left:28vw;top:40vh;--ss:13px;--sd:7s;--sdl:5.2s"></span>
+<!-- ============================== LOADER ============================== -->
+<div id="loader" aria-hidden="true">
+  <div>
+    <div class="ld-mark">TERAPP</div>
+    <div class="ld-line"></div>
+  </div>
 </div>
 
 <!-- ============================== HEADER ============================== -->
-<header id="hdr">
-  <a href="#top" class="brand" aria-label="TERAPP ホーム">
-    <span class="brand-name">TERAPP</span>
-  </a>
-  <nav class="nav" aria-label="メインナビゲーション">
-    <a href="#concept">CONCEPT</a>
-    <a href="#areas">AREAS</a>
-    <a href="#howto">HOW TO USE</a>
+<header class="hdr on-dark" id="hdr">
+  <a href="#top" class="hdr-brand" aria-label="TERAPP ホーム">TERAPP</a>
+  <nav class="hdr-nav" aria-label="メインナビゲーション">
+    <a href="#concept">Concept</a>
+    <a href="#product">Product</a>
+    <a href="#body">Application</a>
+    <a href="#howto">How to Use</a>
     <a href="#faq">FAQ</a>
-    <a href="#pricing" class="nav-cta" data-ev="hero_cta_click">購入について</a>
+    <a href="#price" class="hdr-cta">Purchase</a>
   </nav>
-  <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
+  <button class="brg" id="brg" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer">
     <span></span><span></span><span></span>
   </button>
 </header>
 
 <div class="drawer" id="drawer" aria-hidden="true">
-  <a href="#concept" data-close>CONCEPT</a>
-  <a href="#areas" data-close>AREAS</a>
-  <a href="#howto" data-close>HOW TO USE</a>
-  <a href="#faq" data-close>FAQ</a>
-  <a href="#pricing" class="nav-cta" data-close data-ev="hero_cta_click">購入について</a>
+  <a href="#concept" data-close>Concept<span class="d-jp">コンセプト</span></a>
+  <a href="#product" data-close>Product<span class="d-jp">商品</span></a>
+  <a href="#body" data-close>Application<span class="d-jp">使用部位</span></a>
+  <a href="#howto" data-close>How to Use<span class="d-jp">使い方</span></a>
+  <a href="#faq" data-close>FAQ<span class="d-jp">よくあるご質問</span></a>
+  <a href="#price" data-close>Purchase<span class="d-jp">ご購入について</span></a>
 </div>
 
-<div id="feathers" aria-hidden="true"></div>
 <span id="top"></span>
 
 <main id="main">
-<!-- ============================== HERO ============================== -->
-<section class="hero" aria-label="TERAPP Conditioning Tape メインビジュアル">
-  <div class="hero-inner">
-    <p class="hero-eyebrow eyebrow" data-h="1">Luxury Body Conditioning</p>
 
-    <div class="stage" data-h="2">
-      <div class="stage-glow"></div>
-      <div class="stage-rings"><span class="ring r3"></span><span class="ring r1"></span><span class="ring r2"></span></div>
-      <div class="product brand-kv" role="img" aria-label="TERAPP ブランドロゴ">
-        <img src="images/terapp-hero-logo.jpg" alt="TERAPP" width="1000" height="880" fetchpriority="high" decoding="async">
-      </div>
-    </div>
+<!-- ============================== 1. HERO ============================== -->
+<section class="hero" aria-label="TERAPP Conditioning Tape">
+  <figure class="media" aria-hidden="true">
+    <div class="media-fb"></div>
+    <video class="media-video" data-src="assets/cinematic/hero.mp4" muted loop playsinline preload="none"></video>
+  </figure>
+  <div class="hero-veil" aria-hidden="true"></div>
 
+  <div class="hero-in">
+    <p class="hero-eyebrow"><span>Luxury</span><span>Body</span><span>Conditioning</span></p>
     <h1>
-      <span class="line" data-h="3"><span>肩も　首も　膝も</span></span>
-      <span class="line" data-h="4"><span>貼るという</span></span>
-      <span class="line" data-h="5"><span class="gold">上質なセルフケア</span></span>
+      <span class="hero-brand rl" data-d="1"><span>TERAPP</span></span>
+      <span class="hero-jp">
+        <span class="rl" data-d="2"><span>貼るという</span></span>
+        <span class="rl" data-d="3"><span>上質なセルフケア</span></span>
+      </span>
     </h1>
-
-    <p class="hero-sub" data-h="6">部位に合わせて切って貼る、<span class="accent">&Prime;わたし&Prime;</span>のコンディショニング習慣。</p>
-    <p class="hero-name" data-h="7">TERAPP Conditioning Tape</p>
-    <p class="hero-note" data-h="8">テラヘルツ特殊加工を施した、コンディショニング用ボディテープ。</p>
-
-    <div class="hero-cta" data-h="9">
-      <a href="#areas" class="btn btn-primary" data-ev="hero_cta_click">使える部位を見る</a>
-      <a href="#pricing" class="btn btn-ghost" data-ev="pricing_click">購入について</a>
+    <p class="hero-name">TERAPP Conditioning Tape</p>
+    <div class="hero-cta">
+      <a href="#product" class="btn btn-fill" data-ev="hero_product_click">商品を見る <span class="ar">→</span></a>
+      <a href="#price" class="btn btn-line" data-ev="hero_price_click">購入について <span class="ar">→</span></a>
     </div>
-    <p class="hero-note2" data-h="10">※本商品は雑貨です。医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
+    <p class="hero-note">本商品は雑貨です。医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
   </div>
 
-  <div class="scroll-cue" data-h="11">
-    <span class="txt">SCROLL</span>
-    <span class="bar"></span>
-  </div>
+  <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
 </section>
 
-<!-- ============================== BRAND FILM（FV直下） ============================== -->
-<section class="section brandfilm" aria-label="TERAPP ブランドフィルム">
+<!-- ============================== 2. BRAND FILM ============================== -->
+<section class="sec film" aria-labelledby="film-h">
   <div class="wrap">
-    <div class="film-head reveal">
+    <div class="film-head rv">
       <span class="eyebrow">Brand Film</span>
-      <p class="t"><span class="en">The Invisible Possibility.</span>目に見えない可能性を<wbr>映像で</p>
+      <h2 class="display display--sm" id="film-h" style="margin-top:1.2rem">The Invisible<br>Possibility.</h2>
+      <p class="jp-h" style="margin-top:1.4rem">目に見えない可能性を<wbr>毎日の習慣へ</p>
     </div>
-    <div class="film-wrap reveal" data-d="1">
-      <div class="film-glow" aria-hidden="true"></div>
-      <div class="film-frame">
-        <video class="brand-video" id="brandVideo"
-               poster="images/brandfilm-poster.jpg"
-               muted playsinline loop preload="metadata"
-               width="1920" height="1080" aria-label="TERAPP ブランドフィルム（音声なし）">
-          <source src="douga/TERAPP-ブランドフィルム.mp4" type="video/mp4">
-        </video>
+    <div class="film-frame mv rv" data-d="1">
+      <video id="brandVideo" poster="images/brandfilm-poster.jpg" muted loop playsinline preload="metadata"
+             aria-label="TERAPP ブランドフィルム（音声なし）">
+        <source src="douga/TERAPP-ブランドフィルム.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 3. CONCEPT ============================== -->
+<section class="sec concept" id="concept" aria-labelledby="concept-h">
+  <div class="wrap">
+    <div class="concept-grid">
+      <div>
+        <span class="eyebrow rv">Concept</span>
+        <h2 class="display rv" data-d="1" id="concept-h" style="margin:1.4rem 0 1.8rem">A New<br>Daily Ritual.</h2>
+        <p class="jp-h jp-h--lg rv" data-d="2">身体をいたわる時間を<wbr>もっと美しく</p>
+      </div>
+      <div class="concept-copy rv" data-d="3">
+        <p class="lead">TERAPP Conditioning Tape は、ロールから必要な長さに切って、肩・首・背中・腰・ひじ・ひざ・足首など、気になる部位へ貼って使うボディテープです。</p>
+        <p class="lead">特別な準備はいりません。忙しい朝も、一日の終わりも、いつもの時間にそっと寄り添う。毎日つづけられる、上質なセルフケア習慣を提案します。</p>
+        <p class="note" style="margin-top:2rem">本商品は雑貨であり、医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================== DUAL MARQUEE ============================== -->
-<div class="marquee-band" aria-hidden="true">
-  <div class="marquee row1"><div class="mq-track ltr" id="mq1"></div></div>
-  <div class="marquee row2"><div class="mq-track rtl" id="mq2"></div></div>
-</div>
-
-<!-- ============================== CONCEPT ============================== -->
-<section class="section concept" id="concept">
-  <div class="wrap">
-    <div class="concept-copy reveal">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="eyebrow" style="display:block;margin-bottom:1rem">Concept</span>
-        <h2 class="sec-title"><span class="en">A New Daily Ritual.</span>貼るという<wbr>あたらしい<wbr>セルフケア習慣</h2>
-        <div class="s-line left"></div>
-      </div>
-      <p class="lead" style="margin-top:1.6rem">TERAPP Conditioning Tape は、ロールから必要な長さに切って、肩・首・背中・腰・ひじ・ひざ・足首など、気になる部位へ貼って使うボディテープです。特別な準備はいりません。忙しい朝も、一日の終わりも、いつもの時間にそっと寄り添う——毎日つづけられる、上質なセルフケア習慣を提案します。</p>
-    </div>
-
-    <!-- 商品レンダー: 黒箱＋ゴールドロゴ＋台座＋反射＋スポットライト -->
-    <div class="reveal" data-d="1">
-      <div class="prod-stage" role="img" aria-label="TERAPP Conditioning Tape のパッケージイメージ（黒×ゴールド）">
-        <div class="prod-spot" aria-hidden="true"></div>
-        <div class="prod-pedestal" aria-hidden="true"></div>
-        <div class="prod-box">
-          <svg class="pb-emblem" viewBox="452 286 296 264" aria-hidden="true">
-            <defs><linearGradient id="lgP" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".45" stop-color="#D9BE86"/><stop offset=".75" stop-color="#C29B57"/><stop offset="1" stop-color="#A9843F"/></linearGradient></defs>
-            <g fill="none" stroke="url(#lgP)" stroke-width="8" stroke-linecap="round">
-              <path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/>
-              <path d="M570,470 A30,30 0 0 1 630,470"/><path d="M542,470 A58,58 0 0 1 658,470"/>
-              <path d="M514,470 A86,86 0 0 1 686,470"/><path d="M486,470 A114,114 0 0 1 714,470"/>
-            </g>
-            <circle cx="600" cy="470" r="7" fill="url(#lgP)"/>
-          </svg>
-          <span class="pb-wm">TERAPP</span>
-          <span class="pb-line" aria-hidden="true"></span>
-          <span class="pb-sub">Conditioning Tape</span>
+<!-- ============================== 4. PRODUCT REVEAL (sticky) ============================== -->
+<section class="product" id="product" aria-labelledby="product-h">
+  <h2 class="sr-only" id="product-h">TERAPP Conditioning Tape の製品ディテール</h2>
+  <div class="product-in">
+    <div class="product-sticky">
+      <div class="product-stage">
+        <div class="product-halo" aria-hidden="true"></div>
+        <div class="product-shadow" aria-hidden="true"></div>
+        <div class="product-obj" id="productObj" role="img" aria-label="TERAPP Conditioning Tape パッケージ">
+          <video class="media-video" data-src="assets/cinematic/product.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+          <span class="pw">TERAPP</span>
+          <span class="pl" aria-hidden="true"></span>
+          <span class="ps">Conditioning Tape</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============================== CONCERNS ============================== -->
-<section class="section concerns">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Your Day</span>
-      <h2 class="sec-title"><span class="en">Everyday Moments.</span>こんな毎日に<wbr>貼る習慣を</h2>
-      <div class="s-line"></div>
-    </div>
-    <div class="concern-grid">
-      <div class="concern-card reveal">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>
-        <p>デスクワークや、同じ姿勢が続く一日に。</p>
-      </div>
-      <div class="concern-card reveal" data-d="1">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 8c-3 0-5 2-5 5v9M12 8c3 0 5 2 5 5v9"/><circle cx="12" cy="4" r="0"/></svg></span>
-        <p>立ち仕事や、よく歩いた日のセルフケアに。</p>
-      </div>
-      <div class="concern-card reveal" data-d="2">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l3 3M14.5 14.5l3 3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M9.5 9.5l5 5"/></svg></span>
-        <p>スポーツやトレーニングの前後の習慣に。</p>
-      </div>
-      <div class="concern-card reveal">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span>
-        <p>長時間の移動や、出張・旅行のおともに。</p>
-      </div>
-      <div class="concern-card reveal" data-d="1">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 0 12 6 6 0 0 1 0-12z"/><path d="M12 15v6M9 21h6"/></svg></span>
-        <p>一日の終わりに、自分をいたわる時間を。</p>
-      </div>
-      <div class="concern-card reveal" data-d="2">
-        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
-        <p>気になる部位のケア習慣を、無理なく続けたい。</p>
-      </div>
-    </div>
-
-    <!-- こんな方におすすめ（薬機法配慮: 疾患名は用いずコンディション/セルフケア表現） -->
-    <div class="recommend reveal" data-d="1">
-      <span class="eyebrow">Recommended For</span>
-      <h3>こんな方におすすめ</h3>
-      <div class="s-line"></div>
-      <ul>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>肩・首・腰・膝など、身体のコンディションが気になる方</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>長時間のデスクワークや立ち仕事が多い方</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>同じ姿勢が続きやすく、腰まわりのケアを意識したい方</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>日頃から身体のセルフケア習慣を大切にしたい方</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>スポーツやトレーニングの前後のコンディショニングに取り入れたい方</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>毎日を軽やかに、心地よく過ごしたい方</li>
-      </ul>
-      <p class="r-note">※本商品は雑貨です。特定の症状の改善・治療を目的とした商品ではありません。</p>
+    <div class="product-steps">
+      <article class="pstep">
+        <span class="eyebrow">01 — Product</span>
+        <h3 class="display display--sm">The Roll.</h3>
+        <p class="jp-h" style="margin-bottom:1.4rem">一本のロールから<wbr>整える時間が始まる</p>
+        <p class="lead">テラヘルツ特殊加工を施した、コンディショニング用のボディテープ。必要な分だけ切り出して使う、シンプルなロール仕様です。</p>
+      </article>
+      <article class="pstep">
+        <span class="eyebrow">02 — Detail</span>
+        <h3 class="display display--sm">Quiet<br>Presence.</h3>
+        <p class="jp-h" style="margin-bottom:1.4rem">日常に溶けこむ<wbr>控えめなデザイン</p>
+        <p class="lead">薄く肌なじみのよいデザインで、衣類の下にも取り入れやすく。日常のスタイルを崩しません。</p>
+      </article>
+      <article class="pstep">
+        <span class="eyebrow">03 — Texture</span>
+        <h3 class="display display--sm">Skin<br>Comfort.</h3>
+        <p class="jp-h" style="margin-bottom:1.4rem">やさしい使い心地を<wbr>毎日のために</p>
+        <p class="lead">肌に貼って過ごす時間のために、扱いやすさを大切にしました。肌の状態を確認しながら、無理のない範囲でお使いください。</p>
+      </article>
+      <article class="pstep">
+        <span class="eyebrow">04 — Application</span>
+        <h3 class="display display--sm">Cut<br>To Fit.</h3>
+        <p class="jp-h" style="margin-bottom:1.4rem">部位に合わせて<wbr>切って貼る</p>
+        <p class="lead">肩・首・背中・腰・ひじ・ひざ・足首。貼りたい部位の長さに合わせて、必要な分だけカットしてお使いいただけます。</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============================== FEATURES ============================== -->
-<section class="section features" id="features">
+<!-- ============================== 5. BODY / APPLICATION ============================== -->
+<section class="sec bodysec" id="body" aria-labelledby="body-h">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Features</span>
-      <h2 class="sec-title"><span class="en">Body Care, Made Simple.</span>TERAPP Conditioning Tape<wbr>の特徴</h2>
-      <div class="s-line"></div>
-    </div>
-    <div class="feature-grid">
-      <div class="feature-card reveal">
-        <span class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2 12c2-4 4-4 5 0s3 4 5 0 3-4 5 0 3 4 5 0"/></svg></span>
-        <p class="feature-num">01</p>
-        <h3>テラヘルツ特殊加工</h3>
-        <p>TERAPP独自の技術思想を取り入れた、コンディショニング用ボディテープ。毎日のセルフケア習慣に、そっと寄り添います。</p>
-      </div>
-      <div class="feature-card reveal" data-d="1">
-        <span class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M4 8l3-3M4 8l3 3"/><path d="M14 14a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/><path d="M17 12l4 4M21 12l-4 4"/></svg></span>
-        <p class="feature-num">02</p>
-        <h3>部位に合わせて切って使える</h3>
-        <p>ロールから必要な長さにカットして、肩・首・腰・ひざなど、貼りたい部位のかたちに合わせて使えます。</p>
-      </div>
-      <div class="feature-card reveal" data-d="2">
-        <span class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/></svg></span>
-        <p class="feature-num">03</p>
-        <h3>貼るだけの手軽さ</h3>
-        <p>特別な準備や複雑な手順は不要。日々のセルフケアとして、無理なく取り入れられるシンプルな使い心地。</p>
-      </div>
-      <div class="feature-card reveal" data-d="3">
-        <span class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s7 3 7 9-3 9-7 9-7-3-7-9 7-9 7-9z"/></svg></span>
-        <p class="feature-num">04</p>
-        <h3>目立ちにくいデザイン</h3>
-        <p>薄く肌なじみのよいデザインで、衣類の下にも取り入れやすく。日常のスタイルを崩しません。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== AREAS（キー演出: 人体シルエット部位マップ） ============================== -->
-<section class="section areas" id="areas">
-  <div class="wrap">
-    <div class="sec-head center reveal">
+    <div class="sec-head rv">
       <span class="eyebrow">Application Areas</span>
-      <h2 class="sec-title"><span class="en">Where to Apply.</span>気になる部位へ<wbr>やさしく寄り添う</h2>
-      <div class="s-line"></div>
+      <h2 class="display" id="body-h">Where Body<br>Meets Ritual.</h2>
+      <p class="jp-h">身体のさまざまな場所へ</p>
     </div>
-    <div class="areas-grid">
-      <!-- 人体シルエット＋金のマーキング（貼付位置マップ） -->
-      <div class="bodymap reveal" aria-hidden="true">
-        <div class="bodymap-glow"></div>
-        <svg viewBox="0 0 300 560" role="img" aria-label="貼付部位を示す人体シルエット図">
-          <!-- 頭 -->
-          <circle class="bm-fig" cx="150" cy="52" r="30"/>
-          <!-- 胴体 -->
-          <path class="bm-fig" d="M124,104 C120,140 118,196 120,244 C121,270 125,286 134,292 L166,292 C175,286 179,270 180,244 C182,196 180,140 176,104 C168,96 158,92 150,92 C142,92 132,96 124,104 Z"/>
-          <!-- 左腕 -->
-          <path class="bm-line" d="M122,112 C104,146 92,190 84,240"/>
-          <!-- 右腕 -->
-          <path class="bm-line" d="M178,112 C196,146 208,190 216,240"/>
-          <!-- 左脚 -->
-          <path class="bm-line" d="M138,290 C133,362 131,442 132,516"/>
-          <!-- 右脚 -->
-          <path class="bm-line" d="M162,290 C167,362 169,442 168,516"/>
-          <!-- 首の付け根の補助線 -->
-          <path class="bm-line" d="M138,86 L138,94 M162,86 L162,94" style="opacity:.5"/>
 
-          <!-- Pins（金のマーキング） -->
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="150" cy="96" r="12"/><circle class="dot" cx="150" cy="96" r="11"/><text x="150" y="96">1</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="120" cy="110" r="12"/><circle class="dot" cx="120" cy="110" r="11"/><text x="120" y="110">2</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="88" cy="200" r="12"/><circle class="dot" cx="88" cy="200" r="11"/><text x="88" y="200">3</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="84" cy="242" r="12"/><circle class="dot" cx="84" cy="242" r="11"/><text x="84" y="242">4</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="150" cy="238" r="12"/><circle class="dot" cx="150" cy="238" r="11"/><text x="150" y="238">5</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="166" cy="392" r="12"/><circle class="dot" cx="166" cy="392" r="11"/><text x="166" y="392">6</text>
-          </g>
-          <g class="bm-pin">
-            <circle class="halo halo-anim" cx="168" cy="500" r="12"/><circle class="dot" cx="168" cy="500" r="11"/><text x="168" y="500">7</text>
-          </g>
-        </svg>
+    <div class="body-grid">
+      <div class="body-stage mv rv" aria-hidden="true">
+        <div class="body-shot on" data-shot="neck"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Neck</span><span class="jp">首</span></div></div>
+        <div class="body-shot" data-shot="shoulder"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Shoulder</span><span class="jp">肩</span></div></div>
+        <div class="body-shot" data-shot="elbow"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Elbow</span><span class="jp">ひじ</span></div></div>
+        <div class="body-shot" data-shot="arm"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Arm &amp; Wrist</span><span class="jp">腕・手首</span></div></div>
+        <div class="body-shot" data-shot="back"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Back &amp; Waist</span><span class="jp">背中・腰</span></div></div>
+        <div class="body-shot" data-shot="knee"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Knee</span><span class="jp">ひざ</span></div></div>
+        <div class="body-shot" data-shot="ankle"><div class="media media-fb"></div><div class="body-shot-name"><span class="en">Ankle &amp; Calf</span><span class="jp">足首・ふくらはぎ</span></div></div>
       </div>
 
-      <!-- 部位リスト（図のマーキング番号と対応） -->
-      <div>
-        <ul class="area-list">
-          <li class="area-item reveal"><span class="no">1</span><b>首</b><span class="en">Neck</span></li>
-          <li class="area-item reveal" data-d="1"><span class="no">2</span><b>肩</b><span class="en">Shoulder</span></li>
-          <li class="area-item reveal" data-d="1"><span class="no">3</span><b>ひじ</b><span class="en">Elbow</span></li>
-          <li class="area-item reveal" data-d="2"><span class="no">4</span><b>腕・手首</b><span class="en">Arm &amp; Wrist</span></li>
-          <li class="area-item reveal" data-d="2"><span class="no">5</span><b>背中・腰</b><span class="en">Back &amp; Waist</span></li>
-          <li class="area-item reveal" data-d="3"><span class="no">6</span><b>ひざ</b><span class="en">Knee</span></li>
-          <li class="area-item reveal" data-d="3"><span class="no">7</span><b>足首・ふくらはぎ</b><span class="en">Ankle &amp; Calf</span></li>
+      <div class="rv" data-d="1">
+        <ul class="body-list" id="bodyList">
+          <li><button type="button" class="on" data-part="neck"><span class="idx">01</span><span class="en">Neck</span><span class="jp">首</span></button></li>
+          <li><button type="button" data-part="shoulder"><span class="idx">02</span><span class="en">Shoulder</span><span class="jp">肩</span></button></li>
+          <li><button type="button" data-part="elbow"><span class="idx">03</span><span class="en">Elbow</span><span class="jp">ひじ</span></button></li>
+          <li><button type="button" data-part="arm"><span class="idx">04</span><span class="en">Arm &amp; Wrist</span><span class="jp">腕・手首</span></button></li>
+          <li><button type="button" data-part="back"><span class="idx">05</span><span class="en">Back &amp; Waist</span><span class="jp">背中・腰</span></button></li>
+          <li><button type="button" data-part="knee"><span class="idx">06</span><span class="en">Knee</span><span class="jp">ひざ</span></button></li>
+          <li><button type="button" data-part="ankle"><span class="idx">07</span><span class="en">Ankle &amp; Calf</span><span class="jp">足首・ふくらはぎ</span></button></li>
         </ul>
-        <p class="area-note reveal">※図は貼付部位の一例です。正式な使用可能部位・使用方法は、商品パッケージおよび同梱の取扱説明をご確認ください。</p>
+        <p class="note body-note">※ 正式な使用可能部位・使用方法は、商品パッケージおよび同梱の取扱説明をご確認ください。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================== HOW TO USE ============================== -->
-<section class="section howto" id="howto">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">How to Use</span>
-      <h2 class="sec-title"><span class="en">Cut, Apply, Care.</span>3ステップの<wbr>やさしい習慣</h2>
-      <div class="s-line"></div>
+<!-- ============================== 6. EVERYDAY MOMENTS ============================== -->
+<section class="sec moments" aria-labelledby="moments-h">
+  <div class="m-head rv">
+    <span class="eyebrow">Everyday Moments</span>
+    <h2 class="display" id="moments-h" style="margin:1.4rem 0 1.4rem">From Morning<br>To Night.</h2>
+    <p class="jp-h">日常のすべてを<wbr>コンディショニングの時間へ</p>
+  </div>
+
+  <div class="m-row rv">
+    <figure class="m-media mv media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/moment-work.mp4" muted loop playsinline preload="none"></video>
+      <figcaption class="media-label">Work</figcaption>
+    </figure>
+    <div class="m-copy">
+      <span class="idx">01</span>
+      <span class="en">Work</span>
+      <p class="lead">デスクワークや、同じ姿勢が続く一日に。仕事の合間にも、そっと取り入れられるセルフケアを。</p>
     </div>
+  </div>
+
+  <div class="m-row rv">
+    <figure class="m-media mv media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/moment-move.mp4" muted loop playsinline preload="none"></video>
+      <figcaption class="media-label">Move</figcaption>
+    </figure>
+    <div class="m-copy">
+      <span class="idx">02</span>
+      <span class="en">Move</span>
+      <p class="lead">立ち仕事や、よく歩いた日に。街を歩く時間も、自分をいたわる時間へ。</p>
+    </div>
+  </div>
+
+  <div class="m-row rv">
+    <figure class="m-media mv media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/moment-train.mp4" muted loop playsinline preload="none"></video>
+      <figcaption class="media-label">Train</figcaption>
+    </figure>
+    <div class="m-copy">
+      <span class="idx">03</span>
+      <span class="en">Train</span>
+      <p class="lead">スポーツやトレーニングの前後の習慣に。静かに整える時間として。</p>
+    </div>
+  </div>
+
+  <div class="m-row rv">
+    <figure class="m-media mv media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/moment-travel.mp4" muted loop playsinline preload="none"></video>
+      <figcaption class="media-label">Travel</figcaption>
+    </figure>
+    <div class="m-copy">
+      <span class="idx">04</span>
+      <span class="en">Travel</span>
+      <p class="lead">長時間の移動や、出張・旅行のおともに。持ち運びやすく、いつもの習慣を続けられます。</p>
+    </div>
+  </div>
+
+  <div class="m-row rv">
+    <figure class="m-media mv media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/moment-rest.mp4" muted loop playsinline preload="none"></video>
+      <figcaption class="media-label">Rest</figcaption>
+    </figure>
+    <div class="m-copy">
+      <span class="idx">05</span>
+      <span class="en">Rest</span>
+      <p class="lead">一日の終わりに、自分をいたわる時間を。明日をおだやかに迎えるための習慣として。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 7. FEATURES ============================== -->
+<section aria-labelledby="feat-h">
+  <h2 class="sr-only" id="feat-h">TERAPP Conditioning Tape の特徴</h2>
+
+  <article class="feat">
+    <figure class="media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/technology.mp4" muted loop playsinline preload="none"></video>
+    </figure>
+    <div class="feat-veil" aria-hidden="true"></div>
+    <div class="feat-in">
+      <span class="feat-num rv">01</span>
+      <span class="feat-en rv" data-d="1">Terahertz<br>Processing.</span>
+      <span class="jp-h feat-jp rv" data-d="2">テラヘルツ特殊加工</span>
+      <p class="lead rv" data-d="3">TERAPP独自の技術思想を取り入れた、コンディショニング用ボディテープ。毎日のセルフケア習慣に、そっと寄り添います。</p>
+    </div>
+  </article>
+
+  <article class="feat">
+    <figure class="media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/cut.mp4" muted loop playsinline preload="none"></video>
+    </figure>
+    <div class="feat-veil" aria-hidden="true"></div>
+    <div class="feat-in">
+      <span class="feat-num rv">02</span>
+      <span class="feat-en rv" data-d="1">Cut<br>To Fit.</span>
+      <span class="jp-h feat-jp rv" data-d="2">部位に合わせて切って使える</span>
+      <p class="lead rv" data-d="3">ロールから必要な長さにカットして、肩・首・腰・ひざなど、貼りたい部位のかたちに合わせて使えます。</p>
+    </div>
+  </article>
+
+  <article class="feat">
+    <figure class="media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/apply.mp4" muted loop playsinline preload="none"></video>
+    </figure>
+    <div class="feat-veil" aria-hidden="true"></div>
+    <div class="feat-in">
+      <span class="feat-num rv">03</span>
+      <span class="feat-en rv" data-d="1">Simply<br>Apply.</span>
+      <span class="jp-h feat-jp rv" data-d="2">貼るだけの手軽さ</span>
+      <p class="lead rv" data-d="3">特別な準備や複雑な手順は不要。日々のセルフケアとして、無理なく取り入れられるシンプルな使い心地です。</p>
+    </div>
+  </article>
+
+  <article class="feat">
+    <figure class="media" aria-hidden="true">
+      <div class="media-fb"></div>
+      <video class="media-video" data-src="assets/cinematic/lifestyle.mp4" muted loop playsinline preload="none"></video>
+    </figure>
+    <div class="feat-veil" aria-hidden="true"></div>
+    <div class="feat-in">
+      <span class="feat-num rv">04</span>
+      <span class="feat-en rv" data-d="1">Discreet<br>Design.</span>
+      <span class="jp-h feat-jp rv" data-d="2">目立ちにくいデザイン</span>
+      <p class="lead rv" data-d="3">薄く肌なじみのよいデザインで、衣類の下にも取り入れやすく。日常のスタイルを崩しません。</p>
+    </div>
+  </article>
+</section>
+
+<!-- ============================== 8. TERAHERTZ (dark) ============================== -->
+<section class="sec dark tech" aria-labelledby="tech-h">
+  <div class="p-field" id="pField" aria-hidden="true"></div>
+  <div class="wrap wrap--narrow center">
+    <span class="eyebrow rv">Terahertz Technology</span>
+    <h2 class="display rv" data-d="1" id="tech-h" style="margin:1.6rem 0 1.8rem">Science Beyond<br>The Visible.</h2>
+    <p class="jp-h rv" data-d="2">テラヘルツテクノロジー</p>
+    <div class="tech-wave rv" data-d="2" aria-hidden="true"></div>
+    <p class="lead rv" data-d="3" style="margin:clamp(2.4rem,6vw,3.4rem) auto 0">テラヘルツ波は、一般に電波と赤外線の間に位置する周波数帯の電磁波です。通信、センシング、分析など、さまざまな分野で研究が進められています。TERAPPは、その可能性に着目し、独自の技術思想をボディケア製品へ取り入れています。</p>
+    <p class="note tech-note rv" data-d="3">※本商品は医薬品・医療機器ではありません。テラヘルツ波に関する記述は一般的な情報であり、本商品の効果・効能を示すものではありません。</p>
+  </div>
+</section>
+
+<!-- ============================== 9. HOW TO USE ============================== -->
+<section class="sec howto" id="howto" aria-labelledby="howto-h">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">How to Use</span>
+      <h2 class="display" id="howto-h">Cut. Apply. Care.</h2>
+      <p class="jp-h">3ステップのやさしい習慣</p>
+    </div>
+
     <div class="steps">
-      <div class="step reveal">
-        <span class="step-big">01</span>
-        <span class="step-no">Step 01</span>
-        <span class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><path d="M8 7.5L20 17M8 16.5L20 7"/></svg></span>
+      <article class="step rv">
+        <figure class="s-media mv media" aria-hidden="true">
+          <div class="media-fb"></div>
+          <video class="media-video" data-src="assets/cinematic/step-cut.mp4" muted loop playsinline preload="none"></video>
+          <figcaption class="media-label">Cut</figcaption>
+        </figure>
+        <span class="num">01</span>
         <h3>部位の長さに合わせて切る</h3>
         <p>貼りたい部位に合わせて、ロールから必要な長さにカットします。</p>
-      </div>
-      <div class="step reveal" data-d="1">
-        <span class="step-big">02</span>
-        <span class="step-no">Step 02</span>
-        <span class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l5 5 11-11"/><path d="M3 8c3-1 6-1 9 0"/></svg></span>
+      </article>
+      <article class="step rv" data-d="1">
+        <figure class="s-media mv media" aria-hidden="true">
+          <div class="media-fb"></div>
+          <video class="media-video" data-src="assets/cinematic/step-apply.mp4" muted loop playsinline preload="none"></video>
+          <figcaption class="media-label">Apply</figcaption>
+        </figure>
+        <span class="num">02</span>
         <h3>清潔な肌に貼る</h3>
         <p>汗・水分・油分をやさしく拭き取り、シワにならないように貼ります。</p>
-      </div>
-      <div class="step reveal" data-d="2">
-        <span class="step-big">03</span>
-        <span class="step-no">Step 03</span>
-        <span class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c4-8 8-12 16-14"/><path d="M4 20l3-1M4 20l1-3"/></svg></span>
+      </article>
+      <article class="step rv" data-d="2">
+        <figure class="s-media mv media" aria-hidden="true">
+          <div class="media-fb"></div>
+          <video class="media-video" data-src="assets/cinematic/step-care.mp4" muted loop playsinline preload="none"></video>
+          <figcaption class="media-label">Care</figcaption>
+        </figure>
+        <span class="num">03</span>
         <h3>使用後はゆっくり剥がす</h3>
         <p>肌を傷めないよう、端からゆっくり剥がします。</p>
-      </div>
+      </article>
     </div>
 
-    <div class="notice reveal">
+    <div class="caution rv">
       <h3>使用上の注意</h3>
       <ul>
         <li>肌に異常がないことを確認してご使用ください。傷、はれ、湿疹などがある部分にはご使用にならないでください。</li>
@@ -1027,381 +1040,433 @@ footer::before{content:"";position:absolute;left:0;right:0;top:-130px;height:130
         <li>肌の弱い方は、目立たない部分で短時間からお試しください。</li>
         <li>乳幼児の手の届かない場所に、高温・多湿・直射日光を避けて保管してください。</li>
       </ul>
-      <p class="foot">※使用時間・使用回数などの詳細、およびメーカーの正式な注意事項は、商品パッケージおよび同梱の取扱説明の記載を優先してご確認ください。</p>
+      <p class="note foot">※使用時間・使用回数などの詳細、およびメーカーの正式な注意事項は、商品パッケージおよび同梱の取扱説明の記載を優先してご確認ください。</p>
     </div>
   </div>
 </section>
 
-<!-- ============================== TERAHERTZ ============================== -->
-<section class="section terahertz">
-  <div class="wrap wrap-narrow thz-inner reveal">
-    <div class="sec-head" style="margin-bottom:1.4rem">
-      <span class="eyebrow" style="display:block;margin-bottom:1rem">Technology</span>
-      <h2 class="sec-title"><span class="en">What is Terahertz?</span>テラヘルツ波について</h2>
-      <div class="s-line left"></div>
-    </div>
-    <p class="lead">テラヘルツ波は、一般に電波と赤外線の間に位置する周波数帯の電磁波です。通信、センシング、分析など、さまざまな分野で研究が進められています。TERAPPは、その可能性に着目し、独自の技術思想をボディケア製品へ取り入れています。</p>
-    <div class="thz-note">
-      <p>※本商品は医薬品・医療機器ではありません。テラヘルツ波に関する記述は一般的な情報であり、本商品の効果・効能を示すものではありません。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== BRAND STORY ============================== -->
-<section class="section story">
+<!-- ============================== 10. RECOMMENDED FOR ============================== -->
+<section class="sec reco" aria-labelledby="reco-h">
   <div class="wrap">
-    <span class="eyebrow reveal">The Invisible Possibility.</span>
-    <h2 class="story-big reveal" data-d="1">目に見えない可能性を<wbr>毎日の習慣に</h2>
-    <p class="reveal" data-d="1">TERAPPは、テラヘルツ波の可能性に着目し、美容、健康、スポーツなど、日常のさまざまな場面で取り入れやすい製品づくりを目指しています。コンディションを意識する時間は、特別な日のためだけにあるものではありません。毎日の小さな積み重ねが、自分らしい心地よさにつながっていく。</p>
-    <div class="beat reveal" data-d="2"><span>誰でも。</span><span>いつでも。</span><span>どこでも。</span></div>
-    <p class="reveal" data-d="2">テラヘルツの可能性を、もっと身近に。</p>
-    <p class="close reveal" data-d="3">あなたらしい毎日へ。</p>
-  </div>
-</section>
-
-<!-- ============================== PRICING ============================== -->
-<section class="section pricing" id="pricing">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Pricing</span>
-      <h2 class="sec-title"><span class="en">Choose Your Routine.</span>ご購入について</h2>
-      <div class="s-line"></div>
+    <div class="sec-head center rv">
+      <span class="eyebrow">Recommended For</span>
+      <h2 class="display display--sm" id="reco-h">For Your<br>Everyday Body.</h2>
+      <p class="jp-h">こんな方におすすめ</p>
     </div>
-    <!-- 価格確定（2026-07 ユーザー提供）: 1本 4,400円 / 3本セット 9,900円（税込）。送料=全国無料。
-         購入URL(checkoutURL)は未確定のため当面は問い合わせ導線。data-checkout 設定時にJSがhref/文言を差し替え。 -->
-    <div class="price-grid" id="price-grid">
-      <div class="price-card reveal" data-plan="one">
-        <span class="pc-name">TERAPP Conditioning Tape</span>
-        <span class="pc-qty">1本</span>
-        <span class="pc-price">4,400<small>円（税込）</small></span>
-        <a class="btn btn-primary pc-cta" href="contact.html" data-ev="one_set_click" data-checkout="">購入について問い合わせる</a>
-      </div>
-      <div class="price-card reveal reco" data-plan="set" data-d="1">
-        <span class="price-badge">おすすめ</span>
-        <span class="pc-name">TERAPP Conditioning Tape</span>
-        <span class="pc-qty">3本セット</span>
-        <span class="pc-price">9,900<small>円（税込）</small></span>
-        <a class="btn btn-primary pc-cta" href="contact.html" data-ev="set_click" data-checkout="">購入について問い合わせる</a>
-      </div>
-    </div>
-    <p class="price-note reveal">※表示価格はすべて税込です。全国送料無料でお届けします。販売単位・内容量などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
-
-    <ul class="assurance reveal" data-d="1">
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h13v8H3zM16 10h3l2 2v3h-5" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
-        <b>全国送料無料</b><span>全国どこでも送料無料でお届けします。詳細は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18" stroke-linejoin="round"/></svg>
-        <b>お支払い</b><span>お支払い方法の詳細は<a href="tokushoho.html">特商法表記</a>に記載します。</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12a9 9 0 109-9M3 12l3-2M3 12l2 3" stroke-linejoin="round" stroke-linecap="round"/></svg>
-        <b>返品・交換</b><span>条件は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.5 8.5 0 118-11.9" stroke-linecap="round"/><path d="M8 12l3 3 6-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <b>お困りの際は</b><span><a href="contact.html">お問い合わせ</a>または <a href="mailto:support@terapp.jp">support@terapp.jp</a> へ。</span>
-      </li>
+    <ul class="reco-list rv" data-d="1">
+      <li><span class="mk" aria-hidden="true"></span>肩・首・腰・膝など、身体のコンディションが気になる方</li>
+      <li><span class="mk" aria-hidden="true"></span>長時間のデスクワークや立ち仕事が多い方</li>
+      <li><span class="mk" aria-hidden="true"></span>同じ姿勢が続きやすく、腰まわりのケアを意識したい方</li>
+      <li><span class="mk" aria-hidden="true"></span>日頃から身体のセルフケア習慣を大切にしたい方</li>
+      <li><span class="mk" aria-hidden="true"></span>スポーツやトレーニングの前後のコンディショニングに取り入れたい方</li>
+      <li><span class="mk" aria-hidden="true"></span>毎日を軽やかに、心地よく過ごしたい方</li>
     </ul>
+    <p class="note center rv" data-d="2" style="margin-top:2rem">※本商品は雑貨です。特定の症状の改善・治療を目的とした商品ではありません。</p>
   </div>
 </section>
 
-<!-- ============================== REVIEWS (empty state) ============================== -->
-<section class="section reviews">
+<!-- ============================== 11. PRICE ============================== -->
+<section class="sec price" id="price" aria-labelledby="price-h">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Voice</span>
-      <h2 class="sec-title">お客様の声</h2>
-      <div class="s-line"></div>
+    <div class="sec-head center rv">
+      <span class="eyebrow">The Product</span>
+      <h2 class="display" id="price-h">TERAPP<br>Conditioning Tape</h2>
+      <p class="jp-h">価格とご購入について</p>
     </div>
-    <div class="review-empty reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#E4CFA3" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linejoin="round"/></svg>
+
+    <!-- 価格確定: 1本 4,400円 / 3本セット 9,900円（税込）／送料全国無料。
+         購入URL未確定のため当面は問い合わせ導線（data-checkout 設定時にJSがhref/文言を差し替え）。 -->
+    <div class="price-grid" id="priceGrid">
+      <div class="pcard rv">
+        <span class="pn">Conditioning Tape</span>
+        <span class="pq">1本</span>
+        <span class="pp"><span class="cur">¥</span>4,400</span>
+        <span class="tax">Tax Included</span>
+        <a class="btn btn-ink-line pcta" href="contact.html" data-ev="one_set_click" data-checkout="">購入について問い合わせる <span class="ar">→</span></a>
+      </div>
+      <div class="pcard reco-card rv" data-d="1">
+        <span class="badge">Recommended</span>
+        <span class="pn">Conditioning Tape</span>
+        <span class="pq">3本セット</span>
+        <span class="pp"><span class="cur">¥</span>9,900</span>
+        <span class="tax">Tax Included</span>
+        <a class="btn btn-fill pcta" href="contact.html" data-ev="set_click" data-checkout="">購入について問い合わせる <span class="ar">→</span></a>
+      </div>
+    </div>
+
+    <p class="ship rv" data-d="2"><span class="en">Free Shipping</span><span class="note">全国送料無料でお届けします</span></p>
+
+    <ul class="assure rv" data-d="2">
+      <li><b>Shipping</b><span>全国送料無料。配送の詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</span></li>
+      <li><b>Payment</b><span>お支払い方法の詳細は<a href="tokushoho.html">特商法表記</a>に記載します。</span></li>
+      <li><b>Returns</b><span>返品・交換の条件は<a href="tokushoho.html">特商法表記</a>をご確認ください。</span></li>
+      <li><b>Support</b><span><a href="contact.html">お問い合わせ</a>または <a href="mailto:support@terapp.jp">support@terapp.jp</a> へ。</span></li>
+    </ul>
+
+    <p class="note price-note rv" data-d="3">※表示価格はすべて税込です。販売単位・内容量などの詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
+  </div>
+</section>
+
+<!-- ============================== 12. VOICE ============================== -->
+<section class="sec sec--tight voice" aria-labelledby="voice-h">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Voice</span>
+      <h2 class="display display--sm" id="voice-h">Customer<br>Voice.</h2>
+      <p class="jp-h">お客様の声</p>
+    </div>
+    <!-- 掲載許諾済みの実レビューが提供されるまで空状態。捏造しない。 -->
+    <div class="voice-empty rv" data-d="1">
       <p>お客様の声は、掲載許可をいただいた内容を準備中です。</p>
     </div>
   </div>
 </section>
 
-<!-- ============================== FAQ ============================== -->
-<section class="section faq" id="faq">
+<!-- ============================== 13. FAQ ============================== -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
   <div class="wrap">
-    <div class="sec-head center reveal">
+    <div class="sec-head center rv">
       <span class="eyebrow">FAQ</span>
-      <h2 class="sec-title">よくあるご質問</h2>
-      <div class="s-line"></div>
+      <h2 class="display display--sm" id="faq-h">Questions<br>&amp; Answers.</h2>
+      <p class="jp-h">よくあるご質問</p>
     </div>
-    <div class="faq-list" id="faq-list">
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-0" aria-expanded="false" aria-controls="faq-a-0"><span class="qmark">Q</span><span>どこに使用できますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-0" role="region" aria-labelledby="faq-q-0"><div class="faq-a-inner">肩・首・背中・腰・ひじ・ひざ・足首など、身体の気になる部位への使用を想定しています。正式な使用可能部位は商品パッケージおよび取扱説明をご確認ください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1"><span class="qmark">Q</span><span>どのくらいの長さで使いますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><div class="faq-a-inner">ロール状のテープを、貼りたい部位の長さに合わせて必要な分だけカットしてご使用ください。詳しい目安は商品パッケージまたは同梱の取扱説明に従ってください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2"><span class="qmark">Q</span><span>繰り返し使用できますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><div class="faq-a-inner">衛生面の観点から、使用可否は商品パッケージおよび取扱説明の記載に従ってください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3"><span class="qmark">Q</span><span>毎日使用できますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><div class="faq-a-inner">使用頻度は商品パッケージの記載に従ってください。肌の状態を確認し、異常を感じた場合はご使用を中止してください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4"><span class="qmark">Q</span><span>敏感肌でも使用できますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><div class="faq-a-inner">すべての方に刺激が起こらないことを保証するものではありません。肌が敏感な方は、目立たない部分で様子をみてから、商品表示を確認のうえご使用ください。異常がある場合は使用をお控えください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5"><span class="qmark">Q</span><span>テラヘルツ波とは何ですか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><div class="faq-a-inner">一般に、電波と赤外線の間に位置する周波数帯の電磁波を指します。通信、分析、センシングなど、さまざまな分野で研究されています。本商品の効果・効能を示すものではありません。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6"><span class="qmark">Q</span><span>貼ると身体が楽になりますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6"><div class="faq-a-inner">本商品は雑貨であり、医薬品や医療機器ではありません。身体の変化や効果を目的とした商品ではなく、日々のセルフケア習慣としてお使いいただくものです。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-7" aria-expanded="false" aria-controls="faq-a-7"><span class="qmark">Q</span><span>衣類の下に貼れますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7"><div class="faq-a-inner">薄いデザインで、衣類の下にも取り入れやすくなっています。使用に適した場面は商品パッケージおよび取扱説明の記載をご確認ください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-8" aria-expanded="false" aria-controls="faq-a-8"><span class="qmark">Q</span><span>運動中や入浴中に使えますか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8"><div class="faq-a-inner">使用に適した場面は商品パッケージおよび取扱説明の記載に従ってください。水濡れや長時間の使用が想定されていない場合がありますので、記載の使用方法をご確認のうえお使いください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-9" aria-expanded="false" aria-controls="faq-a-9"><span class="qmark">Q</span><span>保管方法を教えてください。</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-9" role="region" aria-labelledby="faq-q-9"><div class="faq-a-inner">高温・多湿・直射日光を避け、乳幼児の手の届かない場所に保管してください。詳しくは商品パッケージの記載に従ってください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-10" aria-expanded="false" aria-controls="faq-a-10"><span class="qmark">Q</span><span>送料・返品について教えてください。</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-10" role="region" aria-labelledby="faq-q-10"><div class="faq-a-inner">送料は全国無料です。返品・交換の条件は、<a href="tokushoho.html">特定商取引法に基づく表記</a>および購入手続き画面の記載をご確認ください。</div></div></div>
-      <div class="faq-item reveal"><button class="faq-q" id="faq-q-11" aria-expanded="false" aria-controls="faq-a-11"><span class="qmark">Q</span><span>使用をやめたほうがよいのはどんなときですか？</span><span class="plus" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-11" role="region" aria-labelledby="faq-q-11"><div class="faq-a-inner">使用中・使用後に赤み、はれ、かゆみ、刺激などの異常が現れた場合は、ただちに使用を中止してください。異常が続く場合は医師にご相談ください。</div></div></div>
+
+    <div class="faq-list rv" data-d="1" id="faqList">
+      <div class="faq-item"><button class="faq-q" id="fq0" aria-expanded="false" aria-controls="fa0"><span class="qm">Q</span><span>どこに使用できますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa0" role="region" aria-labelledby="fq0"><div class="faq-a-in">肩・首・背中・腰・ひじ・ひざ・足首など、身体の気になる部位への使用を想定しています。正式な使用可能部位は商品パッケージおよび取扱説明をご確認ください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq1" aria-expanded="false" aria-controls="fa1"><span class="qm">Q</span><span>どのくらいの長さで使いますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa1" role="region" aria-labelledby="fq1"><div class="faq-a-in">ロール状のテープを、貼りたい部位の長さに合わせて必要な分だけカットしてご使用ください。詳しい目安は商品パッケージまたは同梱の取扱説明に従ってください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq2" aria-expanded="false" aria-controls="fa2"><span class="qm">Q</span><span>繰り返し使用できますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa2" role="region" aria-labelledby="fq2"><div class="faq-a-in">衛生面の観点から、使用可否は商品パッケージおよび取扱説明の記載に従ってください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq3" aria-expanded="false" aria-controls="fa3"><span class="qm">Q</span><span>毎日使用できますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa3" role="region" aria-labelledby="fq3"><div class="faq-a-in">使用頻度は商品パッケージの記載に従ってください。肌の状態を確認し、異常を感じた場合はご使用を中止してください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq4" aria-expanded="false" aria-controls="fa4"><span class="qm">Q</span><span>敏感肌でも使用できますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa4" role="region" aria-labelledby="fq4"><div class="faq-a-in">すべての方に刺激が起こらないことを保証するものではありません。肌が敏感な方は、目立たない部分で様子をみてから、商品表示を確認のうえご使用ください。異常がある場合は使用をお控えください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq5" aria-expanded="false" aria-controls="fa5"><span class="qm">Q</span><span>テラヘルツ波とは何ですか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa5" role="region" aria-labelledby="fq5"><div class="faq-a-in">一般に、電波と赤外線の間に位置する周波数帯の電磁波を指します。通信、分析、センシングなど、さまざまな分野で研究されています。本商品の効果・効能を示すものではありません。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq6" aria-expanded="false" aria-controls="fa6"><span class="qm">Q</span><span>貼ると身体が楽になりますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa6" role="region" aria-labelledby="fq6"><div class="faq-a-in">本商品は雑貨であり、医薬品や医療機器ではありません。身体の変化や効果を目的とした商品ではなく、日々のセルフケア習慣としてお使いいただくものです。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq7" aria-expanded="false" aria-controls="fa7"><span class="qm">Q</span><span>衣類の下に貼れますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa7" role="region" aria-labelledby="fq7"><div class="faq-a-in">薄いデザインで、衣類の下にも取り入れやすくなっています。使用に適した場面は商品パッケージおよび取扱説明の記載をご確認ください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq8" aria-expanded="false" aria-controls="fa8"><span class="qm">Q</span><span>運動中や入浴中に使えますか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa8" role="region" aria-labelledby="fq8"><div class="faq-a-in">使用に適した場面は商品パッケージおよび取扱説明の記載に従ってください。水濡れや長時間の使用が想定されていない場合がありますので、記載の使用方法をご確認のうえお使いください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq9" aria-expanded="false" aria-controls="fa9"><span class="qm">Q</span><span>保管方法を教えてください。</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa9" role="region" aria-labelledby="fq9"><div class="faq-a-in">高温・多湿・直射日光を避け、乳幼児の手の届かない場所に保管してください。詳しくは商品パッケージの記載に従ってください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq10" aria-expanded="false" aria-controls="fa10"><span class="qm">Q</span><span>送料・返品について教えてください。</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa10" role="region" aria-labelledby="fq10"><div class="faq-a-in">送料は全国無料です。返品・交換の条件は、<a href="tokushoho.html">特定商取引法に基づく表記</a>および購入手続き画面の記載をご確認ください。</div></div></div>
+      <div class="faq-item"><button class="faq-q" id="fq11" aria-expanded="false" aria-controls="fa11"><span class="qm">Q</span><span>使用をやめたほうがよいのはどんなときですか？</span><span class="pm" aria-hidden="true"></span></button><div class="faq-a" id="fa11" role="region" aria-labelledby="fq11"><div class="faq-a-in">使用中・使用後に赤み、はれ、かゆみ、刺激などの異常が現れた場合は、ただちに使用を中止してください。異常が続く場合は医師にご相談ください。</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============================== FINAL CTA ============================== -->
-<section class="section final">
-  <div class="wrap">
-    <h2 class="final-big reveal">心地よさは<wbr>毎日の小さな習慣から</h2>
-    <p class="final-sub reveal" data-d="1">いつものセルフケアに、<br>TERAPP Conditioning Tape という新しい選択を。</p>
-    <a href="#pricing" class="btn btn-primary reveal" data-d="2" data-ev="purchase_start">TERAPP Conditioning Tape の購入について</a>
-    <p class="final-note reveal" data-d="2">※使用感や感じ方には個人差があります。本商品は雑貨です。</p>
+<!-- ============================== 14. FINAL CTA ============================== -->
+<section class="final" aria-labelledby="final-h">
+  <figure class="media" aria-hidden="true">
+    <div class="media-fb media-fb--dark"></div>
+    <video class="media-video" data-src="assets/cinematic/final.mp4" muted loop playsinline preload="none"></video>
+  </figure>
+  <div class="final-veil" aria-hidden="true"></div>
+  <div class="final-in">
+    <h2 class="display" id="final-h">
+      <span class="final-line rl"><span>Every Day.</span></span>
+      <span class="final-line rl" data-d="1"><span>Every Body.</span></span>
+      <span class="final-line rl" data-d="2"><span>Every Moment.</span></span>
+    </h2>
+    <p class="jp-h jp-h--lg final-jp rv" data-d="2">心地よさは<wbr>毎日の小さな習慣から</p>
+    <p class="final-name rv" data-d="3">TERAPP Conditioning Tape</p>
+    <a href="#price" class="btn btn-line btn-lg rv" data-d="3" data-ev="purchase_start">商品を見る <span class="ar">→</span></a>
   </div>
 </section>
 
-<!-- ============================== BUSINESS INFO ============================== -->
-<section class="section biz">
+<!-- ============================== 15. COMPANY ============================== -->
+<section class="sec sec--tight biz" aria-labelledby="biz-h">
   <div class="wrap">
-    <div class="sec-head center reveal">
+    <div class="sec-head center rv">
       <span class="eyebrow">Company</span>
-      <h2 class="sec-title">事業者情報</h2>
-      <div class="s-line"></div>
+      <h2 class="display display--sm" id="biz-h">Business<br>Information.</h2>
+      <p class="jp-h">事業者情報</p>
     </div>
-    <dl class="biz-table reveal">
-      <div class="biz-row"><dt>販売ブランド</dt><dd>TERAPP</dd></div>
+    <dl class="biz-table rv" data-d="1">
+      <div class="biz-row"><dt>Brand</dt><dd>TERAPP</dd></div>
       <div class="biz-row"><dt>代表者</dt><dd>内田 衣真</dd></div>
       <div class="biz-row"><dt>担当者</dt><dd>大山 真奈</dd></div>
       <div class="biz-row"><dt>電話番号</dt><dd>お取引に際してご請求があった場合、遅滞なく開示いたします。</dd></div>
       <div class="biz-row"><dt>所在地</dt><dd>お取引に際してご請求があった場合、遅滞なく開示いたします。</dd></div>
-      <div class="biz-row"><dt>メールアドレス</dt><dd><a href="mailto:support@terapp.jp">support@terapp.jp</a></dd></div>
+      <div class="biz-row"><dt>Email</dt><dd><a href="mailto:support@terapp.jp">support@terapp.jp</a></dd></div>
       <div class="biz-row"><dt>お問い合わせ</dt><dd><a href="contact.html">お問い合わせフォームへ</a></dd></div>
     </dl>
   </div>
 </section>
+
 </main>
 
 <!-- ============================== FOOTER ============================== -->
-<footer>
-  <div class="foot-wrap">
-    <span class="foot-brand">
-      <span class="foot-brand-text">TERAPP</span>
-    </span>
-    <nav class="foot-links" aria-label="フッターナビゲーション">
-      <a href="tokushoho.html">特定商取引法に基づく表記</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="terms.html">利用規約</a>
-      <a href="contact.html">お問い合わせ</a>
+<footer class="ft">
+  <div class="ft-in">
+    <span class="ft-brand">TERAPP</span>
+    <nav class="ft-nav" aria-label="フッターナビゲーション">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="tokushoho.html">Legal</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <p class="foot-copy">&copy; 2026 TERAPP. All Rights Reserved.</p>
+    <p class="ft-cp">&copy; 2026 TERAPP. All Rights Reserved.</p>
   </div>
 </footer>
 
-<!-- ============================== STICKY PURCHASE BAR (mobile) ============================== -->
-<div class="sticky-bar" id="stickyBar" aria-hidden="true">
-  <div class="sb-info"><b>TERAPP Conditioning Tape</b><span>1本 4,400円／3本セット 9,900円（税込）</span></div>
-  <span class="sb-price">4,400円〜</span>
-  <a href="#pricing" class="btn btn-primary" data-ev="sticky_cta_click">見る</a>
+<!-- ============================== STICKY CTA (mobile) ============================== -->
+<div class="sbar" id="sbar" aria-hidden="true">
+  <div class="si">
+    <b>Conditioning Tape</b>
+    <span>¥4,400〜</span>
+  </div>
+  <a href="#price" class="btn btn-fill" data-ev="sticky_cta_click">View <span class="ar">→</span></a>
 </div>
 
 <script>
 (function(){
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var doc = document;
 
+  /* ---- Analytics (dataLayer があれば push) ---- */
   function track(ev){ try{ if(window.dataLayer){ window.dataLayer.push({event:ev}); } }catch(e){} }
-  document.addEventListener('click', function(e){
-    var t = e.target.closest('[data-ev]');
-    if(t){ track(t.getAttribute('data-ev')); }
+  doc.addEventListener('click', function(e){
+    var t = e.target.closest('[data-ev]'); if(t) track(t.getAttribute('data-ev'));
   });
 
-  /* Header scroll state */
-  var hdr = document.getElementById('hdr');
-  var onScroll = function(){ hdr.classList.toggle('scrolled', window.scrollY > 40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-
-  /* Mobile drawer + body scroll lock */
-  var burger = document.getElementById('burger');
-  var drawer = document.getElementById('drawer');
-  function setDrawer(open){
-    burger.classList.toggle('open', open);
-    drawer.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
-    drawer.setAttribute('aria-hidden', !open);
-    burger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-  burger.addEventListener('click', function(){ setDrawer(!drawer.classList.contains('open')); });
-  drawer.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click', function(){ setDrawer(false); }); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && drawer.classList.contains('open')) setDrawer(false); });
-
-  /* Hero entrance (masked reveal) */
-  if(!reduce){
-    var seq = document.querySelectorAll('[data-h]');
-    seq.forEach(function(el){
-      var i = parseInt(el.getAttribute('data-h'),10);
-      var delay = 200 + i*130;
-      setTimeout(function(){
-        el.style.transition = 'opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)';
-        el.style.opacity = 1;
-        var span = el.matches('.line') ? el.querySelector('span') : null;
-        if(span){ span.style.transition='transform .9s cubic-bezier(.22,1,.36,1),opacity .9s'; span.style.transform='translateY(0)'; span.style.opacity=1; }
-        else { el.style.transform='none'; }
-      }, delay);
+  /* ---- LOADER: BLACK -> LOGO -> FADE -> HERO REVEAL ---- */
+  (function(){
+    var ld = doc.getElementById('loader');
+    function reveal(){
+      doc.body.classList.add('ready');
+      if(ld) ld.classList.add('done');
+      setTimeout(function(){ if(ld && ld.parentNode) ld.parentNode.removeChild(ld); }, 1200);
+    }
+    if(reduce){ reveal(); return; }
+    var t = setTimeout(reveal, 2100);
+    window.addEventListener('load', function(){
+      clearTimeout(t); setTimeout(reveal, Math.max(0, 1500 - (performance.now()||0)));
     });
-  }
+  })();
 
-  /* Hero parallax (pointer only) */
+  /* ---- HEADER: scrolled / on-dark 判定 ---- */
+  (function(){
+    var hdr = doc.getElementById('hdr');
+    var darks = [].slice.call(doc.querySelectorAll('.hero,.dark,.final,.ft'));
+    function onScroll(){
+      hdr.classList.toggle('scrolled', window.scrollY > 40);
+      var y = 38, over = false;
+      for(var i=0;i<darks.length;i++){
+        var r = darks[i].getBoundingClientRect();
+        if(r.top <= y && r.bottom >= y){ over = true; break; }
+      }
+      hdr.classList.toggle('on-dark', over);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    onScroll();
+  })();
+
+  /* ---- DRAWER ---- */
+  (function(){
+    var brg = doc.getElementById('brg'), dr = doc.getElementById('drawer');
+    function set(open){
+      brg.classList.toggle('open', open); dr.classList.toggle('open', open);
+      brg.setAttribute('aria-expanded', open); dr.setAttribute('aria-hidden', !open);
+      brg.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+      doc.body.style.overflow = open ? 'hidden' : '';
+    }
+    brg.addEventListener('click', function(){ set(!dr.classList.contains('open')); });
+    dr.querySelectorAll('[data-close]').forEach(function(a){ a.addEventListener('click', function(){ set(false); }); });
+    doc.addEventListener('keydown', function(e){ if(e.key==='Escape' && dr.classList.contains('open')) set(false); });
+  })();
+
+  /* ---- REVEAL: IntersectionObserver + スクロール監視の二重化
+         （IOが発火しない環境でもコンテンツが不可視のまま残らないようフォールバック） ---- */
+  (function(){
+    var els = [].slice.call(doc.querySelectorAll('.rv,.rl,.mv'));
+    if(reduce || !('IntersectionObserver' in window)){
+      els.forEach(function(el){ el.classList.add('in'); }); return;
+    }
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.16, rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+
+    // フォールバック: ビューポートに入った要素をスクロール時にも判定（rAF非依存）
+    var last = 0;
+    function sweep(){
+      last = Date.now();
+      var vh = window.innerHeight || doc.documentElement.clientHeight, done = true;
+      for(var i=0;i<els.length;i++){
+        var el = els[i];
+        if(el.classList.contains('in')) continue;
+        done = false;
+        var r = el.getBoundingClientRect();
+        if(r.top < vh * 0.92 && r.bottom > 0){ el.classList.add('in'); io.unobserve(el); }
+      }
+      if(done){
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+      }
+    }
+    function onScroll(){ if(Date.now() - last > 90) sweep(); }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    sweep();
+    setTimeout(sweep, 400);
+    window.addEventListener('load', sweep);
+  })();
+
+  /* ---- CINEMATIC MEDIA: 遅延ロード + 再生成功時のみフェードイン（無ければ fallback を表示） ---- */
+  (function(){
+    var vids = [].slice.call(doc.querySelectorAll('.media-video[data-src]'));
+    if(!vids.length) return;
+    if(reduce){ vids.forEach(function(v){ v.remove(); }); return; }
+    function load(v){
+      if(v.dataset.loaded) return; v.dataset.loaded = '1';
+      var s = doc.createElement('source');
+      s.src = v.getAttribute('data-src'); s.type = 'video/mp4';
+      v.appendChild(s);
+      v.addEventListener('playing', function(){ v.classList.add('is-playing'); });
+      v.addEventListener('error', function(){ v.remove(); }, true);
+      v.load();
+      var p = v.play(); if(p && p.catch) p.catch(function(){ /* 素材未設置なら fallback のまま */ });
+    }
+    if(!('IntersectionObserver' in window)){ vids.forEach(load); return; }
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        var v = en.target;
+        if(en.isIntersecting){ load(v); if(v.paused){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } }
+        else if(!v.paused){ v.pause(); }
+      });
+    }, {threshold:.2, rootMargin:'200px 0px'});
+    vids.forEach(function(v){ io.observe(v); });
+  })();
+
+  /* ---- BRAND FILM: 表示中のみ再生 ---- */
+  (function(){
+    var v = doc.getElementById('brandVideo'); if(!v) return;
+    if(reduce || !('IntersectionObserver' in window)){ v.setAttribute('controls',''); return; }
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(en.isIntersecting){ var p=v.play(); if(p&&p.catch) p.catch(function(){ v.setAttribute('controls',''); }); }
+        else v.pause();
+      });
+    }, {threshold:.35});
+    io.observe(v);
+  })();
+
+  /* ---- HERO parallax（pointer:fine のみ・控えめ） ---- */
   (function(){
     if(reduce) return;
-    var fine = window.matchMedia('(pointer:fine)').matches; if(!fine) return;
-    var stage = document.querySelector('.stage');
-    var glow  = document.querySelector('.stage-glow');
-    var hero  = document.querySelector('.hero');
-    if(!stage || !hero) return;
+    if(!window.matchMedia('(pointer:fine)').matches) return;
+    var hero = doc.querySelector('.hero'), inr = doc.querySelector('.hero-in');
+    if(!hero || !inr) return;
     var tx=0,ty=0,cx=0,cy=0,raf=null;
     hero.addEventListener('pointermove', function(e){
       var r = hero.getBoundingClientRect();
-      tx = ((e.clientX - r.left)/r.width - .5);
-      ty = ((e.clientY - r.top)/r.height - .5);
+      tx = ((e.clientX-r.left)/r.width - .5); ty = ((e.clientY-r.top)/r.height - .5);
       if(!raf) raf = requestAnimationFrame(loop);
     });
-    hero.addEventListener('pointerleave', function(){ tx=0; ty=0; if(!raf) raf=requestAnimationFrame(loop); });
+    hero.addEventListener('pointerleave', function(){ tx=0;ty=0; if(!raf) raf=requestAnimationFrame(loop); });
     function loop(){
-      cx += (tx-cx)*.08; cy += (ty-cy)*.08;
-      stage.style.transform = 'translate('+(cx*18)+'px,'+(cy*14)+'px)';
-      if(glow) glow.style.transform = 'translate('+(cx*-26)+'px,'+(cy*-20)+'px)';
+      cx += (tx-cx)*.06; cy += (ty-cy)*.06;
+      inr.style.transform = 'translate3d('+(cx*-12)+'px,'+(cy*-9)+'px,0)';
       if(Math.abs(tx-cx)>.001 || Math.abs(ty-cy)>.001){ raf = requestAnimationFrame(loop); } else { raf=null; }
     }
   })();
 
-  /* Falling gold feathers */
+  /* ---- HERO scroll zoom（映像をゆっくりズーム） ---- */
   (function(){
-    var box = document.getElementById('feathers'); if(!box || reduce) return;
-    var isMobile = window.innerWidth < 720;
-    var MAX = isMobile ? 3 : 6;
-    var SIZES = [16,22,30];
-    var svgNS = 'http://www.w3.org/2000/svg';
-    var active = true;
-    document.addEventListener('visibilitychange', function(){ active = !document.hidden; });
-    function count(){ return box.childElementCount; }
-    function rnd(a,b){ return a + Math.random()*(b-a); }
-    function spawn(){
-      if(!active || count() >= MAX) return;
-      var wrap = document.createElement('div');
-      wrap.className = 'feather';
-      var size = SIZES[Math.floor(Math.random()*SIZES.length)];
-      var dur = rnd(9,15);
-      var startX = rnd(2,96);
-      var driftX = rnd(-70,70);
-      var rot = rnd(140,320) * (Math.random()<.5?-1:1);
-      var op = rnd(.28,.5);
-      wrap.style.left = startX + 'vw';
-      wrap.style.width = size + 'px';
-      wrap.style.setProperty('--fx', driftX + 'px');
-      wrap.style.setProperty('--fr', rot + 'deg');
-      wrap.style.setProperty('--fo', op.toFixed(2));
-      wrap.style.animation = 'feather-fall ' + dur.toFixed(1) + 's cubic-bezier(.45,.05,.55,.95) forwards';
-      var svg = document.createElementNS(svgNS,'svg');
-      svg.setAttribute('viewBox','0 0 24 48'); svg.setAttribute('width',size); svg.setAttribute('height',size*2);
-      var p = document.createElementNS(svgNS,'path');
-      p.setAttribute('d','M12 1C7 9 5 18 5 27c0 8 3 15 7 20 4-5 7-12 7-20 0-9-2-18-7-26z');
-      p.setAttribute('fill','none'); p.setAttribute('stroke','#C9A86A'); p.setAttribute('stroke-width','1');
-      var spine = document.createElementNS(svgNS,'path');
-      spine.setAttribute('d','M12 3v42'); spine.setAttribute('stroke','#C9A86A'); spine.setAttribute('stroke-width','.7'); spine.setAttribute('opacity','.7');
-      svg.appendChild(p); svg.appendChild(spine);
-      wrap.appendChild(svg);
-      wrap.addEventListener('animationend', function(){ wrap.remove(); });
-      box.appendChild(wrap);
+    if(reduce) return;
+    var m = doc.querySelector('.hero .media'); if(!m) return;
+    var ticking=false;
+    window.addEventListener('scroll', function(){
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(function(){
+        var y = Math.min(window.scrollY, window.innerHeight);
+        var k = y / Math.max(1, window.innerHeight);
+        m.style.transform = 'scale('+(1 + k*.08)+')';
+        ticking=false;
+      });
+    }, {passive:true});
+  })();
+
+  /* ---- BODY APPLICATION: 部位切替（hover / click / focus） ---- */
+  (function(){
+    var list = doc.getElementById('bodyList'); if(!list) return;
+    var shots = doc.querySelectorAll('.body-shot');
+    function activate(part){
+      list.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-part')===part); });
+      shots.forEach(function(s){ s.classList.toggle('on', s.getAttribute('data-shot')===part); });
     }
-    spawn();
-    setInterval(function(){ if(Math.random()<.85) spawn(); }, 2600);
+    list.addEventListener('click', function(e){ var b=e.target.closest('button'); if(b) activate(b.getAttribute('data-part')); });
+    list.addEventListener('mouseover', function(e){ var b=e.target.closest('button'); if(b) activate(b.getAttribute('data-part')); });
+    list.addEventListener('focusin', function(e){ var b=e.target.closest('button'); if(b) activate(b.getAttribute('data-part')); });
   })();
 
-  /* Dual marquee content */
+  /* ---- PRODUCT sticky: ステップに応じた微細な変化 ---- */
   (function(){
-    var row1 = ['BODY CONDITIONING','DAILY RITUAL','TERAHERTZ','SELF CARE','TERAPP','貼るコンディショニング習慣','肩・首・腰・ひざ・ひじ'];
-    var row2 = ['CONDITIONING TAPE','CUT TO FIT','SHOULDER & NECK','KNEE & ANKLE','部位に合わせて切って貼る','わたしのセルフケア時間'];
-    function build(el, items){
-      if(!el) return;
-      var half = items.map(function(t){ return '<span class="mq-item">'+t+'<span class="mq-star">✦</span></span>'; }).join('');
-      el.innerHTML = half + half;
+    var obj = doc.getElementById('productObj'), steps = doc.querySelectorAll('.pstep');
+    if(!obj || !steps.length || reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var i = [].indexOf.call(steps, en.target);
+        obj.style.transform = 'scale('+(1 + i*0.035)+') rotate('+(i%2 ? -1.1 : 1.1)+'deg)';
+      });
+    }, {threshold:.5});
+    steps.forEach(function(s){ io.observe(s); });
+  })();
+
+  /* ---- TERAHERTZ: 微細な粒子 ---- */
+  (function(){
+    var f = doc.getElementById('pField'); if(!f || reduce) return;
+    var n = window.innerWidth < 720 ? 18 : 34, html='';
+    for(var i=0;i<n;i++){
+      html += '<i style="left:'+(Math.random()*100).toFixed(2)+'%;top:'+(Math.random()*100).toFixed(2)+'%;'+
+              '--pd:'+(10+Math.random()*12).toFixed(1)+'s;--pl:'+(-Math.random()*12).toFixed(1)+'s"></i>';
     }
-    build(document.getElementById('mq1'), row1);
-    build(document.getElementById('mq2'), row2);
+    f.innerHTML = html;
   })();
 
-  /* Pricing checkout URL 差替補助 */
+  /* ---- FAQ accordion ---- */
   (function(){
-    var grid = document.getElementById('price-grid'); if(!grid) return;
-    grid.querySelectorAll('.pc-cta').forEach(function(a){
-      var url = a.getAttribute('data-checkout');
-      if(url){
-        var qty = a.closest('.price-card').querySelector('.pc-qty');
-        a.setAttribute('href', url);
-        a.textContent = (qty ? qty.textContent : '') + 'を購入する';
-      }
-    });
-  })();
-
-  /* FAQ 開閉 */
-  (function(){
-    var list = document.getElementById('faq-list'); if(!list) return;
+    var list = doc.getElementById('faqList'); if(!list) return;
     list.addEventListener('click', function(e){
       var btn = e.target.closest('.faq-q'); if(!btn) return;
-      var item = btn.parentElement;
-      var panel = item.querySelector('.faq-a');
+      var item = btn.parentElement, panel = item.querySelector('.faq-a');
       var open = item.classList.toggle('open');
       btn.setAttribute('aria-expanded', open);
       panel.style.maxHeight = open ? (panel.scrollHeight + 'px') : '0px';
       if(open) track('faq_open');
     });
+    window.addEventListener('resize', function(){
+      list.querySelectorAll('.faq-item.open .faq-a').forEach(function(p){ p.style.maxHeight = p.scrollHeight+'px'; });
+    });
   })();
 
-  /* Brand film: 表示中のみ自動再生（音声なし・省電力）。reduced-motion時は自動再生せずコントロール表示 */
+  /* ---- PRICING: checkoutURL 確定時に href/文言を差し替える補助 ---- */
   (function(){
-    var v = document.getElementById('brandVideo'); if(!v) return;
-    if(reduce){ v.setAttribute('controls',''); return; }
-    if(!('IntersectionObserver' in window)){ v.setAttribute('controls',''); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){ var p = v.play(); if(p&&p.catch) p.catch(function(){ v.setAttribute('controls',''); }); }
-        else { v.pause(); }
+    var grid = doc.getElementById('priceGrid'); if(!grid) return;
+    grid.querySelectorAll('.pcta').forEach(function(a){
+      var url = a.getAttribute('data-checkout');
+      if(url){
+        var q = a.closest('.pcard').querySelector('.pq');
+        a.setAttribute('href', url);
+        a.innerHTML = (q ? q.textContent : '') + 'を購入する <span class="ar">→</span>';
+      }
+    });
+  })();
+
+  /* ---- STICKY CTA: ヒーロー通過後に表示 / フッター付近で退避 ---- */
+  (function(){
+    var bar = doc.getElementById('sbar'); if(!bar) return;
+    var ft = doc.querySelector('.ft'), fin = doc.querySelector('.final'), price = doc.getElementById('price');
+    function show(on){ bar.classList.toggle('show', on); bar.setAttribute('aria-hidden', on ? 'false' : 'true'); }
+    function check(){
+      var past = window.scrollY > window.innerHeight * .75;
+      var near = false;
+      [ft, fin, price].forEach(function(el){
+        if(!el) return; var r = el.getBoundingClientRect();
+        if(r.top < window.innerHeight && r.bottom > 0) near = true;
       });
-    }, {threshold:.4});
-    io.observe(v);
-  })();
-
-  /* Reveal on scroll */
-  (function(){
-    var els = document.querySelectorAll('.reveal');
-    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, {threshold:.14, rootMargin:'0px 0px -8% 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  })();
-
-  /* Sticky bar */
-  (function(){
-    var bar = document.getElementById('stickyBar'); if(!bar) return;
-    var footer = document.querySelector('footer');
-    var final = document.querySelector('.final');
-    function setHidden(hidden){
-      bar.classList.toggle('hidden', hidden);
-      bar.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+      show(past && !near);
     }
-    if(!('IntersectionObserver' in window)){ setHidden(false); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ en.target.__vis = en.isIntersecting; });
-      var nearEnd = (footer && footer.__vis) || (final && final.__vis);
-      setHidden(!!nearEnd || window.scrollY <= window.innerHeight*0.6);
-    }, {threshold:.05});
-    if(footer) io.observe(footer);
-    if(final) io.observe(final);
-    setHidden(true);
-    window.addEventListener('scroll', function(){
-      if(window.scrollY > window.innerHeight*0.6){
-        if(!((footer&&footer.__vis)||(final&&final.__vis))) setHidden(false);
-      } else { setHidden(true); }
-    }, {passive:true});
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+    check();
   })();
 
 })();
