@@ -1,0 +1,27 @@
+# ============================================================
+# terapp.jp キャッシュ制御 (.htaccess)  ※XServer / Apache用
+#  目的: ファイルを差し替えたら「スマホでも」即反映させる
+#  仕組み: 毎回ETag/更新日時で鮮度確認し、変わっていなければ
+#          304(中身なし)を返すので通信量は最小・でも常に最新
+# ============================================================
+
+<IfModule mod_headers.c>
+  # --- HTML: 毎回サーバーに確認して最新を取得 ---
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+
+  # --- CSS / JS: 同上（小さいので毎回確認でOK） ---
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+
+  # --- 画像 / 動画 / フォント: 差し替え検知して即更新 ---
+  #  同じファイル名で上書きしても、更新日時が変われば取り直す
+  <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|ico|mp4|webm|woff2?|ttf)$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
+</IfModule>
+
+# ETagを有効化（中身が同じなら304で軽く済ませるため）
+FileETag MTime Size
