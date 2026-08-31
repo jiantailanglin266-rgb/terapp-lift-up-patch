@@ -389,6 +389,14 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .areas{position:relative}
 .areas-head{margin-bottom:clamp(3rem,7vw,6rem)}
 .areas-head .eyebrow{display:block;margin-bottom:1.8rem}
+/* Areas / Lifestyle のシネマティック帯（横長・上下を地色へ溶かす） */
+.areas-film,.life-film{position:relative;margin:0 0 clamp(2.4rem,5vw,4rem);border-radius:10px;overflow:hidden;background:var(--ivory-2)}
+.life-film{margin:0 0 clamp(1.6rem,3.4vw,2.6rem)}
+.areas-film video,.life-film video{display:block;width:100%;height:100%;object-fit:cover;
+  aspect-ratio:21/9;filter:saturate(.98) contrast(1.03)}
+@media(max-width:760px){.areas-film video,.life-film video{aspect-ratio:4/3}}
+.areas-film::after,.life-film::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(248,246,242,.16) 0%,transparent 22%,transparent 78%,rgba(248,246,242,.22) 100%)}
 .areas-grid{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2vw,1.4rem)}
 .area-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.4rem;
   padding:clamp(1.6rem,3vw,2.4rem) 0;border-top:1px solid var(--line);transition:padding-left .5s var(--ease)}
@@ -452,6 +460,11 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .tech::before{content:"";position:absolute;inset:-160px 0;z-index:-1;pointer-events:none;
   background:linear-gradient(180deg,rgba(18,16,14,0) 0%,var(--dark) 160px,var(--dark) calc(100% - 160px),rgba(18,16,14,0) 100%)}
 .tech-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+/* 抽象的な光の映像（テキストの背面・可読性のため落として合成） */
+.tech-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;
+  filter:saturate(1.05) contrast(1.06)}
+.tech-fx::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(12,11,10,.86) 0%,rgba(12,11,10,.62) 46%,rgba(12,11,10,.2) 100%)}
 .tech-wave{position:absolute;left:50%;top:50%;width:140vmax;height:140vmax;transform:translate(-50%,-50%);
   background:radial-gradient(circle,transparent 58%,rgba(216,196,168,.05) 60%,transparent 62%),
   radial-gradient(circle,transparent 66%,rgba(216,196,168,.045) 68%,transparent 70%),
@@ -869,6 +882,9 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       <h2 class="display reveal" data-d="1">Designed<br>for you.</h2>
       <p class="jp-serif reveal" data-d="2" style="margin-top:1.6rem;font-size:clamp(1.2rem,3vw,1.9rem)">気になる部分に、<br>やさしく寄り添う。</p>
     </div>
+    <figure class="areas-film reveal">
+      <video class="autoloop" data-src="assets/cinematic/05-lifestyle.mp4" poster="images/05-lifestyle-poster.jpg" playsinline muted loop preload="none" aria-label="フェイスラインから首元へ、やさしく手を添える様子"></video>
+    </figure>
     <div class="areas-grid">
       <div class="area-row reveal"><span class="idx">01</span><span class="nm"><b>フェイスライン</b><span class="en">Face Line</span></span><span class="desc">フェイスラインの印象を意識したいときに。</span></div>
       <div class="area-row reveal"><span class="idx">02</span><span class="nm"><b>頬</b><span class="en">Cheek</span></span><span class="desc">頬をすっきり見せて、明るい印象へ。</span></div>
@@ -955,6 +971,9 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       <h2 class="display reveal" data-d="1">From Morning<br><span class="it">to Night.</span></h2>
       <p class="lead reveal" data-d="2">忙しい日も、ゆっくり過ごす日も。毎日の中に、無理なく続けられる美容習慣を。わたしの時間に、そっと寄り添う一枚。</p>
     </div>
+    <figure class="life-film reveal">
+      <video class="autoloop" data-src="assets/cinematic/02-brandfilm.mp4" poster="images/02-brandfilm-poster.jpg" playsinline muted loop preload="none" aria-label="朝の光がさす部屋で、静かに肌を整える時間"></video>
+    </figure>
     <div class="life-grid">
       <figure class="life-item big reveal">
         <picture><source srcset="images/terapp-scene-1.webp" type="image/webp"><img src="images/terapp-scene-1.jpg" loading="lazy" decoding="async" alt="朝のスキンケア。一日のはじまりに、肌を整えて気持ちも前向きに。"></picture>
@@ -986,7 +1005,10 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 
 <!-- ============================== 15/16 TECHNOLOGY ============================== -->
 <section class="section tech on-dark">
-  <div class="tech-fx" aria-hidden="true"><span class="tech-wave"></span><span class="tech-glow"></span></div>
+  <div class="tech-fx" aria-hidden="true">
+    <video class="tech-video autoloop" data-src="assets/cinematic/07-tech.mp4" poster="images/07-tech-poster.jpg" playsinline muted loop preload="none"></video>
+    <span class="tech-wave"></span><span class="tech-glow"></span>
+  </div>
   <div class="wrap tech-inner">
     <span class="eyebrow reveal">Technology</span>
     <h2 class="display reveal" data-d="1">Beyond<br>the Visible.</h2>
@@ -1152,7 +1174,7 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 <!-- ============================== 24 FINAL CINEMATIC CTA ============================== -->
 <section class="final on-dark" aria-label="TERAPP 購入への導線">
   <div class="final-media" aria-hidden="true">
-    <video id="finalVideo" playsinline muted loop preload="none" data-src="assets/cinematic/06-final.mp4"></video>
+    <video id="finalVideo" playsinline muted loop preload="none" poster="images/06-final-poster.jpg" data-src="assets/cinematic/06-final.mp4"></video>
   </div>
   <div class="final-inner">
     <span class="eyebrow reveal">Your Ritual</span>
@@ -1331,7 +1353,7 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
          既定は空 → リクエストを一切出さず 404 も出ない（未撮影時は濃色グラデ背景のまま）。
          例) 01-hero.mp4 を assets/cinematic/ に置いたら:
              var CINEMATIC_READY = ['assets/cinematic/01-hero.mp4'];  ← この行に追記するだけ ---- */
-  var CINEMATIC_READY = ['assets/cinematic/01-hero.mp4'];
+  var CINEMATIC_READY = ['assets/cinematic/01-hero.mp4','assets/cinematic/06-final.mp4'];
   (function(){
     if(reduce || !CINEMATIC_READY.length) return;
     document.querySelectorAll('video[data-src]').forEach(function(v){
