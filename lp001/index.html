@@ -524,6 +524,11 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .price-card .pc-cta{margin-top:2rem;width:100%}
 .price-note{margin:2.4rem auto 0;text-align:center;font-family:var(--jp);font-weight:400;font-size:.76rem;color:var(--muted);line-height:1.9;max-width:54ch}
 .price-note a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+/* LINE公式アカウント CTA（価格節・全デバイス表示） */
+.line-cta{max-width:840px;margin:2.4rem auto 0;padding:1.8rem 1.6rem;text-align:center;
+  border:1px solid var(--line);border-radius:8px;background:rgba(6,199,85,.035)}
+.line-cta-lead{font-family:var(--jp);font-weight:400;font-size:.86rem;color:var(--text);line-height:1.95;margin-bottom:1.3rem}
+.line-cta .btn-line{padding:1rem 2.2rem;font-size:.76rem}
 .assurance{list-style:none;max-width:840px;margin:2.6rem auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;padding:0}
 .assurance li{display:flex;flex-direction:column;gap:.4rem;border:1px solid var(--line);border-radius:6px;padding:1.3rem 1.4rem}
 .assurance svg{width:24px;height:24px;color:var(--champagne)}
@@ -681,8 +686,28 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 .sticky-bar .sb-info{display:flex;flex-direction:column;line-height:1.25}
 .sticky-bar .sb-info b{font-family:var(--jp);font-size:.8rem;color:var(--ink);font-weight:500}
 .sticky-bar .sb-info span{font-family:var(--jp);font-weight:400;font-size:.7rem;color:var(--muted)}
-.sticky-bar .sb-price{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.1rem;margin-left:auto}
-.sticky-bar .btn{padding:.8rem 1.3rem;font-size:.7rem}
+.sticky-bar .sb-price{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.05rem;display:flex;align-items:baseline;gap:.45rem}
+.sticky-bar .sb-tax{font-family:var(--jp);font-weight:400;font-size:.62rem;color:var(--muted);letter-spacing:.02em}
+.sticky-bar .sb-actions{margin-left:auto;display:flex;align-items:center;gap:.5rem;flex-shrink:0}
+.sticky-bar .btn{padding:.8rem 1.15rem;font-size:.68rem;white-space:nowrap}
+/* LINE CTA（公式ブランドカラー #06C755・黒/白どちらでもない専用色） */
+.btn-line{background:#06C755;color:#fff;display:inline-flex;align-items:center;gap:.4rem}
+.btn-line:hover{background:#05b64d}
+.btn-line .line-ico{width:17px;height:17px;flex-shrink:0}
+/* 狭いスマホ：ボタンを詰め、商品名を省略して2ボタンを必ず収める */
+@media(max-width:430px){
+  .sticky-bar{gap:.5rem;padding-left:.7rem;padding-right:.7rem}
+  .sticky-bar .sb-info b{font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:8.5em}
+  .sticky-bar .sb-tax{display:none}
+  .sticky-bar .sb-price{font-size:.95rem}
+  .sticky-bar .btn{padding:.75rem .8rem;font-size:.64rem}
+  .sticky-bar .btn-line .line-ico{width:15px;height:15px}
+}
+@media(max-width:360px){
+  .sticky-bar .sb-info{display:none}       /* 極小幅は2ボタンを優先 */
+  .sticky-bar .sb-actions{margin:0 auto;width:100%}
+  .sticky-bar .btn{flex:1}
+}
 
 /* ============================================================
    RESPONSIVE
@@ -1036,6 +1061,15 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       </div>
     </div>
     <p class="price-note reveal">※表示価格はすべて税込です。1セット パッチ24枚入り。全国送料無料。詳細は<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p>
+
+    <!-- LINE公式アカウント：購入前のご相談導線 -->
+    <div class="line-cta reveal" data-d="1">
+      <p class="line-cta-lead">ご購入前のご相談・お問い合わせは<br>LINE公式アカウントからお気軽にどうぞ。</p>
+      <a href="https://lin.ee/5e2twWr" target="_blank" rel="noopener noreferrer" class="btn btn-line" data-ev="line_friend_click">
+        <svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8.1.3.07.8.22.9.5.1.26.07.66.03.92l-.14.87c-.04.26-.2 1.02.9.56 1.1-.46 5.95-3.5 8.12-6H20c1.5-1.63 2-3.3 2-5.05C22 5.7 17.5 2 12 2M7.5 12.9H5.6a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.5c.15 0 .27.12.27.26v2.95H7.5c.15 0 .26.12.26.26v.5c0 .15-.11.27-.26.27m1.55-.26c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.5c.15 0 .27.12.27.26zm4.2 0c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.2-.1L10.6 10.5v2.14c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.55l1.7 2.3V8.9c0-.14.12-.26.27-.26h.5c.15 0 .27.12.27.26zm3.4-3.24c0 .14-.12.26-.27.26h-1.3v.5h1.3c.15 0 .27.12.27.27v.5c0 .14-.12.26-.27.26h-1.3v.5h1.3c.15 0 .27.12.27.27v.5c0 .14-.12.26-.27.26h-2.06a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h2.06c.15 0 .27.12.27.26z"/></svg>
+        <span>LINEで相談する</span>
+      </a>
+    </div>
     <ul class="assurance reveal" data-d="1">
       <li>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h13v8H3zM16 10h3l2 2v3h-5" stroke-linejoin="round"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>
@@ -1178,9 +1212,14 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 
 <!-- ============================== STICKY PURCHASE BAR (mobile) ============================== -->
 <div class="sticky-bar" id="stickyBar" aria-hidden="true">
-  <div class="sb-info"><b>TERAPP Lift Up Patch</b><span>気になる部分の美容ケアに</span></div>
-  <span class="sb-price">2,200円〜</span>
-  <a href="https://terapp.base.shop/items/152366986" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-ev="sticky_cta_click">購入する</a>
+  <div class="sb-info"><b>TERAPP Lift Up Patch</b><span class="sb-price">2,200円〜<span class="sb-tax">税込・送料無料</span></span></div>
+  <div class="sb-actions">
+    <a href="https://lin.ee/5e2twWr" target="_blank" rel="noopener noreferrer" class="btn btn-line" data-ev="sticky_line_click" aria-label="LINEで相談する（LINE公式アカウント）">
+      <svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8.1.3.07.8.22.9.5.1.26.07.66.03.92l-.14.87c-.04.26-.2 1.02.9.56 1.1-.46 5.95-3.5 8.12-6H20c1.5-1.63 2-3.3 2-5.05C22 5.7 17.5 2 12 2M7.5 12.9H5.6a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.5c.15 0 .27.12.27.26v2.95H7.5c.15 0 .26.12.26.26v.5c0 .15-.11.27-.26.27m1.55-.26c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.5c.15 0 .27.12.27.26zm4.2 0c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.2-.1L10.6 10.5v2.14c0 .14-.12.26-.27.26h-.5a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h.55l1.7 2.3V8.9c0-.14.12-.26.27-.26h.5c.15 0 .27.12.27.26zm3.4-3.24c0 .14-.12.26-.27.26h-1.3v.5h1.3c.15 0 .27.12.27.27v.5c0 .14-.12.26-.27.26h-1.3v.5h1.3c.15 0 .27.12.27.27v.5c0 .14-.12.26-.27.26h-2.06a.26.26 0 01-.26-.26V8.9c0-.14.12-.26.26-.26h2.06c.15 0 .27.12.27.26z"/></svg>
+      <span>LINEで相談</span>
+    </a>
+    <a href="https://terapp.base.shop/items/152366986" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-ev="sticky_cta_click">購入する</a>
+  </div>
 </div>
 
 <!-- 任意: Lenis + GSAP + ScrollTrigger（読込失敗しても全機能フォールバックで成立） -->
