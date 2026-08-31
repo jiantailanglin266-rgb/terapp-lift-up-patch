@@ -337,8 +337,8 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .film-head .eyebrow{display:block;margin-bottom:1.4rem}
 .film-en{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(2rem,5.4vw,4rem);color:var(--ink);line-height:1;letter-spacing:.01em}
 .film-jp{font-family:var(--jp-serif);font-weight:500;font-size:clamp(.95rem,2vw,1.2rem);letter-spacing:.08em;color:var(--muted);margin-top:1.2rem}
-.film-frame{position:relative;width:100%;aspect-ratio:21/9;overflow:hidden;background:var(--dark)}
-@media(max-width:760px){.film-frame{aspect-ratio:4/5}}
+/* 動画本来の比率（1280:734）に枠を合わせ、トリミングも余白も出さない */
+.film-frame{position:relative;width:100%;aspect-ratio:1280/734;overflow:hidden;background:var(--dark)}
 .film-frame video,.film-frame img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) contrast(1.02)}
 .film-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.4),rgba(18,16,14,.15) 45%,rgba(18,16,14,.55));pointer-events:none}
 .film-copy{position:absolute;left:0;right:0;bottom:clamp(2rem,6vw,5rem);z-index:3;text-align:center;color:var(--ivory);padding:0 1.4rem;pointer-events:none}
@@ -392,9 +392,8 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 /* Areas / Lifestyle のシネマティック帯（横長・上下を地色へ溶かす） */
 .areas-film,.life-film{position:relative;margin:0 0 clamp(2.4rem,5vw,4rem);border-radius:10px;overflow:hidden;background:var(--ivory-2)}
 .life-film{margin:0 0 clamp(1.6rem,3.4vw,2.6rem)}
-.areas-film video,.life-film video{display:block;width:100%;height:100%;object-fit:cover;
-  aspect-ratio:21/9;filter:saturate(.98) contrast(1.03)}
-@media(max-width:760px){.areas-film video,.life-film video{aspect-ratio:4/3}}
+.areas-film video,.life-film video{display:block;width:100%;height:auto;object-fit:cover;
+  aspect-ratio:1280/734;filter:saturate(.98) contrast(1.03)}
 .areas-film::after,.life-film::after{content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(248,246,242,.16) 0%,transparent 22%,transparent 78%,rgba(248,246,242,.22) 100%)}
 .areas-grid{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2vw,1.4rem)}
@@ -818,11 +817,10 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     <p class="film-jp">目に見えない可能性を、毎日の習慣に。</p>
   </div>
   <div class="film-frame reveal" id="filmFrame">
-    <video class="bf-video" id="brandFilm" playsinline muted loop autoplay preload="metadata" poster="images/terapp-brand-film-poster.jpg">
-      <source src="videos/terapp-brand-film.mp4" type="video/mp4">
+    <video class="bf-video" id="brandFilm" playsinline muted loop autoplay preload="metadata" poster="images/02-brandfilm-poster.jpg">
+      <source src="assets/cinematic/02-brandfilm.mp4" type="video/mp4">
       お使いのブラウザは動画に対応していません。
     </video>
-    <button class="film-play" id="filmPlay" aria-label="ブランドフィルムを音声付きで再生"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
   </div>
 </section>
 
@@ -860,9 +858,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       <h2 class="display reveal" data-d="1">Designed<br>for you.</h2>
       <p class="jp-serif reveal" data-d="2" style="margin-top:1.6rem;font-size:clamp(1.2rem,3vw,1.9rem)">気になる部分に、<br>やさしく寄り添う。</p>
     </div>
-    <figure class="areas-film reveal">
-      <video class="autoloop" data-src="assets/cinematic/05-lifestyle.mp4" poster="images/05-lifestyle-poster.jpg" playsinline muted loop preload="none" aria-label="フェイスラインから首元へ、やさしく手を添える様子"></video>
-    </figure>
     <div class="areas-grid">
       <div class="area-row reveal"><span class="idx">01</span><span class="nm"><b>フェイスライン</b><span class="en">Face Line</span></span><span class="desc">フェイスラインの印象を意識したいときに。</span></div>
       <div class="area-row reveal"><span class="idx">02</span><span class="nm"><b>頬</b><span class="en">Cheek</span></span><span class="desc">頬をすっきり見せて、明るい印象へ。</span></div>
@@ -950,7 +945,7 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       <p class="lead reveal" data-d="2">忙しい日も、ゆっくり過ごす日も。毎日の中に、無理なく続けられる美容習慣を。わたしの時間に、そっと寄り添う一枚。</p>
     </div>
     <figure class="life-film reveal">
-      <video class="autoloop" data-src="assets/cinematic/02-brandfilm.mp4" poster="images/02-brandfilm-poster.jpg" playsinline muted loop preload="none" aria-label="朝の光がさす部屋で、静かに肌を整える時間"></video>
+      <video class="autoloop" data-src="assets/cinematic/05-lifestyle.mp4" poster="images/05-lifestyle-poster.jpg" playsinline muted loop preload="none" aria-label="窓辺で静かに肌を整える朝の時間"></video>
     </figure>
   </div>
 </section>
