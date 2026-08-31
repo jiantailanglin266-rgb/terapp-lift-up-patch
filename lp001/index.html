@@ -430,28 +430,6 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
    ============================================================ */
 .life-head{margin-bottom:clamp(2.4rem,6vw,5rem)}
 .life-head .eyebrow{display:block;margin-bottom:1.8rem}
-.life-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(.8rem,1.6vw,1.4rem)}
-.life-item{position:relative;overflow:hidden;border-radius:8px;isolation:isolate}
-.life-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease-out);
-  filter:saturate(.94) contrast(1.02) brightness(1.01)}
-.life-item:hover img{transform:scale(1.05)}
-.life-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(18,16,14,.22));pointer-events:none}
-/* 実写に元々キャプションが焼き込まれているため、重複するオーバーレイは非表示。
-   文字なしのクリーン実写に差し替えたら display:flex へ戻すと英字ラベルが復活する。 */
-.life-item .cap{display:none;position:absolute;left:1.2rem;bottom:1.1rem;z-index:2;color:var(--ivory)}
-.life-item .cap .en{font-family:var(--sans);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
-.life-item .cap .jp{font-family:var(--jp-serif);font-weight:500;font-size:1rem;letter-spacing:.04em;margin-top:.2rem}
-/* spans */
-.life-item.big{grid-column:span 7;aspect-ratio:16/13}
-.life-item.tall{grid-column:span 5;aspect-ratio:4/5}
-.life-item.wide{grid-column:span 5;aspect-ratio:5/4}
-.life-item.reg{grid-column:span 4;aspect-ratio:1/1}
-.life-item.reg2{grid-column:span 4;aspect-ratio:1/1}
-.life-item.reg3{grid-column:span 4;aspect-ratio:1/1}
-@media(max-width:760px){
-  .life-item.big,.life-item.tall,.life-item.wide{grid-column:span 12;aspect-ratio:4/3}
-  .life-item.reg,.life-item.reg2,.life-item.reg3{grid-column:span 6;aspect-ratio:1/1}
-}
 
 /* ============================================================
    15/16 TECHNOLOGY — dark, abstract
@@ -974,32 +952,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     <figure class="life-film reveal">
       <video class="autoloop" data-src="assets/cinematic/02-brandfilm.mp4" poster="images/02-brandfilm-poster.jpg" playsinline muted loop preload="none" aria-label="朝の光がさす部屋で、静かに肌を整える時間"></video>
     </figure>
-    <div class="life-grid">
-      <figure class="life-item big reveal">
-        <picture><source srcset="images/terapp-scene-1.webp" type="image/webp"><img src="images/terapp-scene-1.jpg" loading="lazy" decoding="async" alt="朝のスキンケア。一日のはじまりに、肌を整えて気持ちも前向きに。"></picture>
-        <span class="cap"><span class="en">Morning</span><span class="jp">朝のスキンケア</span></span>
-      </figure>
-      <figure class="life-item tall reveal">
-        <picture><source srcset="images/terapp-scene-2.webp" type="image/webp"><img src="images/terapp-scene-2.jpg" loading="lazy" decoding="async" alt="メイク前の美容時間。朝の身支度に、ひと呼吸のケアを。"></picture>
-        <span class="cap"><span class="en">Before Makeup</span><span class="jp">メイク前の美容時間</span></span>
-      </figure>
-      <figure class="life-item wide reveal">
-        <picture><source srcset="images/terapp-scene-3.webp" type="image/webp"><img src="images/terapp-scene-3.jpg" loading="lazy" decoding="async" alt="在宅ワーク中。自分のペースでケアをしながら、リフレッシュタイムに。"></picture>
-        <span class="cap"><span class="en">Work</span><span class="jp">在宅ワーク中</span></span>
-      </figure>
-      <figure class="life-item reg reveal">
-        <picture><source srcset="images/terapp-scene-4.webp" type="image/webp"><img src="images/terapp-scene-4.jpg" loading="lazy" decoding="async" alt="リラックスタイム。一日の終わりに、ほっとするご褒美ケアを。"></picture>
-        <span class="cap"><span class="en">Rest</span><span class="jp">リラックスタイム</span></span>
-      </figure>
-      <figure class="life-item reg2 reveal">
-        <picture><source srcset="images/terapp-scene-5.webp" type="image/webp"><img src="images/terapp-scene-5.jpg" loading="lazy" decoding="async" alt="外出前の身支度。ちょっとしたケアで、気分を高めてお出かけ準備。"></picture>
-        <span class="cap"><span class="en">Going Out</span><span class="jp">外出前の身支度</span></span>
-      </figure>
-      <figure class="life-item reg3 reveal">
-        <picture><source srcset="images/terapp-scene-6.webp" type="image/webp"><img src="images/terapp-scene-6.jpg" loading="lazy" decoding="async" alt="特別な日のセルフケア。大切な日を、もっと輝くわたしで。"></picture>
-        <span class="cap"><span class="en">Special Day</span><span class="jp">特別な日のセルフケア</span></span>
-      </figure>
-    </div>
   </div>
 </section>
 
