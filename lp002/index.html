@@ -36,10 +36,10 @@
 <link rel="alternate" hreflang="ja" href="https://terapp.jp/conditioning-tape/">
 <link rel="alternate" hreflang="x-default" href="https://terapp.jp/conditioning-tape/">
 
-<!-- ===== Fonts: 欧文ディスプレイ(Cormorant) × 欧文UI(Inter) × 和文明朝/ゴシック(Noto) ===== -->
+<!-- ===== Fonts: 原LPと同一の4書体（Cormorant Garamond / Montserrat / Zen Kaku Gothic New / Shippori Mincho） ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
 
 <!-- ===== Structured Data (@graph) =====
      捏造しない方針: review/rating/在庫/GTIN/SKU は入れない。FAQPage は画面表示の12問と完全一致。 -->
@@ -145,9 +145,9 @@
   --cream-mute:rgba(239,233,219,.62);
   /* --- Type --- */
   --display:'Cormorant Garamond',serif;
-  --ui:'Inter',sans-serif;
-  --jp:'Noto Sans JP',sans-serif;
-  --jp-serif:'Noto Serif JP',serif;
+  --ui:'Montserrat',sans-serif;
+  --jp:'Zen Kaku Gothic New',sans-serif;
+  --jp-serif:'Shippori Mincho',serif;
   /* --- Layout --- */
   --pad:clamp(1.25rem,5vw,4rem);
   --wrap:1240px;
@@ -284,7 +284,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .hdr.scrolled{background:rgba(247,244,239,.86);backdrop-filter:blur(16px) saturate(1.1);
   box-shadow:0 1px 0 var(--line-2);height:64px}
 /* ブランドロゴ: 従来LPのゴールドグラデーション・ワードマークを踏襲 */
-.hdr-brand{font-family:'Montserrat',var(--ui);font-weight:700;font-size:1.08rem;letter-spacing:.24em;text-indent:.24em;
+.hdr-brand{font-family:var(--ui);font-weight:700;font-size:1.08rem;letter-spacing:.24em;text-indent:.24em;
   background:linear-gradient(180deg,#8A6A24,#A9843F 55%,#7A5F28);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hdr.on-dark .hdr-brand{background:linear-gradient(180deg,#E4CFA3,#C9A86A 55%,#A9843F);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hdr.on-dark .hdr-nav a,.hdr.on-dark .brg span{color:var(--cream)}
@@ -602,7 +602,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
    ============================================================ */
 .ft{background:var(--deep);color:var(--cream);padding:clamp(3.4rem,8vw,5rem) var(--pad) calc(2.6rem + env(safe-area-inset-bottom))}
 .ft-in{max-width:var(--wrap);margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between}
-.ft-brand{font-family:'Montserrat',var(--ui);font-weight:700;font-size:1.1rem;letter-spacing:.24em;text-indent:.24em;
+.ft-brand{font-family:var(--ui);font-weight:700;font-size:1.1rem;letter-spacing:.24em;text-indent:.24em;
   background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ft-nav{display:flex;flex-wrap:wrap;gap:clamp(1.1rem,3vw,2rem)}
 .ft-nav a{font-family:var(--ui);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,233,219,.62);transition:color .4s}
