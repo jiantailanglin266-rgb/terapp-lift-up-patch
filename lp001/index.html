@@ -184,6 +184,70 @@ html.lenis,html.lenis body{height:auto}
   background-size:200px 200px;}
 
 /* ============================================================
+   CINEMATIC BACKGROUND — 光の呼吸 / シルクの気配 / 微光の帯
+   すべて fixed・操作透過・transform/opacityのみ・very slow
+   ============================================================ */
+.bg-aura{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden;contain:strict}
+/* 1) シャンパン光のゆっくりした呼吸（3つ・位相をずらす） */
+.bg-aura .orb{position:absolute;border-radius:50%;filter:blur(90px);will-change:transform,opacity;
+  mix-blend-mode:multiply}
+.bg-aura .o1{top:-18%;left:-12%;width:62vw;height:62vw;
+  background:radial-gradient(circle,rgba(187,166,143,.42),rgba(187,166,143,0) 68%);
+  animation:auraDrift1 34s ease-in-out infinite}
+.bg-aura .o2{bottom:-22%;right:-14%;width:70vw;height:70vw;
+  background:radial-gradient(circle,rgba(203,178,142,.38),rgba(203,178,142,0) 70%);
+  animation:auraDrift2 42s ease-in-out -8s infinite}
+.bg-aura .o3{top:34%;left:38%;width:56vw;height:56vw;
+  background:radial-gradient(circle,rgba(196,182,160,.32),rgba(196,182,160,0) 72%);
+  animation:auraDrift3 38s ease-in-out -16s infinite}
+@keyframes auraDrift1{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.75}
+  50%{transform:translate3d(3.5%,4%,0) scale(1.10);opacity:1}}
+@keyframes auraDrift2{0%,100%{transform:translate3d(0,0,0) scale(1.06);opacity:.85}
+  50%{transform:translate3d(-4%,-3%,0) scale(1);opacity:1}}
+@keyframes auraDrift3{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.55}
+  50%{transform:translate3d(-3%,3.5%,0) scale(1.12);opacity:.85}}
+
+/* 2) 斜めに横切る微光の帯（シルクの艶。極薄・超スロー） */
+.bg-aura .sheen{position:absolute;top:-30%;height:160%;width:clamp(180px,26vw,460px);
+  background:linear-gradient(90deg,transparent,rgba(255,252,246,.55),transparent);
+  filter:blur(28px);opacity:0;will-change:transform,opacity}
+.bg-aura .s1{left:-30%;transform:rotate(14deg);animation:sheenPass 26s ease-in-out infinite}
+.bg-aura .s2{left:-30%;transform:rotate(14deg);animation:sheenPass 30s ease-in-out -15s infinite}
+@keyframes sheenPass{
+  0%{transform:translate3d(0,0,0) rotate(14deg);opacity:0}
+  12%{opacity:.5}
+  60%{opacity:.5}
+  100%{transform:translate3d(150vw,0,0) rotate(14deg);opacity:0}}
+
+/* 3) ごく淡いヴィネット（画面端を締めて奥行きを出す） */
+.bg-vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 85% at 50% 45%,transparent 52%,rgba(112,96,78,.16) 100%)}
+
+/* 4) 濃色セクション上では光を反転させ、金の粒子感を出す */
+.tech .bg-local,.final .bg-local,.hero .bg-local{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+
+@media(prefers-reduced-motion:reduce){
+  .bg-aura .orb,.bg-aura .sheen{animation:none!important}
+  .bg-aura .sheen{opacity:0}
+}
+/* 低性能端末では blur コストを抑える */
+@media(max-width:560px){
+  .bg-aura .orb{filter:blur(60px)}
+  .bg-aura .sheen{display:none}
+}
+
+
+/* 5) セクションの節目に走る、極細の光の線（1本1.6秒でゆっくり開く） */
+.section > .wrap{position:relative}
+.section > .wrap::before{content:"";position:absolute;left:50%;top:calc(-1 * clamp(2.4rem,6vw,5rem));
+  width:0;height:1px;transform:translateX(-50%);pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(187,166,143,.85),transparent);
+  transition:width 1600ms var(--ease)}
+.section.lit > .wrap::before{width:min(560px,72%)}
+.tech > .wrap::before,.final .final-inner::before{background:linear-gradient(90deg,transparent,rgba(216,196,168,.75),transparent)}
+@media(prefers-reduced-motion:reduce){.section > .wrap::before{transition:none;width:min(560px,72%)}}
+
+/* ============================================================
    TYPOGRAPHY HELPERS
    ============================================================ */
 .eyebrow{font-family:var(--sans);font-size:.64rem;font-weight:500;letter-spacing:.42em;
@@ -734,6 +798,12 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 
 <!-- 連続背景＋グレイン -->
 <div class="bg-canvas" aria-hidden="true"></div>
+<!-- シネマティック背景：光の呼吸＋シルクの艶（すべて装飾・操作透過） -->
+<div class="bg-aura" aria-hidden="true">
+  <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+  <span class="sheen s1"></span><span class="sheen s2"></span>
+</div>
+<div class="bg-vignette" aria-hidden="true"></div>
 <div class="bg-grain" aria-hidden="true"></div>
 
 <!-- 07 INTRO OVERLAY（BLACK → TERAPP → FADE） -->
@@ -1291,6 +1361,21 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
       var s = document.createElement('source'); s.src = url; s.type = 'video/mp4';
       v.appendChild(s); v.preload='metadata'; v.load(); v.play().catch(function(){});
     });
+  })();
+
+  /* ---- セクションの光のヘアライン：画面に入ったら静かに開く ---- */
+  (function(){
+    var secs=[].slice.call(document.querySelectorAll('.section'));
+    if(!secs.length) return;
+    if(reduce || !('IntersectionObserver' in window)){ secs.forEach(function(s){ s.classList.add('lit'); }); return; }
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('lit'); io.unobserve(e.target); } });
+    },{threshold:.08, rootMargin:'0px 0px -10% 0px'});
+    secs.forEach(function(s){ io.observe(s); });
+    // 保険（背景タブ等でIOが抑制されても表示される）
+    setTimeout(function(){ secs.forEach(function(s){
+      var r=s.getBoundingClientRect(); if(r.top<window.innerHeight && r.bottom>0) s.classList.add('lit');
+    }); },600);
   })();
 
   /* ---- Voice: クリックで <video> を生成し音声付き再生（初期はポスターのみ＝軽量） ---- */
