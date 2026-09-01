@@ -410,6 +410,24 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 @media(max-width:360px){.statement .jp-serif{font-size:5vw}}
 .statement .lead{margin-top:2.4rem}
 
+/* ---- Statement: なぜ「貼るだけ」なの？ ---- */
+.st-block{margin-top:clamp(2.4rem,6vw,3.6rem);padding-top:clamp(1.8rem,4vw,2.4rem);border-top:1px solid var(--line)}
+.st-block:first-of-type{border-top:none;padding-top:0}
+.st-h{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.12rem,3.2vw,1.45rem);
+  color:var(--ink);line-height:1.65;letter-spacing:.03em;margin-bottom:1rem}
+.st-note{margin-top:1rem;font-family:var(--jp);font-weight:400;font-size:clamp(.78rem,2.1vw,.84rem);
+  color:var(--muted);line-height:1.85;padding-left:1rem;border-left:1px solid var(--line)}
+.st-points{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.2rem,4vw,1.7rem);
+  color:var(--champagne);letter-spacing:.08em;line-height:1.7;margin:.6rem 0 .9rem}
+.st-points .sep{color:var(--greige);margin:0 .1em}
+.st-final{margin-top:clamp(2.6rem,6vw,4rem);padding:clamp(1.8rem,4.5vw,2.6rem) clamp(1.4rem,4vw,2.2rem);
+  border:1px solid var(--line-gold);border-radius:10px;background:rgba(255,255,255,.42);text-align:center}
+.st-formula{font-family:var(--jp-serif);font-weight:600;font-size:clamp(1.05rem,3.2vw,1.4rem);
+  color:var(--ink);letter-spacing:.04em;line-height:1.7}
+.st-formula .x{color:var(--champagne);margin:0 .35em;font-family:var(--serif)}
+.st-lead-final{margin-top:1.1rem;font-family:var(--jp);font-weight:400;
+  font-size:clamp(.95rem,2.5vw,1.08rem);color:var(--text);line-height:2}
+
 /* ============================================================
    09 CINEMATIC BRAND FILM — full bleed
    ============================================================ */
@@ -885,8 +903,29 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   <div class="wrap measure">
     <span class="eyebrow reveal">The New Ritual</span>
     <h2 class="display reveal" data-d="1">A New<br><span class="it">Ritual.</span></h2>
-    <p class="jp-serif nowrap-lines reveal" data-d="2"><span>貼るだけで始まる、</span><span>新しい美容ルーティン。</span></p>
-    <p class="lead reveal" data-d="2">TERAPP Lift Up Patch は、フェイスラインや首元など、印象が気になる部分へ貼って使用する美容ケア用パッチです。いつものスキンケアにプラスするだけ。忙しい朝にも、ゆっくり過ごす夜にも、無理なく続けられる美容習慣を提案します。</p>
+    <p class="jp-serif nowrap-lines reveal" data-d="2"><span>なぜ「貼るだけ」なの？</span></p>
+
+    <div class="st-block reveal" data-d="3">
+      <p class="st-h">1秒間に1兆回という領域に着目。</p>
+      <p class="lead">「テラ（Tera）」は1兆を意味する単位。TERAPP は、テラヘルツ領域に着目した加工技術を取り入れたリフトアップパッチです。</p>
+      <p class="st-note">※1秒間に1兆回、肌を物理的にマッサージするという意味ではありません。</p>
+    </div>
+
+    <div class="st-block reveal" data-d="3">
+      <p class="st-h">ポイントは「どこに貼るか」</p>
+      <p class="st-points">翳風<span class="sep">・</span>聴会<span class="sep">・</span>角孫<span class="sep">・</span>太陽</p>
+      <p class="lead">など、おすすめのポイントをご案内しています。</p>
+    </div>
+
+    <div class="st-block reveal" data-d="3">
+      <p class="st-h">毎日フェイスマッサージを続けるのは大変。<br>代わりに「貼る」という発想に。</p>
+      <p class="lead">特別な美容時間をつくらなくても、貼るだけだから、毎日続けやすい。</p>
+    </div>
+
+    <div class="st-final reveal" data-d="3">
+      <p class="st-formula">テラヘルツ加工 <span class="x">×</span> ポイント美容</p>
+      <p class="st-lead-final">フェイスラインをすっきりとした印象へ導く<br>新しい「貼るだけ」美容ルーティン。</p>
+    </div>
   </div>
 </section>
 
