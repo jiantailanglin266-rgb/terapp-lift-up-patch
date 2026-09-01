@@ -335,7 +335,7 @@ header.scrolled .brand-logo{height:44px}
 .nav-cta{opacity:1;border:1px solid currentColor;padding:.5rem 1.2rem;border-radius:2px;transition:background .4s,color .4s}
 header.scrolled .nav-cta:hover{background:var(--ink);color:var(--ivory)}
 header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:210}
+.burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:12px;min-width:44px;min-height:44px;z-index:210}
 .burger span{width:24px;height:1.5px;background:currentColor;transition:transform .4s var(--ease),opacity .3s}
 .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
@@ -575,6 +575,24 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .how-step h3{font-family:var(--jp-serif);font-weight:600;font-size:1.15rem;color:var(--ink);margin-bottom:.7rem;letter-spacing:.03em}
 .how-step p{font-family:var(--jp);font-weight:400;font-size:.9rem;color:var(--muted);line-height:1.95}
 .how-step .rule{margin-top:1.6rem;height:1px;background:var(--line)}
+
+/* ---- How to Use: 実写動画（縦型 Apply / 横型 Texture） ---- */
+.ritual-media{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2.4vw,1.6rem);
+  margin-top:clamp(2.4rem,5vw,3.6rem);align-items:start}
+@media(min-width:861px){.ritual-media{grid-template-columns:.8fr 1.2fr;align-items:center}}
+.ritual-media figure{position:relative;margin:0;border-radius:10px;overflow:hidden;
+  border:1px solid var(--line-gold);background:var(--ivory-2)}
+/* 動画は必ず枠内に収める（原寸ではみ出さない） */
+.ritual-media video{display:block;width:100%;height:100%;object-fit:cover}
+.rm-tall{aspect-ratio:540/960;max-width:340px;margin-inline:auto!important;width:100%}
+.rm-wide{aspect-ratio:16/9;width:100%}
+@media(max-width:860px){
+  .rm-tall{max-width:300px}
+}
+ /* 動画に字幕が焼き込まれているため、重複するラベルは非表示（クリーン素材に差し替えたら block に戻す） */
+.ritual-media figcaption{display:none;position:absolute;left:1rem;bottom:.9rem;z-index:2;color:var(--ivory);
+  font-family:var(--sans);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  text-shadow:0 1px 6px rgba(0,0,0,.7)}
 
 /* ============================================================
    18 SCROLL TYPOGRAPHY — giant words
