@@ -403,7 +403,11 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
    ============================================================ */
 .statement .eyebrow{display:block;margin-bottom:2.4rem}
 .statement .display{margin-bottom:2.6rem}
-.statement .jp-serif{font-size:clamp(1.4rem,3.4vw,2.3rem);color:var(--ink);line-height:1.66;max-width:20ch}
+.statement .jp-serif{font-size:clamp(1.3rem,3.1vw,2.3rem);color:var(--ink);line-height:1.66;max-width:22ch}
+/* 各行を1行に固定（『ン。』だけが落ちるのを防ぐ） */
+.nowrap-lines>span{display:block;white-space:nowrap}
+@media(max-width:430px){.statement .jp-serif{font-size:5.2vw;letter-spacing:.02em}}
+@media(max-width:360px){.statement .jp-serif{font-size:5vw}}
 .statement .lead{margin-top:2.4rem}
 
 /* ============================================================
@@ -878,7 +882,7 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   <div class="wrap measure">
     <span class="eyebrow reveal">The New Ritual</span>
     <h2 class="display reveal" data-d="1">A New<br><span class="it">Ritual.</span></h2>
-    <p class="jp-serif reveal" data-d="2">貼るだけで始まる、<br>新しい美容ルーティン。</p>
+    <p class="jp-serif nowrap-lines reveal" data-d="2"><span>貼るだけで始まる、</span><span>新しい美容ルーティン。</span></p>
     <p class="lead reveal" data-d="2">TERAPP Lift Up Patch は、フェイスラインや首元など、印象が気になる部分へ貼って使用する美容ケア用パッチです。いつものスキンケアにプラスするだけ。忙しい朝にも、ゆっくり過ごす夜にも、無理なく続けられる美容習慣を提案します。</p>
   </div>
 </section>
