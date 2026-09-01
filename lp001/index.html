@@ -189,29 +189,29 @@ html.lenis,html.lenis body{height:auto}
    ============================================================ */
 .bg-aura{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 /* 1) シャンパン光のゆっくりした呼吸（3つ・位相をずらす） */
-.bg-aura .orb{position:absolute;border-radius:50%;filter:blur(80px);will-change:transform,opacity}
-.bg-aura .o1{top:-18%;left:-12%;width:62vw;height:62vw;
-  background:radial-gradient(circle,rgba(206,168,110,.55),rgba(206,168,110,0) 70%);
-  animation:auraDrift1 20s ease-in-out infinite}
-.bg-aura .o2{bottom:-22%;right:-14%;width:70vw;height:70vw;
-  background:radial-gradient(circle,rgba(198,150,116,.48),rgba(198,150,116,0) 72%);
-  animation:auraDrift2 24s ease-in-out -6s infinite}
-.bg-aura .o3{top:34%;left:38%;width:56vw;height:56vw;
-  background:radial-gradient(circle,rgba(176,158,122,.42),rgba(176,158,122,0) 72%);
-  animation:auraDrift3 22s ease-in-out -11s infinite}
+.bg-aura .orb{position:absolute;border-radius:50%;filter:blur(46px);will-change:transform,opacity}
+.bg-aura .o1{top:-18%;left:-12%;width:52vw;height:52vw;
+  background:radial-gradient(circle,rgba(186,140,72,.95),rgba(186,140,72,0) 62%);
+  animation:auraDrift1 13s ease-in-out infinite}
+.bg-aura .o2{bottom:-22%;right:-14%;width:58vw;height:58vw;
+  background:radial-gradient(circle,rgba(176,118,84,.85),rgba(176,118,84,0) 64%);
+  animation:auraDrift2 16s ease-in-out -5s infinite}
+.bg-aura .o3{top:34%;left:38%;width:46vw;height:46vw;
+  background:radial-gradient(circle,rgba(150,126,80,.78),rgba(150,126,80,0) 66%);
+  animation:auraDrift3 15s ease-in-out -7s infinite}
 @keyframes auraDrift1{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.55}
-  50%{transform:translate3d(14%,12%,0) scale(1.35);opacity:1}}
+  50%{transform:translate3d(26%,22%,0) scale(1.55);opacity:1}}
 @keyframes auraDrift2{0%,100%{transform:translate3d(0,0,0) scale(1.25);opacity:1}
-  50%{transform:translate3d(-16%,-11%,0) scale(1);opacity:.6}}
+  50%{transform:translate3d(-28%,-20%,0) scale(1);opacity:.5}}
 @keyframes auraDrift3{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.45}
-  50%{transform:translate3d(-13%,14%,0) scale(1.4);opacity:.95}}
+  50%{transform:translate3d(-24%,26%,0) scale(1.6);opacity:1}}
 
 /* 2) 斜めに横切る微光の帯（シルクの艶。極薄・超スロー） */
 .bg-aura .sheen{position:absolute;top:-30%;height:160%;width:clamp(220px,32vw,560px);
-  background:linear-gradient(90deg,transparent,rgba(255,250,235,.95) 45%,rgba(255,244,214,.85) 55%,transparent);
-  filter:blur(16px);opacity:0;will-change:transform,opacity}
-.bg-aura .s1{left:-30%;transform:rotate(14deg);animation:sheenPass 11s ease-in-out infinite}
-.bg-aura .s2{left:-30%;transform:rotate(14deg);animation:sheenPass 14s ease-in-out -7s infinite}
+  background:linear-gradient(90deg,transparent,rgba(255,252,240,1) 45%,rgba(255,236,190,.95) 55%,transparent);
+  filter:blur(9px);opacity:0;will-change:transform,opacity}
+.bg-aura .s1{left:-30%;transform:rotate(14deg);animation:sheenPass 7s ease-in-out infinite}
+.bg-aura .s2{left:-30%;transform:rotate(14deg);animation:sheenPass 9s ease-in-out -4.5s infinite}
 @keyframes sheenPass{
   0%{transform:translate3d(-20vw,0,0) rotate(14deg);opacity:0}
   10%{opacity:.9}
@@ -220,7 +220,7 @@ html.lenis,html.lenis body{height:auto}
 
 /* 2.5) 金の微粒子がゆっくり昇る（ラグジュアリー香水CMの粉塵。点滅させず、静かに漂わせる） */
 .bg-aura .dust{position:absolute;bottom:-8vh;border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(255,241,208,.95),rgba(214,180,128,.35) 45%,rgba(214,180,128,0) 70%);
+  background:radial-gradient(circle,#FFF6DC,rgba(226,186,110,.75) 40%,rgba(226,186,110,0) 72%);box-shadow:0 0 12px rgba(230,192,120,.85);
   will-change:transform,opacity;animation:dustRise var(--dd,26s) linear var(--ddl,0s) infinite}
 @keyframes dustRise{
   0%{transform:translate3d(0,0,0) scale(.7);opacity:0}
@@ -230,7 +230,7 @@ html.lenis,html.lenis body{height:auto}
 
 /* 3) ごく淡いヴィネット（画面端を締めて奥行きを出す） */
 .bg-vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:radial-gradient(120% 85% at 50% 45%,transparent 46%,rgba(104,88,68,.28) 100%)}
+  background:radial-gradient(120% 85% at 50% 45%,transparent 40%,rgba(88,72,52,.42) 100%)}
 
 /* 4) 濃色セクション上では光を反転させ、金の粒子感を出す */
 .tech .bg-local,.final .bg-local,.hero .bg-local{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
@@ -1377,18 +1377,18 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   (function(){
     var box=document.querySelector('.bg-aura'); if(!box || reduce) return;
     var isMobile=window.innerWidth<640;
-    var N = isMobile ? 10 : 18;
+    var N = isMobile ? 16 : 30;
     var frag=document.createDocumentFragment();
     for(var i=0;i<N;i++){
       var d=document.createElement('span');
       d.className='dust';
-      var size=(2+Math.random()*5).toFixed(1);          // 2〜7px
+      var size=(4+Math.random()*9).toFixed(1);          // 4〜13px
       d.style.left=(Math.random()*100).toFixed(1)+'vw';
       d.style.width=size+'px'; d.style.height=size+'px';
-      d.style.setProperty('--dd',(20+Math.random()*22).toFixed(1)+'s');   // 20〜42s
+      d.style.setProperty('--dd',(13+Math.random()*14).toFixed(1)+'s');   // 13〜27s
       d.style.setProperty('--ddl','-'+(Math.random()*30).toFixed(1)+'s'); // 開始位置を分散
       d.style.setProperty('--dx',((Math.random()-.5)*180).toFixed(0)+'px');
-      d.style.setProperty('--do',(.45+Math.random()*.5).toFixed(2));
+      d.style.setProperty('--do',(.6+Math.random()*.4).toFixed(2));
       frag.appendChild(d);
     }
     box.appendChild(frag);
