@@ -437,7 +437,7 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .film-en{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(2rem,5.4vw,4rem);color:var(--ink);line-height:1;letter-spacing:.01em}
 .film-jp{font-family:var(--jp-serif);font-weight:500;font-size:clamp(.95rem,2vw,1.2rem);letter-spacing:.08em;color:var(--muted);margin-top:1.2rem}
 /* 動画本来の比率（1280:734）に枠を合わせ、トリミングも余白も出さない */
-.film-frame{position:relative;width:100%;aspect-ratio:1280/734;overflow:hidden;background:var(--dark)}
+.film-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--dark)}
 .film-frame video,.film-frame img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) contrast(1.02)}
 .film-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.4),rgba(18,16,14,.15) 45%,rgba(18,16,14,.55));pointer-events:none}
 .film-copy{position:absolute;left:0;right:0;bottom:clamp(2rem,6vw,5rem);z-index:3;text-align:center;color:var(--ivory);padding:0 1.4rem;pointer-events:none}
@@ -650,51 +650,6 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
   line-height:1.95;max-width:62ch;padding-left:1.2rem;border-left:1px solid var(--line)}
 
 /* ============================================================
-   VOICE — お客様の感想動画（縦型9:16・掲載許諾済み）
-   ============================================================ */
-.voice{background:var(--ivory-2)}
-.voice-head{text-align:center;margin-bottom:clamp(2.4rem,5vw,4rem)}
-.voice-head .eyebrow{display:block;margin-bottom:1.4rem}
-.voice-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.6vw,3.2rem);color:var(--ink)}
-.voice-head p{margin-top:1.2rem;font-family:var(--jp);font-weight:400;font-size:.92rem;color:var(--muted)}
-.voice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(.8rem,1.8vw,1.4rem);
-  max-width:1200px;margin:0 auto}
-/* スマホは2列（縦1列だと縦長すぎるため） */
-@media(max-width:560px){
-  .voice-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
-  .voice-play{width:44px;height:44px}
-  .voice-cap{font-size:.64rem;left:.6rem;bottom:.6rem}
-  .ba-grid{gap:.9rem}
-}
-.voice-card{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:var(--dark);
-  border:1px solid var(--line);cursor:pointer;isolation:isolate}
-.voice-card img,.voice-card video{width:100%;height:100%;object-fit:cover;display:block}
-.voice-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(18,16,14,.55));
-  pointer-events:none;transition:opacity .4s var(--ease)}
-.voice-card.playing::after{opacity:0}
-.voice-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;width:56px;height:56px;border-radius:50%;
-  border:1px solid rgba(237,231,221,.6);background:rgba(18,16,14,.32);color:var(--ivory);display:grid;place-items:center;
-  transition:background .4s,transform .4s var(--ease);pointer-events:none}
-.voice-card:hover .voice-play{background:rgba(18,16,14,.5);transform:translate(-50%,-50%) scale(1.06)}
-.voice-play svg{width:18px;height:18px;margin-left:2px}
-.voice-card.playing .voice-play{opacity:0;visibility:hidden}
-.voice-cap{position:absolute;left:.9rem;bottom:.8rem;z-index:2;color:var(--ivory);font-family:var(--jp);font-weight:400;
-  font-size:.72rem;letter-spacing:.06em;text-shadow:0 1px 4px rgba(0,0,0,.5);transition:opacity .4s}
-.voice-card.playing .voice-cap{opacity:0}
-.voice-note{margin-top:clamp(1.8rem,4vw,2.4rem);text-align:center;font-family:var(--jp);font-weight:400;
-  font-size:.76rem;color:var(--muted);line-height:1.95}
-
-/* Ritual / macro video blocks */
-.ritual-media{display:grid;grid-template-columns:1fr;gap:clamp(1rem,2.4vw,1.6rem);margin-top:clamp(2.4rem,5vw,3.6rem)}
-@media(min-width:861px){.ritual-media{grid-template-columns:1.15fr .85fr}}
-.ritual-media figure{position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--ivory-2)}
-.ritual-media video{width:100%;height:100%;object-fit:cover;display:block}
-.ritual-media .rm-tall{aspect-ratio:9/16;max-height:620px;margin:0 auto}
-.ritual-media .rm-wide{aspect-ratio:16/9}
-.ritual-media figcaption{position:absolute;left:1rem;bottom:.9rem;color:var(--ivory);font-family:var(--sans);
-  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.6)}
-
-/* ============================================================
    22 REVIEWS — empty state
    ============================================================ */
 .reviews{text-align:center}
@@ -852,7 +807,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     <a href="#statement">ABOUT</a>
     <a href="#before-after">BEFORE / AFTER</a>
     <a href="#how">HOW TO USE</a>
-    <a href="#voice">VOICE</a>
     <a href="#faq">FAQ</a>
     <a href="#pricing" class="nav-cta">BUY</a>
   </nav>
@@ -865,7 +819,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   <a href="#statement" data-close>About</a>
   <a href="#before-after" data-close>Before / After</a>
   <a href="#how" data-close>How to use</a>
-  <a href="#voice" data-close>Voice</a>
   <a href="#faq" data-close>FAQ</a>
   <a href="#pricing" class="nav-cta" data-close>BUY</a>
 </div>
@@ -1196,32 +1149,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   </div>
 </section>
 
-<!-- ============================== 22 VOICE（お客様の感想動画） ============================== -->
-<section class="section voice" id="voice">
-  <div class="wrap">
-    <div class="voice-head">
-      <span class="eyebrow reveal">Voice</span>
-      <h2 class="reveal" data-d="1">お客様の声</h2>
-      <p class="reveal" data-d="1">掲載許可をいただいた、ご利用者の感想動画です。<br>サムネイルをタップすると再生します（音が出ます）。</p>
-    </div>
-    <div class="voice-grid" id="voice-grid">
-      <!-- 動画は data-src で遅延読込。クリックで <video> を生成して再生（初期はポスター画像のみ＝軽量） -->
-      <figure class="voice-card reveal" data-src="videos/voice/voice-01.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 01 を再生"><img src="images/voice/voice-01.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 01"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 01</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-02.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 02 を再生"><img src="images/voice/voice-02.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 02"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 02</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-03.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 03 を再生"><img src="images/voice/voice-03.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 03"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 03</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-04.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 04 を再生"><img src="images/voice/voice-04.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 04"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 04</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-05.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 05 を再生"><img src="images/voice/voice-05.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 05"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 05</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-06.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 06 を再生"><img src="images/voice/voice-06.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 06"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 06</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-07.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 07 を再生"><img src="images/voice/voice-07.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 07"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 07</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-08.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 08 を再生"><img src="images/voice/voice-08.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 08"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 08</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-09.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 09 を再生"><img src="images/voice/voice-09.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 09"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 09</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-10.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 10 を再生"><img src="images/voice/voice-10.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 10"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 10</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-11.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 11 を再生"><img src="images/voice/voice-11.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 11"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 11</figcaption></figure>
-      <figure class="voice-card reveal" data-src="videos/voice/voice-12.mp4" tabindex="0" role="button" aria-label="お客様の感想動画 12 を再生"><img src="images/voice/voice-12.jpg" loading="lazy" decoding="async" alt="TERAPP Lift Up Patch ご利用者の感想動画 12"><span class="voice-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><figcaption class="voice-cap">ご利用者の声 12</figcaption></figure>
-    </div>
-    <p class="voice-note reveal">※掲載許可をいただいたご本人の感想です。個人の感想であり、効果・効能を示すものではありません。感じ方には個人差があります。</p>
-  </div>
-</section>
 
 <!-- ============================== 23 FAQ ============================== -->
 <section class="section faq" id="faq">
@@ -1294,8 +1221,7 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     </div>
     <nav class="foot-links" aria-label="フッターナビゲーション">
       <a href="#pricing">PRODUCT</a>
-      <a href="#voice">VOICE</a>
-      <a href="#faq">FAQ</a>
+        <a href="#faq">FAQ</a>
       <a href="contact.html">CONTACT</a>
       <a href="privacy.html">PRIVACY</a>
       <a href="terms.html">TERMS</a>
@@ -1465,41 +1391,6 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     setTimeout(function(){ secs.forEach(function(s){
       var r=s.getBoundingClientRect(); if(r.top<window.innerHeight && r.bottom>0) s.classList.add('lit');
     }); },600);
-  })();
-
-  /* ---- Voice: クリックで <video> を生成し音声付き再生（初期はポスターのみ＝軽量） ---- */
-  (function(){
-    var grid = document.getElementById('voice-grid'); if(!grid) return;
-    function playCard(card){
-      if(card.classList.contains('playing')) return;
-      // 他の再生を止める（同時再生させない）
-      grid.querySelectorAll('.voice-card.playing').forEach(function(c){
-        var ov=c.querySelector('video'); if(ov){ try{ov.pause();}catch(e){} }
-        c.classList.remove('playing');
-      });
-      var src = card.getAttribute('data-src'); if(!src) return;
-      var v = card.querySelector('video');
-      if(!v){
-        v = document.createElement('video');
-        v.setAttribute('playsinline',''); v.controls = true; v.preload='metadata';
-        v.src = src;
-        var img = card.querySelector('img');
-        if(img) v.poster = img.getAttribute('src');
-        card.appendChild(v);
-      }
-      card.classList.add('playing');
-      v.play().catch(function(){ v.controls = true; });
-      track('voice_play');
-    }
-    grid.addEventListener('click', function(e){
-      var card = e.target.closest('.voice-card'); if(!card) return;
-      if(e.target.tagName === 'VIDEO') return;   // コントロール操作は透過
-      playCard(card);
-    });
-    grid.addEventListener('keydown', function(e){
-      var card = e.target.closest('.voice-card'); if(!card) return;
-      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); playCard(card); }
-    });
   })();
 
   /* ---- 自動ループ動画（音声なし）: 画面に入ったら読み込んで再生・出たら停止 ---- */
