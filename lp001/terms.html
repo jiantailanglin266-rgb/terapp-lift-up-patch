@@ -18,9 +18,9 @@ body{font-family:'Zen Kaku Gothic New',sans-serif;color:var(--text);line-height:
 a{color:var(--deep)}
 :focus-visible{outline:2px solid var(--deep);outline-offset:3px}
 .lp-header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);z-index:10}
-.lp-brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none}
-.lp-brand svg{width:30px;height:27px;flex-shrink:0}
-.lp-brand b{font-family:'Montserrat',sans-serif;font-weight:600;letter-spacing:.28em;background:linear-gradient(180deg,#E4CFA3,#C9A86A 55%,#A9843F);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.05rem}
+.lp-brand{display:inline-flex;align-items:center;text-decoration:none}
+.lp-brand img{width:auto;height:38px;display:block}
+
 .lp-nav a{font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:.12em;color:var(--muted);text-decoration:none}
 main{max-width:820px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) 1.4rem 4rem}
 .eyebrow{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
@@ -37,10 +37,7 @@ ul,ol{margin:.5rem 0 1rem 1.4rem}li{margin:.2rem 0}
 </head>
 <body>
 <header class="lp-header">
-  <a class="lp-brand" href="index.html" aria-label="TERAPP トップへ">
-    <svg viewBox="452 286 296 264" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3E6B4"/><stop offset=".5" stop-color="#D9BE86"/><stop offset="1" stop-color="#C29B57"/></linearGradient></defs><g fill="none" stroke="url(#lg)" stroke-width="8" stroke-linecap="round"><path d="M462,470 Q600,296 738,470 Q600,540 462,470 Z" stroke-width="6"/><path d="M570,470 A30,30 0 0 1 630,470"/><path d="M542,470 A58,58 0 0 1 658,470"/><path d="M514,470 A86,86 0 0 1 686,470"/><path d="M486,470 A114,114 0 0 1 714,470"/></g><circle cx="600" cy="470" r="7" fill="url(#lg)"/></svg>
-    <b>TERAPP</b>
-  </a>
+  <a class="lp-brand" href="index.html" aria-label="TERAPP トップへ"><picture><source srcset="images/terapp-logo.webp" type="image/webp"><img src="images/terapp-logo.png" width="600" height="312" alt="TERAPP" decoding="async"></picture></a>
   <nav class="lp-nav"><a href="index.html">← トップへ戻る</a></nav>
 </header>
 
