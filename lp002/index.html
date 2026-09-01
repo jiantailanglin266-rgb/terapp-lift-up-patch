@@ -31,7 +31,8 @@
 <meta name="twitter:description" content="テラヘルツ特殊加工のコンディショニング用ボディテープ。部位に合わせて切って貼る、毎日のセルフケア習慣に。">
 <meta name="twitter:image" content="https://terapp.jp/conditioning-tape/images/og-conditioning-tape.jpg">
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="alternate" hreflang="ja" href="https://terapp.jp/conditioning-tape/">
 <link rel="alternate" hreflang="x-default" href="https://terapp.jp/conditioning-tape/">
@@ -283,10 +284,10 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   transition:background .5s var(--ease),box-shadow .5s var(--ease),height .4s var(--ease)}
 .hdr.scrolled{background:rgba(247,244,239,.86);backdrop-filter:blur(16px) saturate(1.1);
   box-shadow:0 1px 0 var(--line-2);height:64px}
-/* ブランドロゴ: 従来LPのゴールドグラデーション・ワードマークを踏襲 */
-.hdr-brand{font-family:var(--ui);font-weight:700;font-size:1.08rem;letter-spacing:.24em;text-indent:.24em;
-  background:linear-gradient(180deg,#8A6A24,#A9843F 55%,#7A5F28);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hdr.on-dark .hdr-brand{background:linear-gradient(180deg,#E4CFA3,#C9A86A 55%,#A9843F);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* ブランドロゴ: 公式ロゴ画像（head.png）をそのまま使用。変更はサイズのみ */
+.hdr-brand{display:flex;align-items:center;line-height:0}
+.hdr-brand img{height:clamp(30px,4.4vw,44px);width:auto;display:block}
+.hdr.scrolled .hdr-brand img{height:clamp(26px,3.6vw,36px)}
 .hdr.on-dark .hdr-nav a,.hdr.on-dark .brg span{color:var(--cream)}
 .hdr.on-dark .brg span{background:var(--cream)}
 .hdr-nav{display:flex;align-items:center;gap:clamp(1.4rem,3vw,2.6rem)}
@@ -332,8 +333,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .ready .hero-eyebrow span:nth-child(2){transition-delay:.3s}
 .ready .hero-eyebrow span:nth-child(3){transition-delay:.45s}
 .hero h1{margin:0}
-.hero-brand{display:block;font-family:var(--display);font-weight:300;color:var(--cream);
-  font-size:clamp(3.4rem,13vw,10rem);line-height:1;letter-spacing:.06em;text-indent:.06em}
+.hero-brand{display:block;line-height:0}
+.hero-brand img{width:clamp(230px,44vw,460px);height:auto;margin:0 auto;display:block}
 .hero-jp{display:block;margin-top:clamp(1.4rem,4vw,2.6rem);font-family:var(--jp-serif);font-weight:500;
   font-size:clamp(1.05rem,3vw,1.9rem);letter-spacing:.16em;line-height:2;color:var(--cream);
   word-break:keep-all;line-break:strict}
@@ -602,8 +603,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
    ============================================================ */
 .ft{background:var(--deep);color:var(--cream);padding:clamp(3.4rem,8vw,5rem) var(--pad) calc(2.6rem + env(safe-area-inset-bottom))}
 .ft-in{max-width:var(--wrap);margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between}
-.ft-brand{font-family:var(--ui);font-weight:700;font-size:1.1rem;letter-spacing:.24em;text-indent:.24em;
-  background:linear-gradient(180deg,#F3E6B4,#D9BE86 55%,#C29B57);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ft-brand{display:inline-flex;align-items:center;line-height:0}
+.ft-brand img{height:clamp(44px,7vw,64px);width:auto;display:block}
 .ft-nav{display:flex;flex-wrap:wrap;gap:clamp(1.1rem,3vw,2rem)}
 .ft-nav a{font-family:var(--ui);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(239,233,219,.62);transition:color .4s}
 .ft-nav a:hover{color:var(--gold-l)}
@@ -682,7 +683,9 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 <!-- ============================== HEADER ============================== -->
 <header class="hdr on-dark" id="hdr">
-  <a href="#top" class="hdr-brand" aria-label="TERAPP ホーム">TERAPP</a>
+  <a href="#top" class="hdr-brand" aria-label="TERAPP ホーム">
+    <img src="images/terapp-logo.png" width="693" height="324" alt="TERAPP" decoding="async">
+  </a>
   <nav class="hdr-nav" aria-label="メインナビゲーション">
     <a href="#concept">Concept</a>
     <a href="#product">Product</a>
@@ -720,7 +723,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
   <div class="hero-in">
     <p class="hero-eyebrow"><span>Luxury</span><span>Body</span><span>Conditioning</span></p>
     <h1>
-      <span class="hero-brand rl" data-d="1"><span>TERAPP</span></span>
+      <span class="hero-brand rl" data-d="1"><span><img src="images/terapp-logo.png" width="693" height="324" alt="TERAPP" fetchpriority="high" decoding="async"></span></span>
       <span class="hero-jp">
         <span class="rl" data-d="2"><span>貼るという</span></span>
         <span class="rl" data-d="3"><span>上質なセルフケア</span></span>
@@ -1199,7 +1202,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 <!-- ============================== FOOTER ============================== -->
 <footer class="ft">
   <div class="ft-in">
-    <span class="ft-brand">TERAPP</span>
+    <span class="ft-brand"><img src="images/terapp-logo.png" width="693" height="324" alt="TERAPP" loading="lazy" decoding="async"></span>
     <nav class="ft-nav" aria-label="フッターナビゲーション">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
