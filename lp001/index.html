@@ -146,11 +146,13 @@
   --ease-out:cubic-bezier(0.16,1,0.3,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;background:var(--ivory)}
+html{-webkit-text-size-adjust:100%;background:var(--ivory);
+  overflow-x:hidden;width:100%;max-width:100%;overscroll-behavior-x:none}
 body{
   background:transparent;color:var(--text);
   font-family:var(--jp);font-weight:400;line-height:1.95;
-  overflow-x:hidden;position:relative;letter-spacing:.02em;
+  overflow-x:hidden;overscroll-behavior-x:none;width:100%;max-width:100%;
+  position:relative;letter-spacing:.02em;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 img{max-width:100%;height:auto;display:block}
@@ -187,7 +189,7 @@ html.lenis,html.lenis body{height:auto}
    CINEMATIC BACKGROUND — 光の呼吸 / シルクの気配 / 微光の帯
    すべて fixed・操作透過・transform/opacityのみ・very slow
    ============================================================ */
-.bg-aura{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.bg-aura{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;max-width:100vw}
 /* 1) シャンパン光のゆっくりした呼吸（3つ・位相をずらす） */
 .bg-aura .orb{position:absolute;border-radius:50%;filter:blur(46px);will-change:transform,opacity}
 .bg-aura .o1{top:-18%;left:-12%;width:52vw;height:52vw;
