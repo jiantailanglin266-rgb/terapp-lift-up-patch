@@ -485,8 +485,9 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 }
 
 /* ---- Your Concern（お悩み・濃色ビジュアル） ---- */
-.concern-figure{margin:0 auto;max-width:560px;border-radius:12px;overflow:hidden;
-  border:1px solid var(--line-gold);box-shadow:0 34px 70px -44px rgba(30,27,24,.55)}
+.concern-full{position:relative;z-index:2;padding:0}
+.wrap-full{max-width:none;margin:0;padding:0}
+.concern-figure{margin:0;max-width:none;border-radius:0;overflow:hidden;border:0;box-shadow:none}
 .concern-figure img{width:100%;height:auto;display:block}
 
 /* ============================================================
@@ -918,9 +919,27 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   </div>
 </section>
 
+<!-- ============================== 15/16 TECHNOLOGY ============================== -->
+<section class="section tech on-dark">
+  <div class="tech-fx" aria-hidden="true">
+    <video class="tech-video autoloop" data-src="assets/cinematic/07-tech.mp4" poster="images/07-tech-poster.jpg" playsinline muted loop preload="none"></video>
+    <span class="tech-wave"></span><span class="tech-glow"></span>
+  </div>
+  <div class="wrap tech-inner">
+    <span class="eyebrow reveal">Technology</span>
+    <h2 class="display reveal" data-d="1">Beyond<br>the Visible.</h2>
+    <p class="tech-thz reveal" data-d="2">Terahertz</p>
+    <p class="tech-q reveal" data-d="2">遠赤外線領域<br>テラヘルツ波とは？</p>
+    <p class="tech-sub reveal" data-d="2">「電波」と「光」の中間にある電磁波</p>
+    <p class="lead reveal" data-d="3">1秒間に1兆回振動する周波数帯で、かつては利用が難しい未開拓領域でした。NASAの研究で「生物の生存に欠かせない」とされた波長を含み、育成光線とも呼ばれており、さまざまな分野で研究が進められています。</p>
+    <p class="lead reveal" data-d="3">TERAPP は、その可能性に着目し、独自の技術思想を美容ケア製品へ取り入れています。</p>
+    <p class="tech-note reveal" data-d="4">※上記はテラヘルツ波に関する一般的な情報であり、本商品の効果・効能を示すものではありません。本商品は雑貨であり、医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
+  </div>
+</section>
+
 <!-- ============================== YOUR CONCERN ============================== -->
-<section class="section concern" id="concern">
-  <div class="wrap">
+<section class="concern-full" id="concern">
+  <div class="wrap-full">
     <h2 class="sr-only">Your Concern こんな美容のお悩みはありませんか？</h2>
     <ul class="sr-only">
       <li>フェイスラインの印象が気になる</li>
@@ -1030,44 +1049,8 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
   </div>
 </section>
 
-<!-- ============================== 15/16 TECHNOLOGY ============================== -->
-<section class="section tech on-dark">
-  <div class="tech-fx" aria-hidden="true">
-    <video class="tech-video autoloop" data-src="assets/cinematic/07-tech.mp4" poster="images/07-tech-poster.jpg" playsinline muted loop preload="none"></video>
-    <span class="tech-wave"></span><span class="tech-glow"></span>
-  </div>
-  <div class="wrap tech-inner">
-    <span class="eyebrow reveal">Technology</span>
-    <h2 class="display reveal" data-d="1">Beyond<br>the Visible.</h2>
-    <p class="tech-thz reveal" data-d="2">Terahertz</p>
-    <p class="tech-q reveal" data-d="2">遠赤外線領域<br>テラヘルツ波とは？</p>
-    <p class="tech-sub reveal" data-d="2">「電波」と「光」の中間にある電磁波</p>
-    <p class="lead reveal" data-d="3">1秒間に1兆回振動する周波数帯で、かつては利用が難しい未開拓領域でした。NASAの研究で「生物の生存に欠かせない」とされた波長を含み、育成光線とも呼ばれており、さまざまな分野で研究が進められています。</p>
-    <p class="lead reveal" data-d="3">TERAPP は、その可能性に着目し、独自の技術思想を美容ケア製品へ取り入れています。</p>
-    <p class="tech-note reveal" data-d="4">※上記はテラヘルツ波に関する一般的な情報であり、本商品の効果・効能を示すものではありません。本商品は雑貨であり、医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
-  </div>
-</section>
 
-<!-- ============================== 18 SCROLL TYPOGRAPHY ============================== -->
-<div class="bigtype" aria-hidden="true">
-  <div class="bigtype-track" id="bigtype">
-    <span>BEAUTY</span><span class="fill">RITUAL<span class="dot">.</span></span><span>BALANCE</span><span class="fill">TERAPP<span class="dot">.</span></span><span>BEAUTY</span><span class="fill">RITUAL<span class="dot">.</span></span><span>BALANCE</span><span class="fill">TERAPP<span class="dot">.</span></span>
-  </div>
-</div>
 
-<!-- ============================== 19 FEATURES ============================== -->
-<section class="section features" id="features">
-  <div class="wrap">
-    <div class="areas-head measure">
-      <span class="eyebrow reveal">Features</span>
-      <h2 class="display reveal" data-d="1">Beauty Care,<br><span class="it">made simple.</span></h2>
-    </div>
-    <div class="feat-row reveal"><span class="fn">01</span><div class="fbody"><span class="en">Terahertz</span><h3>テラヘルツ特殊加工</h3><p>TERAPP独自の技術思想を取り入れた、美容ケア用パッチです。毎日の美容習慣に、そっと寄り添います。</p></div></div>
-    <div class="feat-row reveal"><span class="fn">02</span><div class="fbody"><span class="en">Simple</span><h3>貼るだけの手軽さ</h3><p>毎日のスキンケアに取り入れやすい、シンプルな使用方法。特別な準備は必要ありません。</p></div></div>
-    <div class="feat-row reveal"><span class="fn">03</span><div class="fbody"><span class="en">For the Areas</span><h3>気になる部分に使える</h3><p>フェイスライン、頬、首元など、目的に合わせて使用できます。</p></div></div>
-    <div class="feat-row reveal"><span class="fn">04</span><div class="fbody"><span class="en">Daily Ritual</span><h3>毎日の美容習慣へ</h3><p>特別な機器や複雑な手順を必要とせず、日常のセルフケアとして使用できます。</p></div></div>
-  </div>
-</section>
 
 <!-- ============================== BEFORE / AFTER ============================== -->
 <section class="section ba" id="before-after">
