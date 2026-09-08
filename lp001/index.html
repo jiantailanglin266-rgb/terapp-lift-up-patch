@@ -490,6 +490,16 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .concern-figure{margin:0;max-width:none;border-radius:0;overflow:hidden;border:0;box-shadow:none}
 .concern-figure img{width:100%;height:auto;display:block}
 
+/* ---- Product visual（商品ビジュアル・単体表示） ---- */
+.pv-figure{margin:0 auto;max-width:520px;border-radius:12px;overflow:hidden;
+  border:1px solid var(--line-gold);box-shadow:0 34px 70px -46px rgba(30,27,24,.5)}
+.pv-figure img{width:100%;height:auto;display:block}
+/* ---- Product steps（01 Product 〜 04 Daily：縦積み） ---- */
+.pr-steps-flat{display:grid;gap:clamp(2.2rem,5vw,3.4rem)}
+.pr-steps-flat .pr-step{min-height:0;padding:0;max-width:none;
+  padding-top:clamp(1.6rem,3.5vw,2.2rem);border-top:1px solid var(--line)}
+.pr-steps-flat .pr-step:first-child{border-top:none;padding-top:0}
+
 /* ============================================================
    12/13 AREAS — face areas, editorial split
    ============================================================ */
@@ -894,28 +904,13 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
 </section>
 
 <!-- ============================== 10/11 PRODUCT REVEAL (sticky) ============================== -->
-<section class="product-reveal" aria-label="TERAPP プロダクト">
-  <h2 class="sr-only">TERAPP Lift Up Patch — プロダクト</h2>
-  <div class="pr-grid">
-    <div class="pr-visual-col">
-      <div class="pr-sticky">
-        <div class="pr-stage">
-          <span class="pr-halo" aria-hidden="true"></span>
-          <span class="pr-ring a" aria-hidden="true"></span>
-          <span class="pr-ring b" aria-hidden="true"></span>
-          <div class="pr-card">
-            <picture><source srcset="images/package.webp" type="image/webp">
-            <img src="images/package.jpg" width="1122" height="1402" loading="lazy" decoding="async" alt="忙しい毎日に、貼るという新しい美容習慣を。TERAPP Lift Up Patch の商品パッケージとパッチのシート。毎日に、無理なく続けやすいセルフケア。"></picture>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pr-steps">
-      <div class="pr-step reveal"><span class="no">01 — Product</span><span class="en">TERAPP</span><p class="jp">テラヘルツ特殊加工を施した、美容ケア用のフェイスパッチ。日々のスキンケアに、そっと寄り添う一枚。</p></div>
-      <div class="pr-step reveal"><span class="no">02 — Texture</span><span class="en">Texture</span><p class="jp">肌にやさしく密着する、うすく、なめらかな素材感。気になる部分へ心地よくフィットします。</p></div>
-      <div class="pr-step reveal"><span class="no">03 — Apply</span><span class="en">Apply</span><p class="jp">清潔で乾いた肌へ。フェイスライン・頬・首元など、気になる部分にやさしく貼るだけ。</p></div>
-      <div class="pr-step reveal"><span class="no">04 — Daily</span><span class="en">Daily</span><p class="jp">特別な準備はいりません。いつもの毎日に、無理なく続けられる美容習慣を。</p></div>
-    </div>
+<!-- ============================== PRODUCT VISUAL ============================== -->
+<section class="section product-visual" aria-label="TERAPP Lift Up Patch 商品ビジュアル">
+  <div class="wrap">
+    <figure class="pv-figure reveal">
+      <picture><source srcset="images/package.webp" type="image/webp">
+      <img src="images/package.jpg" width="1122" height="1402" loading="lazy" decoding="async" alt="忙しい毎日に、貼るという新しい美容習慣を。TERAPP Lift Up Patch の商品パッケージとパッチのシート。毎日に、無理なく続けやすいセルフケア。"></picture>
+    </figure>
   </div>
 </section>
 
@@ -934,6 +929,18 @@ footer{background:var(--dark-2);color:var(--on-dark);padding:clamp(3rem,7vw,5rem
     <p class="lead reveal" data-d="3">1秒間に1兆回振動する周波数帯で、かつては利用が難しい未開拓領域でした。NASAの研究で「生物の生存に欠かせない」とされた波長を含み、育成光線とも呼ばれており、さまざまな分野で研究が進められています。</p>
     <p class="lead reveal" data-d="3">TERAPP は、その可能性に着目し、独自の技術思想を美容ケア製品へ取り入れています。</p>
     <p class="tech-note reveal" data-d="4">※上記はテラヘルツ波に関する一般的な情報であり、本商品の効果・効能を示すものではありません。本商品は雑貨であり、医薬品・医薬部外品・化粧品・医療機器ではありません。</p>
+  </div>
+</section>
+
+<!-- ============================== PRODUCT STEPS ============================== -->
+<section class="section product-steps" aria-label="TERAPP Lift Up Patch プロダクト">
+  <div class="wrap measure">
+<div class="pr-steps-flat">
+      <div class="pr-step reveal"><span class="no">01 — Product</span><span class="en">TERAPP</span><p class="jp">テラヘルツ特殊加工を施した、美容ケア用のフェイスパッチ。日々のスキンケアに、そっと寄り添う一枚。</p></div>
+      <div class="pr-step reveal"><span class="no">02 — Texture</span><span class="en">Texture</span><p class="jp">肌にやさしく密着する、うすく、なめらかな素材感。気になる部分へ心地よくフィットします。</p></div>
+      <div class="pr-step reveal"><span class="no">03 — Apply</span><span class="en">Apply</span><p class="jp">清潔で乾いた肌へ。フェイスライン・頬・首元など、気になる部分にやさしく貼るだけ。</p></div>
+      <div class="pr-step reveal"><span class="no">04 — Daily</span><span class="en">Daily</span><p class="jp">特別な準備はいりません。いつもの毎日に、無理なく続けられる美容習慣を。</p></div>
+    </div>
   </div>
 </section>
 
