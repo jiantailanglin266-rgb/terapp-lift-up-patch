@@ -9,7 +9,7 @@
 <title>TERAPP Lift Up Patch｜貼る美容習慣を毎日に</title>
 <meta name="description" content="テラヘルツ特殊加工を施した美容ケア用パッチ「TERAPP Lift Up Patch」。フェイスライン、頬、首元など、気になる部分の毎日の美容ケアに。">
 <meta name="author" content="TERAPP">
-<meta name="theme-color" content="#12100E">
+<meta name="theme-color" content="#0C2A25">
 
 <!-- canonical/OGP: 本番ドメイン terapp.jp を正とする（GitHub Pagesにカスタムドメイン設定＝CNAME同梱／DNSはクライアント側作業）
      TODO: 専用OGP画像(1200x630)を用意でき次第 og:image / twitter:image を差し替える -->
@@ -131,9 +131,9 @@
   --line:rgba(30,27,24,.13);          /* 細罫線 */
   --line-gold:rgba(187,166,143,.55);  /* シャンパンの光線 */
   /* ダーク帯 */
-  --dark:#12100E;       /* cinematic dark（温かみのある黒） */
-  --dark-2:#0C0B0A;
-  --dark-3:#1B1813;
+  --dark:#0C2A25;       /* TERAPP エメラルドグリーン（濃） */
+  --dark-2:#08201C;   /* 深い緑（フッター） */
+  --dark-3:#153E35;   /* 明るめの緑（面） */
   --on-dark:#EDE7DD;    /* ダーク地の本文 */
   --on-dark-muted:rgba(237,231,221,.60);
   --dark-line:rgba(216,196,168,.22);
@@ -343,7 +343,7 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 /* Drawer */
-.drawer{position:fixed;inset:0;z-index:205;background:rgba(18,16,14,.98);color:var(--ivory);
+.drawer{position:fixed;inset:0;z-index:205;background:rgba(9,30,26,.98);color:var(--ivory);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;
   opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
 .drawer.open{opacity:1;visibility:visible}
@@ -356,17 +356,17 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;color:var(--on-dark);
   background:
     radial-gradient(78% 58% at 74% 26%, rgba(216,196,168,.12), transparent 60%),
-    radial-gradient(90% 80% at 16% 84%, rgba(120,150,130,.07), transparent 62%),
-    linear-gradient(158deg, #17140F 0%, #0C0B0A 54%, #12100E 100%)}
+    radial-gradient(90% 80% at 16% 84%, rgba(140,190,165,.10), transparent 62%),
+    linear-gradient(158deg, #124A3E 0%, #08201C 54%, #0C2A25 100%)}
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.04)}
 /* 黒シルク×金の光の映像を活かす：左（テキスト側）だけ落とし、右の光は見せる */
 .hero-media::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(12,11,10,.72) 0%,rgba(12,11,10,.48) 40%,rgba(12,11,10,.12) 70%,rgba(12,11,10,.28) 100%),
-  linear-gradient(180deg,rgba(12,11,10,.30) 0%,transparent 30%,transparent 66%,rgba(12,11,10,.5) 100%)}
+  background:linear-gradient(100deg,rgba(8,32,28,.78) 0%,rgba(8,32,28,.52) 40%,rgba(8,32,28,.16) 70%,rgba(8,32,28,.32) 100%),
+  linear-gradient(180deg,rgba(8,32,28,.34) 0%,transparent 30%,transparent 66%,rgba(8,32,28,.55) 100%)}
 @media(max-width:760px){
   /* スマホは縦位置なので上下グラデを強めて可読性を確保 */
-  .hero-media::after{background:linear-gradient(180deg,rgba(12,11,10,.72) 0%,rgba(12,11,10,.5) 40%,rgba(12,11,10,.45) 70%,rgba(12,11,10,.72) 100%)}
+  .hero-media::after{background:linear-gradient(180deg,rgba(8,32,28,.78) 0%,rgba(8,32,28,.55) 40%,rgba(8,32,28,.50) 70%,rgba(8,32,28,.78) 100%)}
 }
 .hero-inner{position:relative;z-index:3;max-width:1500px;width:100%;margin:0 auto;padding:6rem clamp(1.6rem,5vw,4rem) 5rem}
 .hero-eyebrow{margin-bottom:2rem;color:var(--champagne-l)}
@@ -441,14 +441,14 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
 /* 動画本来の比率（1280:734）に枠を合わせ、トリミングも余白も出さない */
 .film-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--dark)}
 .film-frame video,.film-frame img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) contrast(1.02)}
-.film-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.4),rgba(18,16,14,.15) 45%,rgba(18,16,14,.55));pointer-events:none}
+.film-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,36,31,.45),rgba(10,36,31,.20) 45%,rgba(10,36,31,.58));pointer-events:none}
 .film-copy{position:absolute;left:0;right:0;bottom:clamp(2rem,6vw,5rem);z-index:3;text-align:center;color:var(--ivory);padding:0 1.4rem;pointer-events:none}
 .film-copy .en{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(2rem,6vw,4.4rem);letter-spacing:.02em;line-height:1}
 .film-copy .jp{font-family:var(--jp-serif);font-weight:500;font-size:clamp(.95rem,2vw,1.25rem);letter-spacing:.1em;margin-top:1.2rem;color:rgba(237,231,221,.9)}
 .film-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;width:78px;height:78px;border-radius:50%;
-  border:1px solid rgba(237,231,221,.5);background:rgba(18,16,14,.28);color:var(--ivory);display:grid;place-items:center;cursor:pointer;
+  border:1px solid rgba(237,231,221,.5);background:rgba(10,36,31,.32);color:var(--ivory);display:grid;place-items:center;cursor:pointer;
   backdrop-filter:blur(2px);transition:background .4s,transform .4s var(--ease)}
-.film-play:hover{background:rgba(18,16,14,.5);transform:translate(-50%,-50%) scale(1.06)}
+.film-play:hover{background:rgba(10,36,31,.54);transform:translate(-50%,-50%) scale(1.06)}
 .film-play svg{width:22px;height:22px;margin-left:3px}
 .film-frame.playing .film-play,.film-frame.playing .film-copy{opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
 
@@ -554,13 +554,13 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
    ============================================================ */
 .tech{position:relative;background:var(--dark);color:var(--on-dark);isolation:isolate;overflow:hidden}
 .tech::before{content:"";position:absolute;inset:-160px 0;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(18,16,14,0) 0%,var(--dark) 160px,var(--dark) calc(100% - 160px),rgba(18,16,14,0) 100%)}
+  background:linear-gradient(180deg,rgba(10,36,31,0) 0%,var(--dark) 160px,var(--dark) calc(100% - 160px),rgba(10,36,31,0) 100%)}
 .tech-fx{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 /* 抽象的な光の映像（テキストの背面・可読性のため落として合成） */
 .tech-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;
   filter:saturate(1.05) contrast(1.06)}
 .tech-fx::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(12,11,10,.86) 0%,rgba(12,11,10,.62) 46%,rgba(12,11,10,.2) 100%)}
+  background:linear-gradient(100deg,rgba(8,32,28,.88) 0%,rgba(8,32,28,.66) 46%,rgba(8,32,28,.24) 100%)}
 .tech-wave{position:absolute;left:50%;top:50%;width:140vmax;height:140vmax;transform:translate(-50%,-50%);
   background:radial-gradient(circle,transparent 58%,rgba(216,196,168,.05) 60%,transparent 62%),
   radial-gradient(circle,transparent 66%,rgba(216,196,168,.045) 68%,transparent 70%),
@@ -725,11 +725,11 @@ header:not(.scrolled) .nav-cta:hover{background:var(--ivory);color:var(--ink)}
   overflow:hidden;isolation:isolate;color:var(--on-dark);
   background:
     radial-gradient(70% 55% at 50% 18%, rgba(216,196,168,.10), transparent 60%),
-    radial-gradient(90% 70% at 20% 100%, rgba(120,150,130,.06), transparent 62%),
-    linear-gradient(180deg, #12100E 0%, #0A0908 60%, #100E0C 100%)}
+    radial-gradient(90% 70% at 20% 100%, rgba(140,190,165,.09), transparent 62%),
+    linear-gradient(180deg, #0C2A25 0%, #071C18 60%, #0A2620 100%)}
 .final-media{position:absolute;inset:0;z-index:0}
 .final-media video,.final-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) brightness(.7)}
-.final-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.7),rgba(18,16,14,.5) 45%,rgba(18,16,14,.82))}
+.final-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,36,31,.74),rgba(10,36,31,.54) 45%,rgba(10,36,31,.84))}
 .final-inner{position:relative;z-index:3;max-width:800px;padding:6rem 1.6rem}
 .final .eyebrow{display:block;margin-bottom:2rem;color:var(--champagne-l)}
 .final-en{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(2.4rem,7vw,5rem);color:var(--ivory);line-height:1.05;letter-spacing:.02em}
